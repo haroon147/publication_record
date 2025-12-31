@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Dashboard from './components/Dashboard'
 import { FileText } from 'lucide-react'
+import { publicationsData } from './data/publications'
 
 const STORAGE_KEY = 'publication_records'
 
 function App() {
   const [publications, setPublications] = useState([])
 
-  // Load saved data on component mount
+  // Load data on component mount - prioritize localStorage, fallback to default data
   useEffect(() => {
     const savedData = localStorage.getItem(STORAGE_KEY)
     if (savedData) {
@@ -19,10 +20,23 @@ function App() {
           date: pub.date ? new Date(pub.date) : null
         }))
         setPublications(publicationsWithDates)
-        console.log('📂 Loaded saved publications:', publicationsWithDates.length)
+        console.log('📂 Loaded saved publications from localStorage:', publicationsWithDates.length)
       } catch (error) {
         console.error('Error loading saved data:', error)
+        // Fallback to default data if localStorage fails
+        setPublications(publicationsData)
       }
+    } else {
+      // No saved data, use default publications data
+      setPublications(publicationsData)
+      console.log('📂 Loaded default publications:', publicationsData.length)
+      
+      // Save default data to localStorage for future visits
+      const dataToSave = publicationsData.map(pub => ({
+        ...pub,
+        date: pub.date ? pub.date.toISOString() : null
+      }))
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave))
     }
   }, [])
 
