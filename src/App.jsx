@@ -1,21 +1,31 @@
-import React, { useState } from 'react'
-import ExcelUpload from './components/ExcelUpload'
+import React, { useState, useEffect } from 'react'
 import Dashboard from './components/Dashboard'
-import { Upload, FileText } from 'lucide-react'
+import { FileText } from 'lucide-react'
+
+const STORAGE_KEY = 'publication_records'
 
 function App() {
   const [publications, setPublications] = useState([])
-  const [hasData, setHasData] = useState(false)
 
-  const handleDataLoaded = (data) => {
-    setPublications(data)
-    setHasData(true)
-  }
+  // Load saved data on component mount
+  useEffect(() => {
+    const savedData = localStorage.getItem(STORAGE_KEY)
+    if (savedData) {
+      try {
+        const parsed = JSON.parse(savedData)
+        // Convert date strings back to Date objects
+        const publicationsWithDates = parsed.map(pub => ({
+          ...pub,
+          date: pub.date ? new Date(pub.date) : null
+        }))
+        setPublications(publicationsWithDates)
+        console.log('📂 Loaded saved publications:', publicationsWithDates.length)
+      } catch (error) {
+        console.error('Error loading saved data:', error)
+      }
+    }
+  }, [])
 
-  const handleReset = () => {
-    setPublications([])
-    setHasData(false)
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -33,24 +43,7 @@ function App() {
           </p>
         </header>
 
-        {!hasData ? (
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-center mb-6">
-                <Upload className="w-16 h-16 text-blue-500 mx-auto mb-4" />
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                  Upload Publication Data
-                </h2>
-                <p className="text-gray-600">
-                  Upload an Excel file containing publication records to analyze
-                </p>
-              </div>
-              <ExcelUpload onDataLoaded={handleDataLoaded} />
-            </div>
-          </div>
-        ) : (
-          <Dashboard publications={publications} onReset={handleReset} />
-        )}
+        <Dashboard publications={publications} />
       </div>
     </div>
   )

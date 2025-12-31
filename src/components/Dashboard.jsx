@@ -3,9 +3,9 @@ import Statistics from './Statistics'
 import QuarterlyAnalysis from './QuarterlyAnalysis'
 import AuthorLeaderboard from './AuthorLeaderboard'
 import PublicationList from './PublicationList'
-import { RotateCcw, BarChart3 } from 'lucide-react'
+import { BarChart3, Database } from 'lucide-react'
 
-const Dashboard = ({ publications, onReset }) => {
+const Dashboard = ({ publications }) => {
   const stats = useMemo(() => {
     const total = publications.length
     
@@ -106,24 +106,33 @@ const Dashboard = ({ publications, onReset }) => {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-          <BarChart3 className="w-6 h-6 text-blue-600" />
-          Analytics Dashboard
-        </h2>
-        <button
-          onClick={onReset}
-          className="flex items-center gap-2 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg transition-colors"
-        >
-          <RotateCcw className="w-4 h-4" />
-          Upload New File
-        </button>
+      <div className="flex justify-between items-center flex-wrap gap-4">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-6 h-6 text-blue-600" />
+            Analytics Dashboard
+          </h2>
+          <div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
+            <Database className="w-4 h-4 text-green-600" />
+            <span>{publications.length} publication{publications.length !== 1 ? 's' : ''} loaded</span>
+          </div>
+        </div>
       </div>
 
-      <Statistics stats={stats} />
-      <QuarterlyAnalysis quarters={stats.quarters} />
-      <AuthorLeaderboard authorCounts={stats.authorCounts} authorImpactFactors={stats.authorImpactFactors} />
-      <PublicationList publications={publications} />
+      {publications.length > 0 ? (
+        <>
+          <Statistics stats={stats} />
+          <QuarterlyAnalysis quarters={stats.quarters} />
+          <AuthorLeaderboard authorCounts={stats.authorCounts} authorImpactFactors={stats.authorImpactFactors} />
+          <PublicationList publications={publications} />
+        </>
+      ) : (
+        <div className="bg-white rounded-lg shadow-lg p-12 text-center">
+          <Database className="w-20 h-20 text-gray-300 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">No Publications Found</h3>
+          <p className="text-gray-500">No publication data is currently available.</p>
+        </div>
+      )}
     </div>
   )
 }
