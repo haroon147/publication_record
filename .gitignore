@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Excel files in root (source file is in dist/assets)
+publications.xlsx
+*.xlsx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
