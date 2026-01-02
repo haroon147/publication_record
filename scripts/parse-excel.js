@@ -150,8 +150,11 @@ const parseImpactFactor = (ifStr) => {
   return 0;
 };
 
-// Read Excel file - try multiple locations (prioritize Publications.xlsx)
-let excelPath = path.join(__dirname, '..', 'Publications.xlsx');
+// Read Excel file - try multiple locations (prioritize src/data/Publication.xlsx)
+let excelPath = path.join(__dirname, '..', 'src', 'data', 'Publication.xlsx');
+if (!fs.existsSync(excelPath)) {
+  excelPath = path.join(__dirname, '..', 'Publications.xlsx');
+}
 if (!fs.existsSync(excelPath)) {
   excelPath = path.join(__dirname, '..', 'publications.xlsx');
 }
@@ -163,6 +166,7 @@ if (!fs.existsSync(excelPath)) {
 }
 if (!fs.existsSync(excelPath)) {
   console.error('Excel file not found. Tried:', [
+    path.join(__dirname, '..', 'src', 'data', 'Publication.xlsx'),
     path.join(__dirname, '..', 'Publications.xlsx'),
     path.join(__dirname, '..', 'publications.xlsx'),
     path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx'),

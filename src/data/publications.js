@@ -1,159 +1,60 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-02T09:23:46.207Z
-// Total publications: 226
+// Generated on: 2026-01-02T10:24:04.334Z
+// Total publications: 227
 
 export const publicationsData = [
   {
-    "title": "Analysis of Interactive Utilization of CPU between Host and Guests in a Cloud Setup",
-    "author": "Mr. Waqas Ahmad : 7094",
-    "authorName": "Mr Waqas Ahmad",
-    "date": new Date(2018, 4, 20),
-    "journal": "Computer Science and Engineering",
-    "scopus": false,
-    "impactFactor": 0
+    "title": "Ontology based multiagent effort estimation system for scrum agile method",
+    "author": "Dr. Muhammad Adnan : 7585",
+    "authorName": "Dr Muhammad Adnan",
+    "date": new Date(2011, 10, 8),
+    "journal": "IEEE ACCESS",
+    "scopus": true,
+    "impactFactor": 3.4
   },
   {
-    "title": "Comparison of Routing Protocols in Wireless Mesh Network on the Basis of Performance",
-    "author": "Mr. Waqas Ahmad : 7094",
-    "authorName": "Mr Waqas Ahmad",
-    "date": new Date(2018, 9, 20),
-    "journal": "International Journal of Networks and Communications",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Detection and Analysis of Active Attacks using Honeypot",
-    "author": "Mr. Waqas Ahmad : 7094",
-    "authorName": "Mr Waqas Ahmad",
-    "date": new Date(2023, 2, 24),
-    "journal": "ational Journal of Computer Applications",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Estimation of outliers in cognitive networks spectrum sensing",
-    "author": "Mr. Waqas Ahmad : 7094",
-    "authorName": "Mr Waqas Ahmad",
-    "date": new Date(2022, 5, 23),
-    "journal": "Lahore Garrison University Research Journal of Computer Science and IT",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "A Symptoms Motif Detection of Polio at Early Stages By Using Data Visual Analytics: Polio Free Pakistan",
-    "author": "Mr. Waqas Ahmad : 7094",
-    "authorName": "Mr Waqas Ahmad",
-    "date": new Date(2020, 0, 18),
-    "journal": "International Bhurban Conference on Applied Sciences and Technology",
+    "title": "Evidence in software architecture, a systematic literature review",
+    "author": "Ms. Nadia Qureshi : 6178",
+    "authorName": "Ms Nadia Qureshi",
+    "date": new Date(2013, 3, 14),
+    "journal": "EASE: Evaluation and Assessment in Software Engineering",
     "scopus": true,
     "impactFactor": 0
   },
   {
-    "title": "Towards Tomography-Based Real-Time Control of Multiphase Flows: A Proof of Concept in Inline Fluid Separation",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2022, 5, 8),
-    "journal": "MDPI Sensor",
-    "scopus": true,
-    "impactFactor": 3.9
-  },
-  {
-    "title": "A Fast Electrical Resistivity-Based Algorithm to Measure and Visualize Two-Phase Swirling Flows",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2022, 1, 25),
-    "journal": "MDPI Sensors",
-    "scopus": true,
-    "impactFactor": 3.9
-  },
-  {
-    "title": "Towards The Combination Of Data Reduction And Augmented Reality For Online And Onsite ERT-Based Monitoring Of Inline Fluid Separation",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2021, 8, 15),
-    "journal": "10th World Congress on Industrial Process Tomography",
+    "title": "Software Engineering Ethics in Pakistani Software Development Industry",
+    "author": "Dr. Madeeha Fatima : 3473",
+    "authorName": "Dr Madeeha Fatima",
+    "date": new Date(2013, 9, 1),
+    "journal": "WASET Dubai, UAE International Conference",
     "scopus": false,
     "impactFactor": 0
   },
   {
-    "title": "Quantitative Evaluations with 2d Electrical Resistance Tomography in the Low-Conductivity Solutions Using 3d-Printed Phantoms and Sucrose Crystal Agglomerate Assessments",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2021, 0, 14),
-    "journal": "MDPI Sensors",
-    "scopus": true,
-    "impactFactor": 3.9
-  },
-  {
-    "title": "Electrical Resistance Tomography for Control Applications: Quantitative Study of the Gas-Liquid Distribution inside A Cyclone",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2020, 9, 25),
-    "journal": "MDPI Sensors",
-    "scopus": true,
-    "impactFactor": 3.9
-  },
-  {
-    "title": "Scaling Of Electrical Resistance Tomography Data Of Swirled Liquid-Gas Separation Using Fast Camera Imaging",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2020, 11, 9),
-    "journal": "Wirtualne SYMPOZJUM ŚRODOWISKOWE PTZE",
+    "title": "Minimizing big data problems using cloud computing based on Hadoop architecture",
+    "author": "Dr. Muhammad Adnan : 7585",
+    "authorName": "Dr Muhammad Adnan",
+    "date": new Date(2014, 11, 15),
+    "journal": "International Symposium on High Capacity Optical Networks and Enabling Technologies, HONET",
     "scopus": false,
     "impactFactor": 0
   },
   {
-    "title": "Control of a Gas-Liquid Inline Swirl Separator Based on Tomographic Measurements",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2021, 3, 14),
-    "journal": "IFAC-PapersOnLine",
-    "scopus": true,
-    "impactFactor": 0.4
-  },
-  {
-    "title": "Multichannel Capacitive Imaging of Gas Vortex in Swirling Two-Phase Flows Using Parametric Reconstruction",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2020, 3, 8),
-    "journal": "IEEE- Access",
-    "scopus": true,
-    "impactFactor": 3.9
-  },
-  {
-    "title": "Controlled Inline Fluid Separation Based on Smart Process Tomography Sensors",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2020, 2, 27),
-    "journal": "Chemie Ingenieur Technik",
-    "scopus": true,
-    "impactFactor": 1.91
-  },
-  {
-    "title": "Estimation Of Phantom Vortex Size For Liquid Gas Separation Using Electrical Tomography",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2019, 4, 15),
-    "journal": "nternational Interdisciplinary PhD Workshop 2019 Wismar, Germany",
+    "title": "Performance Evaluation and Comparison of EQM with RED, SFQ, and REM, TCP Congestion Control Algorithms Using NS-2",
+    "author": "Dr. Muhammad Asif Nauman : 7196",
+    "authorName": "Dr Muhammad Asif Nauman",
+    "date": new Date(2015, 10, 30),
+    "journal": "International Journal of Computer Science and Telecommunications",
     "scopus": false,
     "impactFactor": 0
   },
   {
-    "title": "Application of the 2D-ERT to evaluate phantom circumscribed regions in various sucrose solution concentrations",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2019, 4, 17),
-    "journal": "2019 International Interdisciplinary PhD Workshop (IIPhDW)",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Adaptive Fuzzy PID Control of a Quadrotor UAV",
-    "author": "Dr. Muhammad Awais Sattar : 5633",
-    "authorName": "Dr Muhammad Awais Sattar",
-    "date": new Date(2017, 9, 5),
-    "journal": "The 5th Arab Robotics Conference",
+    "title": "A novel approach to super quality software development using workflows",
+    "author": "Dr. Muhammad Adnan : 7585",
+    "authorName": "Dr Muhammad Adnan",
+    "date": new Date(2016, 9, 20),
+    "journal": "IEEE 7th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON)",
     "scopus": false,
     "impactFactor": 0
   },
@@ -185,6 +86,222 @@ export const publicationsData = [
     "impactFactor": 8.2
   },
   {
+    "title": "Adaptive Fuzzy PID Control of a Quadrotor UAV",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2017, 9, 5),
+    "journal": "The 5th Arab Robotics Conference",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Collaborative filtering based online recommendation systems: A survey",
+    "author": "Mr. Asim Mansha : 6177",
+    "authorName": "Mr Asim Mansha",
+    "date": new Date(2018, 2, 22),
+    "journal": "2017 International Conference on Information and Communication Technologies (ICICT)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Analysis of Interactive Utilization of CPU between Host and Guests in a Cloud Setup",
+    "author": "Mr. Waqas Ahmad : 7094",
+    "authorName": "Mr Waqas Ahmad",
+    "date": new Date(2018, 4, 20),
+    "journal": "Computer Science and Engineering",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Comparison of Routing Protocols in Wireless Mesh Network on the Basis of Performance",
+    "author": "Mr. Waqas Ahmad : 7094",
+    "authorName": "Mr Waqas Ahmad",
+    "date": new Date(2018, 9, 20),
+    "journal": "International Journal of Networks and Communications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Estimation Of Phantom Vortex Size For Liquid Gas Separation Using Electrical Tomography",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2019, 4, 15),
+    "journal": "nternational Interdisciplinary PhD Workshop 2019 Wismar, Germany",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Application of the 2D-ERT to evaluate phantom circumscribed regions in various sucrose solution concentrations",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2019, 4, 17),
+    "journal": "2019 International Interdisciplinary PhD Workshop (IIPhDW)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "UML-SR: A Novel Security Requirements Specification Language",
+    "author": "Mr. Muhammad Mohsin : 1283",
+    "authorName": "Mr Muhammad Mohsin",
+    "date": new Date(2019, 6, 25),
+    "journal": "IEEE  Sofia, Bulgaria",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "On the Combination of Finite State Transducers and Finite Automata with Translucent Letter",
+    "author": "Dr. Madeeha Fatima : 3473",
+    "authorName": "Dr Madeeha Fatima",
+    "date": new Date(2019, 9, 13),
+    "journal": "Middle-European Conference on Applied Theoretical Computer science (MATCOS) 2019",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Ontology-oriented software effort estimation system for E-commerce applications based on extreme programming and scrum methodologies",
+    "author": "Dr. Muhammad Adnan : 7585",
+    "authorName": "Dr Muhammad Adnan",
+    "date": new Date(2019, 10, 11),
+    "journal": "The Computer Journal",
+    "scopus": true,
+    "impactFactor": 1.5
+  },
+  {
+    "title": "TRANSDUCED-INPUT AUTOMATA WITH TRANSLUCENT LETTERS",
+    "author": "Dr. Madeeha Fatima : 3473",
+    "authorName": "Dr Madeeha Fatima",
+    "date": new Date(2020, 0, 1),
+    "journal": "Comptes rendus de l’Acade'mie bulgare des Sciences, Vol 73, No1, pp.33-39",
+    "scopus": true,
+    "impactFactor": 0.3
+  },
+  {
+    "title": "A Symptoms Motif Detection of Polio at Early Stages By Using Data Visual Analytics: Polio Free Pakistan",
+    "author": "Mr. Waqas Ahmad : 7094",
+    "authorName": "Mr Waqas Ahmad",
+    "date": new Date(2020, 0, 18),
+    "journal": "International Bhurban Conference on Applied Sciences and Technology",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Controlled Inline Fluid Separation Based on Smart Process Tomography Sensors",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2020, 2, 27),
+    "journal": "Chemie Ingenieur Technik",
+    "scopus": true,
+    "impactFactor": 1.91
+  },
+  {
+    "title": "Multichannel Capacitive Imaging of Gas Vortex in Swirling Two-Phase Flows Using Parametric Reconstruction",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2020, 3, 8),
+    "journal": "IEEE- Access",
+    "scopus": true,
+    "impactFactor": 3.9
+  },
+  {
+    "title": "Electrical Resistance Tomography for Control Applications: Quantitative Study of the Gas-Liquid Distribution inside A Cyclone",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2020, 9, 25),
+    "journal": "MDPI Sensors",
+    "scopus": true,
+    "impactFactor": 3.9
+  },
+  {
+    "title": "Scaling Of Electrical Resistance Tomography Data Of Swirled Liquid-Gas Separation Using Fast Camera Imaging",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2020, 11, 9),
+    "journal": "Wirtualne SYMPOZJUM ŚRODOWISKOWE PTZE",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Quantitative Evaluations with 2d Electrical Resistance Tomography in the Low-Conductivity Solutions Using 3d-Printed Phantoms and Sucrose Crystal Agglomerate Assessments",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2021, 0, 14),
+    "journal": "MDPI Sensors",
+    "scopus": true,
+    "impactFactor": 3.9
+  },
+  {
+    "title": "Analysis of Machine Learning Techniques for Detection Framework for DNA Repair Genes to help Diagnose Cancer: A Systematic Literature Review",
+    "author": "Mr. Muhammad Ayaz Farid : 4407",
+    "authorName": "Mr Muhammad Ayaz Farid",
+    "date": new Date(2021, 1, 1),
+    "journal": "IEEE",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Analysis of Machine Learning Techniques for Detection of Tumor Suppressor Genes for Early Detection of Cancer: A Systematic Literature Review",
+    "author": "Mr. Muhammad Ayaz Farid : 4407",
+    "authorName": "Mr Muhammad Ayaz Farid",
+    "date": new Date(2021, 1, 2),
+    "journal": "IEEE",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "VTA-SMAC: Variable Traffic-Adaptive Duty Cycled Sensor MAC Protocol to Enhance Overall QoS of S-MAC Protocol",
+    "author": "Dr. Sheheryar Malik : 3266",
+    "authorName": "Dr Sheheryar Malik",
+    "date": new Date(2021, 2, 3),
+    "journal": "IEEE Access",
+    "scopus": true,
+    "impactFactor": 3.6
+  },
+  {
+    "title": "Detection of impostor and tampered segments in audio by using an intelligent system",
+    "author": "Mr. Zeeshan Mubeen : 7583",
+    "authorName": "Mr Zeeshan Mubeen",
+    "date": new Date(2021, 2, 21),
+    "journal": "Computers and Electrical Engineering",
+    "scopus": true,
+    "impactFactor": 4.1
+  },
+  {
+    "title": "Implementing Multilabeling, ADASYN, and ReliefF Techniques for Classification of Breast Cancer Diagnostic through Machine Learning: Efficient Computer-Aided Diagnostic System",
+    "author": "Ms. Zullatun Gul khan : 7615",
+    "authorName": "Ms Zullatun Gul khan",
+    "date": new Date(2021, 2, 23),
+    "journal": "Journal of Healthcare Engineering",
+    "scopus": false,
+    "impactFactor": 3.822
+  },
+  {
+    "title": "Control of a Gas-Liquid Inline Swirl Separator Based on Tomographic Measurements",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2021, 3, 14),
+    "journal": "IFAC-PapersOnLine",
+    "scopus": true,
+    "impactFactor": 0.4
+  },
+  {
+    "title": "ECM-MAC: An Efficient Collision Mitigation Strategy in Contention Based MAC Protocol",
+    "author": "Dr. Sheheryar Malik : 3266",
+    "authorName": "Dr Sheheryar Malik",
+    "date": new Date(2021, 3, 30),
+    "journal": "IEEE Access",
+    "scopus": true,
+    "impactFactor": 3.6
+  },
+  {
+    "title": "Towards The Combination Of Data Reduction And Augmented Reality For Online And Onsite ERT-Based Monitoring Of Inline Fluid Separation",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2021, 8, 15),
+    "journal": "10th World Congress on Industrial Process Tomography",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
     "title": "Analysis of machine learning techniques for detection of tumor suppressor genes for early detection of cancer: A systematic literature review",
     "author": "Mr. Muhammad Ayaz Farid : 4407",
     "authorName": "Mr Muhammad Ayaz Farid",
@@ -203,96 +320,6 @@ export const publicationsData = [
     "impactFactor": 0
   },
   {
-    "title": "NA",
-    "author": "Ms. Ayesha Majid : 6319",
-    "authorName": "Ms Ayesha Majid",
-    "date": new Date(2023, 11, 12),
-    "journal": "NA",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "A hybrid technique using minimal spanning tree and analytic  hierarchical process to prioritize functional requirements for parallel  software development",
-    "author": "Dr. Muhammad Yaseen : 5769",
-    "authorName": "Dr. Muhammad Yaseen",
-    "date": new Date(2023, 1, 12),
-    "journal": "Requirements Engineering",
-    "scopus": true,
-    "impactFactor": 2.1
-  },
-  {
-    "title": "Empirical exploration of critical challenges of requirements  implementation in global software development",
-    "author": "Dr. Muhammad Yaseen : 5769",
-    "authorName": "Dr. Muhammad Yaseen",
-    "date": new Date(2023, 6, 14),
-    "journal": "Journal of Software: Evolution and Process",
-    "scopus": true,
-    "impactFactor": 2
-  },
-  {
-    "title": "Implementing Multilabeling, ADASYN, and ReliefF Techniques for Classification of Breast Cancer Diagnostic through Machine Learning: Efficient Computer-Aided Diagnostic System",
-    "author": "Ms. Zullatun Gul khan : 7615",
-    "authorName": "Ms Zullatun Gul khan",
-    "date": new Date(2021, 2, 23),
-    "journal": "Journal of Healthcare Engineering",
-    "scopus": false,
-    "impactFactor": 3.822
-  },
-  {
-    "title": "Journal of Software: Evolution and Process",
-    "author": "Dr. Muhammad Yaseen : 5769",
-    "authorName": "Dr. Muhammad Yaseen",
-    "date": new Date(2023, 7, 17),
-    "journal": "Journal of Software: Evolution and Process",
-    "scopus": true,
-    "impactFactor": 2
-  },
-  {
-    "title": "Requirement elicitation model for global software  development vendors",
-    "author": "Dr. Muhammad Yaseen : 5769",
-    "authorName": "Dr. Muhammad Yaseen",
-    "date": new Date(2023, 9, 3),
-    "journal": "Journal of Software: Evolution and Process",
-    "scopus": true,
-    "impactFactor": 2
-  },
-  {
-    "title": "Computational Insight into the Physical Properties of Bulk MP (M =  Li, Na, K) for Energy Applications",
-    "author": "Dr. Muhammad Yaseen : 5769",
-    "authorName": "Dr. Muhammad Yaseen",
-    "date": new Date(2024, 4, 16),
-    "journal": "ACS OMEGA",
-    "scopus": true,
-    "impactFactor": 4.1
-  },
-  {
-    "title": "Prevalence of an Identity Crisis Within the Transgender Population of Pakistan",
-    "author": "Mr. Fahad Zakir : 7199",
-    "authorName": "Mr Fahad Zakir",
-    "date": new Date(2024, 4, 28),
-    "journal": "Annals of Human and Social Sciences",
-    "scopus": true,
-    "impactFactor": 0
-  },
-  {
-    "title": "Perception of Health Risks and Strategies for Mitigation among Male and Female Users of Cosmetics in the District of Kasur",
-    "author": "Mr. Fahad Zakir : 7199",
-    "authorName": "Mr Fahad Zakir",
-    "date": new Date(2024, 3, 1),
-    "journal": "JDSS",
-    "scopus": true,
-    "impactFactor": 0
-  },
-  {
-    "title": "Success factors analysis for requirement elicitation in global  software development paradigm: An empirical study",
-    "author": "Dr. Muhammad Yaseen : 5769",
-    "authorName": "Dr. Muhammad Yaseen",
-    "date": new Date(2022, 3, 6),
-    "journal": "Journal of Software: Evolution and Process",
-    "scopus": true,
-    "impactFactor": 2
-  },
-  {
     "title": "A Novel AI-Based Stock Market Prediction Using Machine  Learning Algorithm",
     "author": "Dr. Muhammad Yaseen : 5769",
     "authorName": "Dr. Muhammad Yaseen",
@@ -300,42 +327,6 @@ export const publicationsData = [
     "journal": "Scientific Programming",
     "scopus": true,
     "impactFactor": 2
-  },
-  {
-    "title": "Detection of impostor and tampered segments in audio by using an intelligent system",
-    "author": "Mr. Zeeshan Mubeen : 7583",
-    "authorName": "Mr Zeeshan Mubeen",
-    "date": new Date(2021, 2, 21),
-    "journal": "Computers and Electrical Engineering",
-    "scopus": true,
-    "impactFactor": 4.1
-  },
-  {
-    "title": "Machine Learning for Improved Threat Detection: LightGBM vs. CatBoost",
-    "author": "Mr. Zeeshan Mubeen : 7583",
-    "authorName": "Mr Zeeshan Mubeen",
-    "date": new Date(2024, 5, 1),
-    "journal": "Journal of Computing & Biomedical Informatics",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Securing IoT: Balancing Privacy and Attack Prediction",
-    "author": "Mr. Zeeshan Mubeen : 7583",
-    "authorName": "Mr Zeeshan Mubeen",
-    "date": new Date(2024, 5, 1),
-    "journal": "Journal of Computing & Biomedical Informatics",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Ontology based multiagent effort estimation system for scrum agile method",
-    "author": "Dr. Muhammad Adnan : 7585",
-    "authorName": "Dr Muhammad Adnan",
-    "date": new Date(2011, 10, 8),
-    "journal": "IEEE ACCESS",
-    "scopus": true,
-    "impactFactor": 3.4
   },
   {
     "title": "Artificial Subjectivity: Personal Semantic Memory Model for Cognitive Agents",
@@ -347,58 +338,85 @@ export const publicationsData = [
     "impactFactor": 2.79
   },
   {
-    "title": "Ontology-oriented software effort estimation system for E-commerce applications based on extreme programming and scrum methodologies",
-    "author": "Dr. Muhammad Adnan : 7585",
-    "authorName": "Dr Muhammad Adnan",
-    "date": new Date(2019, 10, 11),
-    "journal": "The Computer Journal",
+    "title": "A Fast Electrical Resistivity-Based Algorithm to Measure and Visualize Two-Phase Swirling Flows",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2022, 1, 25),
+    "journal": "MDPI Sensors",
     "scopus": true,
-    "impactFactor": 1.5
+    "impactFactor": 3.9
   },
   {
-    "title": "A novel approach to super quality software development using workflows",
-    "author": "Dr. Muhammad Adnan : 7585",
-    "authorName": "Dr Muhammad Adnan",
-    "date": new Date(2016, 9, 20),
-    "journal": "IEEE 7th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON)",
+    "title": "Machine Learning with Data Balancing Technique for IoT Attack and Anomalies Detection",
+    "author": "Ms. Hina Alam : 7631",
+    "authorName": "Ms Hina Alam",
+    "date": new Date(2022, 2, 14),
+    "journal": "2022 Second International Conference on Distributed Computing and High Performance Computing (DCHPC)",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Parallel Implementation of FEM Solver for Shared Memory Using OpenMP",
+    "author": "Ms. Ramisha Farrukh : 7596",
+    "authorName": "Ms Ramisha Farrukh",
+    "date": new Date(2022, 2, 19),
+    "journal": "Hindawi Mathematical Problems in Engineering",
+    "scopus": true,
+    "impactFactor": 1.3
+  },
+  {
+    "title": "Success factors analysis for requirement elicitation in global  software development paradigm: An empirical study",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2022, 3, 6),
+    "journal": "Journal of Software: Evolution and Process",
+    "scopus": true,
+    "impactFactor": 2
+  },
+  {
+    "title": "Towards Tomography-Based Real-Time Control of Multiphase Flows: A Proof of Concept in Inline Fluid Separation",
+    "author": "Dr. Muhammad Awais Sattar : 5633",
+    "authorName": "Dr Muhammad Awais Sattar",
+    "date": new Date(2022, 5, 8),
+    "journal": "MDPI Sensor",
+    "scopus": true,
+    "impactFactor": 3.9
+  },
+  {
+    "title": "Context-Based Emotion Predictor: A Decision- Making Framework for Mobile Data",
+    "author": "Dr. Muhammad Asif Nauman : 7196",
+    "authorName": "Dr Muhammad Asif Nauman",
+    "date": new Date(2022, 5, 16),
+    "journal": "Mobile Information Systems",
     "scopus": false,
     "impactFactor": 0
   },
   {
-    "title": "Minimizing big data problems using cloud computing based on Hadoop architecture",
-    "author": "Dr. Muhammad Adnan : 7585",
-    "authorName": "Dr Muhammad Adnan",
-    "date": new Date(2014, 11, 15),
-    "journal": "International Symposium on High Capacity Optical Networks and Enabling Technologies, HONET",
+    "title": "Context-Based Emotion Predictor: A Decision- Making Framework for Mobile Data",
+    "author": "Dr. Muhammad Asif Nauman : 7196",
+    "authorName": "Dr Muhammad Asif Nauman",
+    "date": new Date(2022, 5, 16),
+    "journal": "Mobile Information Systems",
     "scopus": false,
     "impactFactor": 0
   },
   {
-    "title": "IoT and Ensemble Long Short Term Memory-based Evapotranspiration Forecasting of Riyadh",
-    "author": "Dr. Muhammad Asif Nauman : 7196",
-    "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2023, 8, 1),
-    "journal": "Sensors",
-    "scopus": true,
-    "impactFactor": 3.4
+    "title": "Estimation of outliers in cognitive networks spectrum sensing",
+    "author": "Mr. Waqas Ahmad : 7094",
+    "authorName": "Mr Waqas Ahmad",
+    "date": new Date(2022, 5, 23),
+    "journal": "Lahore Garrison University Research Journal of Computer Science and IT",
+    "scopus": false,
+    "impactFactor": 0
   },
   {
-    "title": "Speech Emotion Recognition through Hybrid Features and Convolutional Neural Network",
+    "title": "Deep Learning-based Environmental Sound Classification Using Feature Fusion and Data Enhancement",
     "author": "Dr. Muhammad Asif Nauman : 7196",
     "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2023, 3, 10),
-    "journal": "Applied Sciences",
+    "date": new Date(2022, 5, 29),
+    "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 2.5
-  },
-  {
-    "title": "Crowd Anomaly Detection in Video Frames Using Fine-Tuned AlexNet Model",
-    "author": "Dr. Muhammad Asif Nauman : 7196",
-    "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2022, 8, 28),
-    "journal": "Electronics",
-    "scopus": true,
-    "impactFactor": 2.6
+    "impactFactor": 2
   },
   {
     "title": "Context Aware Evapotranspiration (ETs) for Saline Soils reclamation",
@@ -419,75 +437,120 @@ export const publicationsData = [
     "impactFactor": 2.5
   },
   {
-    "title": "Deep Learning-based Environmental Sound Classification Using Feature Fusion and Data Enhancement",
+    "title": "Crowd Anomaly Detection in Video Frames Using Fine-Tuned AlexNet Model",
     "author": "Dr. Muhammad Asif Nauman : 7196",
     "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2022, 5, 29),
-    "journal": "Computers, Materials & Continua",
+    "date": new Date(2022, 8, 28),
+    "journal": "Electronics",
+    "scopus": true,
+    "impactFactor": 2.6
+  },
+  {
+    "title": "A hybrid technique using minimal spanning tree and analytic  hierarchical process to prioritize functional requirements for parallel  software development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2023, 1, 12),
+    "journal": "Requirements Engineering",
+    "scopus": true,
+    "impactFactor": 2.1
+  },
+  {
+    "title": "Detection and Analysis of Active Attacks using Honeypot",
+    "author": "Mr. Waqas Ahmad : 7094",
+    "authorName": "Mr Waqas Ahmad",
+    "date": new Date(2023, 2, 24),
+    "journal": "ational Journal of Computer Applications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Speech Emotion Recognition through Hybrid Features and Convolutional Neural Network",
+    "author": "Dr. Muhammad Asif Nauman : 7196",
+    "authorName": "Dr Muhammad Asif Nauman",
+    "date": new Date(2023, 3, 10),
+    "journal": "Applied Sciences",
+    "scopus": true,
+    "impactFactor": 2.5
+  },
+  {
+    "title": "IoT Based Smart Baby Monitoring System with EmotionRecognition Using Machine Learning",
+    "author": "Ms. Hina Alam : 7631",
+    "authorName": "Ms Hina Alam",
+    "date": new Date(2023, 3, 11),
+    "journal": "Hindawi Wireless Communications and Mobile Computing",
+    "scopus": true,
+    "impactFactor": 4.6
+  },
+  {
+    "title": "A Comprehensive Survey on the Cooperation of Fog Computing Paradigm-based IoT Applications: Layered Architecture, Real-Time Security Issues, and Solutions",
+    "author": "Ms. Hina Alam : 7631",
+    "authorName": "Ms Hina Alam",
+    "date": new Date(2023, 6, 12),
+    "journal": "IEEE Access",
+    "scopus": true,
+    "impactFactor": 3.4
+  },
+  {
+    "title": "Empirical exploration of critical challenges of requirements  implementation in global software development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2023, 6, 14),
+    "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
     "impactFactor": 2
   },
   {
-    "title": "Context-Based Emotion Predictor: A Decision- Making Framework for Mobile Data",
-    "author": "Dr. Muhammad Asif Nauman : 7196",
-    "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2022, 5, 16),
-    "journal": "Mobile Information Systems",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Context-Based Emotion Predictor: A Decision- Making Framework for Mobile Data",
-    "author": "Dr. Muhammad Asif Nauman : 7196",
-    "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2022, 5, 16),
-    "journal": "Mobile Information Systems",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Performance Evaluation and Comparison of EQM with RED, SFQ, and REM, TCP Congestion Control Algorithms Using NS-2",
-    "author": "Dr. Muhammad Asif Nauman : 7196",
-    "authorName": "Dr Muhammad Asif Nauman",
-    "date": new Date(2015, 10, 30),
-    "journal": "International Journal of Computer Science and Telecommunications",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "ECM-MAC: An Efficient Collision Mitigation Strategy in Contention Based MAC Protocol",
-    "author": "Dr. Sheheryar Malik : 3266",
-    "authorName": "Dr Sheheryar Malik",
-    "date": new Date(2021, 3, 30),
-    "journal": "IEEE Access",
+    "title": "Journal of Software: Evolution and Process",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2023, 7, 17),
+    "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 3.6
+    "impactFactor": 2
   },
   {
-    "title": "VTA-SMAC: Variable Traffic-Adaptive Duty Cycled Sensor MAC Protocol to Enhance Overall QoS of S-MAC Protocol",
-    "author": "Dr. Sheheryar Malik : 3266",
-    "authorName": "Dr Sheheryar Malik",
-    "date": new Date(2021, 2, 3),
-    "journal": "IEEE Access",
+    "title": "IoT and Ensemble Long Short Term Memory-based Evapotranspiration Forecasting of Riyadh",
+    "author": "Dr. Muhammad Asif Nauman : 7196",
+    "authorName": "Dr Muhammad Asif Nauman",
+    "date": new Date(2023, 8, 1),
+    "journal": "Sensors",
     "scopus": true,
-    "impactFactor": 3.6
+    "impactFactor": 3.4
   },
   {
-    "title": "Analysis of Machine Learning Techniques for Detection of Tumor Suppressor Genes for Early Detection of Cancer: A Systematic Literature Review",
-    "author": "Mr. Muhammad Ayaz Farid : 4407",
-    "authorName": "Mr Muhammad Ayaz Farid",
-    "date": new Date(2021, 1, 2),
-    "journal": "IEEE",
+    "title": "Reducing Dataset Specificity for Deepfakes Using Ensemble Learning",
+    "author": "Mr. Khawar Iqbal : 5737",
+    "authorName": "Mr Khawar Iqbal",
+    "date": new Date(2023, 8, 7),
+    "journal": "Computers, Materials & Continua",
+    "scopus": true,
+    "impactFactor": 5.3
+  },
+  {
+    "title": "Requirement elicitation model for global software  development vendors",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2023, 9, 3),
+    "journal": "Journal of Software: Evolution and Process",
+    "scopus": true,
+    "impactFactor": 2
+  },
+  {
+    "title": "NA",
+    "author": "Ms. Ayesha Majid : 6319",
+    "authorName": "Ms Ayesha Majid",
+    "date": new Date(2023, 11, 12),
+    "journal": "NA",
     "scopus": false,
     "impactFactor": 0
   },
   {
-    "title": "Analysis of Machine Learning Techniques for Detection Framework for DNA Repair Genes to help Diagnose Cancer: A Systematic Literature Review",
-    "author": "Mr. Muhammad Ayaz Farid : 4407",
-    "authorName": "Mr Muhammad Ayaz Farid",
-    "date": new Date(2021, 1, 1),
-    "journal": "IEEE",
-    "scopus": false,
+    "title": "Perception of Health Risks and Strategies for Mitigation among Male and Female Users of Cosmetics in the District of Kasur",
+    "author": "Mr. Fahad Zakir : 7199",
+    "authorName": "Mr Fahad Zakir",
+    "date": new Date(2024, 3, 1),
+    "journal": "JDSS",
+    "scopus": true,
     "impactFactor": 0
   },
   {
@@ -500,12 +563,48 @@ export const publicationsData = [
     "impactFactor": 3.4
   },
   {
-    "title": "Evidence in software architecture, a systematic literature review",
-    "author": "Ms. Nadia Qureshi : 6178",
-    "authorName": "Ms Nadia Qureshi",
-    "date": new Date(2013, 3, 14),
-    "journal": "EASE: Evaluation and Assessment in Software Engineering",
+    "title": "Emergence of Novel WEDEx-Kerberotic Cryptographic Framework to Strengthen the Cloud Data Security against Malicious Attacks",
+    "author": "Dr. Saman Riaz : 7608",
+    "authorName": "Dr Saman Riaz",
+    "date": new Date(2024, 4, 13),
+    "journal": "MDPI Symmetry",
     "scopus": true,
+    "impactFactor": 2.2
+  },
+  {
+    "title": "Computational Insight into the Physical Properties of Bulk MP (M =  Li, Na, K) for Energy Applications",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2024, 4, 16),
+    "journal": "ACS OMEGA",
+    "scopus": true,
+    "impactFactor": 4.1
+  },
+  {
+    "title": "Prevalence of an Identity Crisis Within the Transgender Population of Pakistan",
+    "author": "Mr. Fahad Zakir : 7199",
+    "authorName": "Mr Fahad Zakir",
+    "date": new Date(2024, 4, 28),
+    "journal": "Annals of Human and Social Sciences",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Machine Learning for Improved Threat Detection: LightGBM vs. CatBoost",
+    "author": "Mr. Zeeshan Mubeen : 7583",
+    "authorName": "Mr Zeeshan Mubeen",
+    "date": new Date(2024, 5, 1),
+    "journal": "Journal of Computing & Biomedical Informatics",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Securing IoT: Balancing Privacy and Attack Prediction",
+    "author": "Mr. Zeeshan Mubeen : 7583",
+    "authorName": "Mr Zeeshan Mubeen",
+    "date": new Date(2024, 5, 1),
+    "journal": "Journal of Computing & Biomedical Informatics",
+    "scopus": false,
     "impactFactor": 0
   },
   {
@@ -518,92 +617,11 @@ export const publicationsData = [
     "impactFactor": 1.5
   },
   {
-    "title": "Collaborative filtering based online recommendation systems: A survey",
-    "author": "Mr. Asim Mansha : 6177",
-    "authorName": "Mr Asim Mansha",
-    "date": new Date(2018, 2, 22),
-    "journal": "2017 International Conference on Information and Communication Technologies (ICICT)",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Parallel Implementation of FEM Solver for Shared Memory Using OpenMP",
-    "author": "Ms. Ramisha Farrukh : 7596",
-    "authorName": "Ms Ramisha Farrukh",
-    "date": new Date(2022, 2, 19),
-    "journal": "Hindawi Mathematical Problems in Engineering",
-    "scopus": true,
-    "impactFactor": 1.3
-  },
-  {
-    "title": "UML-SR: A Novel Security Requirements Specification Language",
-    "author": "Mr. Muhammad Mohsin : 1283",
-    "authorName": "Mr Muhammad Mohsin",
-    "date": new Date(2019, 6, 25),
-    "journal": "IEEE  Sofia, Bulgaria",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "A Comprehensive Survey on the Cooperation of Fog Computing Paradigm-based IoT Applications: Layered Architecture, Real-Time Security Issues, and Solutions",
-    "author": "Ms. Hina Alam : 7631",
-    "authorName": "Ms Hina Alam",
-    "date": new Date(2023, 6, 12),
-    "journal": "IEEE Access",
-    "scopus": true,
-    "impactFactor": 3.4
-  },
-  {
-    "title": "IoT Based Smart Baby Monitoring System with EmotionRecognition Using Machine Learning",
-    "author": "Ms. Hina Alam : 7631",
-    "authorName": "Ms Hina Alam",
-    "date": new Date(2023, 3, 11),
-    "journal": "Hindawi Wireless Communications and Mobile Computing",
-    "scopus": true,
-    "impactFactor": 4.6
-  },
-  {
-    "title": "Machine Learning with Data Balancing Technique for IoT Attack and Anomalies Detection",
-    "author": "Ms. Hina Alam : 7631",
-    "authorName": "Ms Hina Alam",
-    "date": new Date(2022, 2, 14),
-    "journal": "2022 Second International Conference on Distributed Computing and High Performance Computing (DCHPC)",
-    "scopus": true,
-    "impactFactor": 0
-  },
-  {
-    "title": "Reducing Dataset Specificity for Deepfakes Using Ensemble Learning",
-    "author": "Mr. Khawar Iqbal : 5737",
-    "authorName": "Mr Khawar Iqbal",
-    "date": new Date(2023, 8, 7),
-    "journal": "Computers, Materials & Continua",
-    "scopus": true,
-    "impactFactor": 5.3
-  },
-  {
-    "title": "TRANSDUCED-INPUT AUTOMATA WITH TRANSLUCENT LETTERS",
-    "author": "Dr. Madeeha Fatima : 3473",
-    "authorName": "Dr Madeeha Fatima",
-    "date": new Date(2020, 0, 1),
-    "journal": "Comptes rendus de l’Acade'mie bulgare des Sciences, Vol 73, No1, pp.33-39",
-    "scopus": true,
-    "impactFactor": 0.3
-  },
-  {
-    "title": "On the Combination of Finite State Transducers and Finite Automata with Translucent Letter",
-    "author": "Dr. Madeeha Fatima : 3473",
-    "authorName": "Dr Madeeha Fatima",
-    "date": new Date(2019, 9, 13),
-    "journal": "Middle-European Conference on Applied Theoretical Computer science (MATCOS) 2019",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
-    "title": "Software Engineering Ethics in Pakistani Software Development Industry",
-    "author": "Dr. Madeeha Fatima : 3473",
-    "authorName": "Dr Madeeha Fatima",
-    "date": new Date(2013, 9, 1),
-    "journal": "WASET Dubai, UAE International Conference",
+    "title": "https://scholar.google.com/citations?user=b0CGq_wAAAAJ&hl=en&authuser=2",
+    "author": "Dr. Saman Riaz : 7608",
+    "authorName": "Dr Saman Riaz",
+    "date": new Date(2024, 5, 20),
+    "journal": "Research Reports on Computer Science",
     "scopus": false,
     "impactFactor": 0
   },
@@ -635,6 +653,15 @@ export const publicationsData = [
     "impactFactor": 0
   },
   {
+    "title": "ext-Generation Block Ciphers: Achieving Superior Memory Efficiency and Cryptographic Robustness for IoT Devices",
+    "author": "Ms. Saadia Aziz : 3322",
+    "authorName": "Ms Saadia Aziz",
+    "date": new Date(2024, 9, 23),
+    "journal": "Cryptography-mdpi",
+    "scopus": true,
+    "impactFactor": 1.8
+  },
+  {
     "title": "Explanatory and predictive modeling of cybersecurity behaviors using protection motivation theory",
     "author": "Ms. Uzma Kiran : 1629",
     "authorName": "Ms Uzma Kiran",
@@ -642,24 +669,6 @@ export const publicationsData = [
     "journal": "Computers & Security",
     "scopus": true,
     "impactFactor": 4.8
-  },
-  {
-    "title": "Next Word Prediction for Urdu using Deep Learning Techniques",
-    "author": "Mr. Muhammad Haroon : 6260",
-    "authorName": "Mr Muhammad Haroon",
-    "date": new Date(2025, 1, 27),
-    "journal": "VFAST Transactions on Software Engineering",
-    "scopus": false,
-    "impactFactor": 0.3
-  },
-  {
-    "title": "Efficient and Sustainable Video Surveillance Using CNN-LSTM Model for Suspicious Activity Detection",
-    "author": "Ms. Sara Khaleel",
-    "authorName": "Ms Sara Khaleel",
-    "date": new Date(2025, 2, 2),
-    "journal": "VFAST Transactions on Software Engineering",
-    "scopus": false,
-    "impactFactor": 0.3
   },
   {
     "title": "Convolutional Neural Networks: A Comprehensive Evaluation and Benchmarking of Pooling Layer Variants",
@@ -671,24 +680,6 @@ export const publicationsData = [
     "impactFactor": 2.2
   },
   {
-    "title": "Emergence of Novel WEDEx-Kerberotic Cryptographic Framework to Strengthen the Cloud Data Security against Malicious Attacks",
-    "author": "Dr. Saman Riaz : 7608",
-    "authorName": "Dr Saman Riaz",
-    "date": new Date(2024, 4, 13),
-    "journal": "MDPI Symmetry",
-    "scopus": true,
-    "impactFactor": 2.2
-  },
-  {
-    "title": "https://scholar.google.com/citations?user=b0CGq_wAAAAJ&hl=en&authuser=2",
-    "author": "Dr. Saman Riaz : 7608",
-    "authorName": "Dr Saman Riaz",
-    "date": new Date(2024, 5, 20),
-    "journal": "Research Reports on Computer Science",
-    "scopus": false,
-    "impactFactor": 0
-  },
-  {
     "title": "A Robust Hybrid Machine Learning based Implications and Preventions of Social Media Blackmailing and Cyber bullying: A Systematic Approach",
     "author": "Mr. Adnan Ahmad",
     "authorName": "Mr Adnan Ahmad",
@@ -698,13 +689,13 @@ export const publicationsData = [
     "impactFactor": 0
   },
   {
-    "title": "ext-Generation Block Ciphers: Achieving Superior Memory Efficiency and Cryptographic Robustness for IoT Devices",
-    "author": "Ms. Saadia Aziz : 3322",
-    "authorName": "Ms Saadia Aziz",
-    "date": new Date(2024, 9, 23),
-    "journal": "Cryptography-mdpi",
-    "scopus": true,
-    "impactFactor": 1.8
+    "title": "Next Word Prediction for Urdu using Deep Learning Techniques",
+    "author": "Mr. Muhammad Haroon : 6260",
+    "authorName": "Mr Muhammad Haroon",
+    "date": new Date(2025, 1, 27),
+    "journal": "VFAST Transactions on Software Engineering",
+    "scopus": false,
+    "impactFactor": 0.3
   },
   {
     "title": "Crime Forecasting Using Data Analytics in Pakistan",
@@ -714,6 +705,24 @@ export const publicationsData = [
     "journal": "Journal of Computing & Biomedical Informatics (JCBI)",
     "scopus": false,
     "impactFactor": 0
+  },
+  {
+    "title": "Efficient and Sustainable Video Surveillance Using CNN-LSTM Model for Suspicious Activity Detection",
+    "author": "Ms. Sara Khaleel",
+    "authorName": "Ms Sara Khaleel",
+    "date": new Date(2025, 2, 2),
+    "journal": "VFAST Transactions on Software Engineering",
+    "scopus": false,
+    "impactFactor": 0.3
+  },
+  {
+    "title": "Cluster Analysis of Security Threats in Web Applications: A Multiphase SDLC Analysis",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2025, 8, 22),
+    "journal": "Journal of Software: Evolution and Process",
+    "scopus": true,
+    "impactFactor": 1.8
   },
   {
     "title": "Prediction of hydrogen generation from perhydro-dibenzyltoluene empowered with machine learning",
@@ -932,7 +941,7 @@ export const publicationsData = [
     "impactFactor": 0
   },
   {
-    "title": "DETERMINING STUDENT&#39;S ONLINE ACADEMIC PERFORMANCE USING\n MACHINE LEARNING TECHNIQUES",
+    "title": "DETERMINING STUDENT&#39;S ONLINE ACADEMIC PERFORMANCE USING\r\n MACHINE LEARNING TECHNIQUES",
     "author": "Atika Islam, Faisal Bukhari, Muhammad Awais Sattar, Ayesha Kashif",
     "authorName": "Atika Islam, Faisal Bukhari, Muhammad Awais Sattar, Ayesha Kashif",
     "date": null,
@@ -1229,7 +1238,7 @@ export const publicationsData = [
     "impactFactor": 3.48
   },
   {
-    "title": "Success factors analysis for requirement elicitation in global\n software development paradigm: An empirical study",
+    "title": "Success factors analysis for requirement elicitation in global\r\n software development paradigm: An empirical study",
     "author": "MUHAMMAD YASEEN",
     "authorName": "Dr. Muhammad Yaseen",
     "date": new Date(2024, 2, 22),
@@ -1238,7 +1247,7 @@ export const publicationsData = [
     "impactFactor": 2
   },
   {
-    "title": "A hybrid technique using minimal spanning tree and analytic\n hierarchical process to prioritize functional requirements for parallel\n software development",
+    "title": "A hybrid technique using minimal spanning tree and analytic\r\n hierarchical process to prioritize functional requirements for parallel\r\n software development",
     "author": "MUHAMMAD YASEEN",
     "authorName": "Dr. Muhammad Yaseen",
     "date": new Date(2024, 1, 23),
