@@ -1,17 +1,45 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import { Trophy, Medal, Award, Star } from 'lucide-react'
+import { filterByFiscalYear } from '../utils/fiscalYear'
 
-const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime = false }) => {
-  const sortedAuthors = Object.entries(authorCounts)
-    .map(([name, count]) => ({ 
-      name, 
-      count,
-      impactFactor: authorImpactFactors?.[name]?.impactFactor || 0,
-      avgImpactFactor: authorImpactFactors?.[name] ? 
-        (authorImpactFactors[name].impactFactor / authorImpactFactors[name].count) : 0
-    }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 10) // Top 10
+const AuthorLeaderboard = ({
+  publications = [],
+  fiscalYears = [],
+  allTime = false
+}) => {
+  const [showAll, setShowAll] = useState(false)
+  const [selectedFiscalYear, setSelectedFiscalYear] = useState('all')
+
+  const visiblePublications = useMemo(
+    () => filterByFiscalYear(publications, selectedFiscalYear),
+    [publications, selectedFiscalYear]
+  )
+
+  const authorStats = useMemo(() => {
+    const counts = {}
+    const impact = {}
+    visiblePublications.forEach(pub => {
+      const author = pub.authorName || 'Unknown'
+      counts[author] = (counts[author] || 0) + 1
+      impact[author] = (impact[author] || 0) + (pub.impactFactor || 0)
+    })
+    return { counts, impact }
+  }, [visiblePublications])
+
+  const sortedAuthors = useMemo(() => {
+    return Object.entries(authorStats.counts)
+      .map(([name, count]) => ({
+        name,
+        count,
+        impactFactor: authorStats.impact[name] || 0,
+        avgImpactFactor: authorStats.impact[name]
+          ? authorStats.impact[name] / count
+          : 0
+      }))
+      .sort((a, b) => b.count - a.count)
+  }, [authorStats])
+
+  const displayedAuthors = showAll ? sortedAuthors : sortedAuthors.slice(0, 10)
 
   const getRankIcon = (index) => {
     if (index === 0) return <Trophy className="w-5 h-5 text-yellow-500" />
@@ -28,24 +56,36 @@ const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime = false 
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="flex items-center gap-2 mb-6">
-        <Trophy className="w-6 h-6 text-yellow-500" />
-        <h3 className="text-xl font-bold text-gray-800">
-          {allTime ? 'All-Time Top Contributors' : 'Top Contributors'}
-        </h3>
-        {allTime && (
-          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
-            Based on all entries
+    <div className="bg-white rounded-3xl shadow-2xl p-6 border border-white/70">
+      <div className="flex flex-wrap items-center gap-3 mb-6">
+        <div className="flex items-center gap-2">
+          <Trophy className="w-6 h-6 text-yellow-500" />
+          <h3 className="text-xl font-bold text-gray-800">
+            {allTime ? 'All-Time Top Contributors' : 'Top Contributors'}
+          </h3>
+        </div>
+        <div className="ml-auto flex items-center gap-2 text-xs uppercase tracking-wide text-slate-500">
+          <span className="text-[0.65rem] px-3 py-1 bg-slate-50 rounded-full border border-slate-200">
+            {selectedFiscalYear === 'all' ? 'All Fiscal Years' : selectedFiscalYear}
           </span>
-        )}
+          <select
+            value={selectedFiscalYear}
+            onChange={(e) => setSelectedFiscalYear(e.target.value)}
+            className="text-[0.65rem] px-3 py-1 border border-slate-200 rounded-full bg-white focus:outline-none"
+          >
+            <option value="all">All Fiscal Years</option>
+            {fiscalYears.map(fy => (
+              <option key={fy} value={fy}>{fy}</option>
+            ))}
+          </select>
+        </div>
       </div>
 
-      {sortedAuthors.length === 0 ? (
+      {displayedAuthors.length === 0 ? (
         <p className="text-gray-500 text-center py-8">No author data available</p>
       ) : (
         <div className="space-y-3">
-          {sortedAuthors.map((author, index) => (
+          {displayedAuthors.map((author, index) => (
             <div
               key={author.name}
               className={`flex items-center gap-4 p-4 rounded-lg border-2 ${getRankColor(index)} transition-all hover:shadow-md`}
@@ -75,13 +115,24 @@ const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime = false 
                   <div
                     className="bg-blue-500 h-2 rounded-full transition-all"
                     style={{
-                      width: `${(author.count / sortedAuthors[0].count) * 100}%`
+                      width: `${(author.count / (sortedAuthors[0]?.count || 1)) * 100}%`
                     }}
                   ></div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {sortedAuthors.length > 10 && (
+        <div className="mt-4 flex justify-end">
+          <button
+            className="text-sm px-3 py-1 rounded-full border border-blue-200 text-blue-600 hover:bg-blue-50 transition"
+            onClick={() => setShowAll(value => !value)}
+          >
+            {showAll ? 'Show Top 10' : 'View All Faculty'}
+          </button>
         </div>
       )}
 

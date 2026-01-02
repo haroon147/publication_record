@@ -15,6 +15,13 @@ export const getFiscalYear = (date) => {
   }
   
   const year = dateObj.getFullYear()
+  
+  // Filter out obviously invalid dates (before 2000 or too far in the future)
+  // Allow dates from 2000 to 2030 for publication dates
+  if (year < 2000 || year > 2030) {
+    return null
+  }
+  
   const month = dateObj.getMonth() // 0-11, where 6 = July
   
   // If month is July (6) or later, it's the start of the fiscal year
@@ -50,28 +57,41 @@ export const getFiscalYearRange = (fiscalYear) => {
   const startShortYear = parseInt(match[1])
   const endShortYear = parseInt(match[2])
   
-  // Determine full years
-  // If end year is less than start year, it means we're in the 2000s
-  // Otherwise, we need to determine based on current date
-  const currentYear = new Date().getFullYear()
-  const currentCentury = Math.floor(currentYear / 100) * 100
+  // Determine full years - for our data range (2000-2030), fiscal years are in the 2000s
+  // FY 22-23 means July 1, 2022 to June 30, 2023
+  // FY 11-12 means July 1, 2011 to June 30, 2012
+  // FY 25-26 means July 1, 2025 to June 30, 2026
   
-  let startYear = currentCentury + startShortYear
-  let endYear = currentCentury + endShortYear
+  let startYear, endYear
   
-  // If end year seems to be in the past, it might be next century
-  if (endYear < startYear) {
-    endYear += 100
+  if (endShortYear < startShortYear) {
+    // Century crossing case (e.g., FY 99-00 = 1999-2000)
+    // For our data, this shouldn't happen, but handle it
+    startYear = 1900 + startShortYear
+    endYear = 2000 + endShortYear
+  } else {
+    // Normal case: both years in 2000s (for years 00-30)
+    // For years 00-30, assume 2000s
+    startYear = 2000 + startShortYear
+    endYear = 2000 + endShortYear
   }
   
-  // If start year seems too far in the future, adjust
-  if (startYear > currentYear + 10) {
-    startYear -= 100
-    endYear -= 100
+  // Validate: ensure years are in reasonable range (2000-2030)
+  if (startYear < 2000 || startYear > 2030) {
+    console.warn(`Invalid start year ${startYear} for fiscal year ${fiscalYear}`)
+    return null
+  }
+  if (endYear < 2000 || endYear > 2030) {
+    console.warn(`Invalid end year ${endYear} for fiscal year ${fiscalYear}`)
+    return null
   }
   
   const startDate = new Date(startYear, 6, 1) // July 1
   const endDate = new Date(endYear, 5, 30) // June 30
+  
+  // Set time to start/end of day for accurate comparison
+  startDate.setHours(0, 0, 0, 0)
+  endDate.setHours(23, 59, 59, 999)
   
   return { startDate, endDate }
 }
@@ -94,15 +114,26 @@ export const getAllFiscalYears = (publications) => {
   })
   
   // Sort fiscal years (most recent first)
-  return Array.from(fiscalYears).sort((a, b) => {
+  const sorted = Array.from(fiscalYears).sort((a, b) => {
     const aMatch = a.match(/FY (\d{2})-(\d{2})/)
     const bMatch = b.match(/FY (\d{2})-(\d{2})/)
     if (!aMatch || !bMatch) return 0
     
     const aYear = parseInt(aMatch[1])
     const bYear = parseInt(bMatch[1])
+    
+    // Handle century wrapping (e.g., FY 99-00 should come before FY 01-02)
+    if (aYear > 50 && bYear < 50) {
+      return -1 // a is in 1900s, b is in 2000s, so a comes first
+    }
+    if (aYear < 50 && bYear > 50) {
+      return 1 // a is in 2000s, b is in 1900s, so b comes first
+    }
+    
     return bYear - aYear // Descending order
   })
+  
+  return sorted
 }
 
 /**
@@ -112,22 +143,51 @@ export const getAllFiscalYears = (publications) => {
  * @returns {Array} - Filtered publications
  */
 export const filterByFiscalYear = (publications, fiscalYear) => {
-  if (fiscalYear === 'all') {
+  // If "all" is selected, return all publications (including those without dates)
+  if (fiscalYear === 'all' || !fiscalYear) {
+    console.log(`✅ Returning ALL publications (${publications.length} total) for fiscal year: ${fiscalYear}`)
     return publications
   }
   
   const range = getFiscalYearRange(fiscalYear)
   if (!range) {
+    console.warn(`Could not parse fiscal year range for: ${fiscalYear}`)
     return publications
   }
   
-  return publications.filter(pub => {
-    if (!pub.date) return false
-    // Validate that date is a valid Date object
-    if (!(pub.date instanceof Date) || isNaN(pub.date.getTime())) {
+  console.log(`🔍 Filtering by fiscal year ${fiscalYear}:`, {
+    startDate: range.startDate.toISOString(),
+    endDate: range.endDate.toISOString(),
+    totalPublications: publications.length
+  })
+  
+  const filtered = publications.filter(pub => {
+    if (!pub.date) {
       return false
     }
-    return pub.date >= range.startDate && pub.date <= range.endDate
+    
+    // Validate that date is a valid Date object
+    let dateObj = pub.date
+    if (!(dateObj instanceof Date)) {
+      // Try to convert string or other format to Date
+      dateObj = new Date(dateObj)
+    }
+    
+    if (!(dateObj instanceof Date) || isNaN(dateObj.getTime())) {
+      return false
+    }
+    
+    // Compare dates (normalize to start of day for comparison)
+    const pubDate = new Date(dateObj)
+    pubDate.setHours(0, 0, 0, 0)
+    
+    const isInRange = pubDate >= range.startDate && pubDate <= range.endDate
+    
+    return isInRange
   })
+  
+  console.log(`✅ Filtered ${filtered.length} publications for ${fiscalYear}`)
+  
+  return filtered
 }
 

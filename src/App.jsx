@@ -8,46 +8,37 @@ const STORAGE_KEY = 'publication_records'
 function App() {
   const [publications, setPublications] = useState([])
 
-  // Load data on component mount - prioritize localStorage, fallback to default data
+  // Load data on component mount - always use the latest data from publications.js
+  // This ensures we always have the most up-to-date data after regenerating from Excel
   useEffect(() => {
-    const savedData = localStorage.getItem(STORAGE_KEY)
-    if (savedData) {
-      try {
-        const parsed = JSON.parse(savedData)
-        // Convert date strings back to Date objects (handle null dates and validate)
-        const publicationsWithDates = parsed.map(pub => {
-          let date = null
-          if (pub.date && pub.date !== 'null') {
-            const dateObj = new Date(pub.date)
-            // Only use the date if it's valid
-            if (dateObj instanceof Date && !isNaN(dateObj.getTime())) {
-              date = dateObj
-            }
-          }
-          return {
-            ...pub,
-            date: date
-          }
-        })
-        setPublications(publicationsWithDates)
-        console.log('📂 Loaded saved publications from localStorage:', publicationsWithDates.length)
-      } catch (error) {
-        console.error('Error loading saved data:', error)
-        // Fallback to default data if localStorage fails
-        setPublications(publicationsData)
+    // Always use the latest data from publications.js file
+    // Ensure dates are proper Date objects (they should be from publications.js, but verify)
+    const publicationsWithDates = publicationsData.map(pub => {
+      let date = pub.date
+      // If date is not a Date object, try to convert it
+      if (date && !(date instanceof Date)) {
+        date = new Date(date)
+        if (isNaN(date.getTime())) {
+          date = null
+        }
       }
-    } else {
-      // No saved data, use default publications data
-      setPublications(publicationsData)
-      console.log('📂 Loaded default publications:', publicationsData.length)
-      
-      // Save default data to localStorage for future visits
-      const dataToSave = publicationsData.map(pub => ({
+      return {
         ...pub,
-        date: pub.date ? pub.date.toISOString() : null
-      }))
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave))
-    }
+        date: date
+      }
+    })
+    setPublications(publicationsWithDates)
+    console.log('📂 Loaded publications from data file:', publicationsWithDates.length)
+    console.log('📊 Publications with dates:', publicationsWithDates.filter(p => p.date).length)
+    console.log('📊 Publications without dates:', publicationsWithDates.filter(p => !p.date).length)
+    
+    // Update localStorage with the latest data
+    const dataToSave = publicationsWithDates.map(pub => ({
+      ...pub,
+      date: pub.date ? pub.date.toISOString() : null
+    }))
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave))
+    console.log('💾 Saved updated data to localStorage')
   }, [])
 
 

@@ -11,34 +11,73 @@ const ExcelUpload = ({ onDataLoaded }) => {
   const parseDate = (dateStr) => {
     if (!dateStr || dateStr === 'NA' || dateStr === '--' || dateStr === 'N/A' || dateStr === '') return null
     
-    // Handle Excel date serial number
-    if (typeof dateStr === 'number') {
-      const excelEpoch = new Date(1899, 11, 30)
-      const date = new Date(excelEpoch.getTime() + dateStr * 86400000)
-      return date
+    // Helper function to validate date is reasonable (between 2000 and 2030)
+    const isValidPublicationDate = (date) => {
+      if (!date || isNaN(date.getTime())) return false
+      const year = date.getFullYear()
+      // Allow dates from 2000 to 2030 for publications
+      return year >= 2000 && year <= 2030
     }
     
-    // Handle MM/DD/YYYY or DD/MM/YYYY format - try both
+    // Handle Excel date serial number
+    if (typeof dateStr === 'number') {
+      // Excel serial numbers for dates 2000-2030 are roughly between 36526 and 47482
+      // If the number is too small (< 30000), it's likely not a valid date serial
+      if (dateStr < 30000 && dateStr > 0) {
+        // Try as Excel serial number anyway
+        const excelEpoch = new Date(1899, 11, 30)
+        const date = new Date(excelEpoch.getTime() + dateStr * 86400000)
+        if (isValidPublicationDate(date)) {
+          return date
+        }
+        // If invalid, return null
+        return null
+      }
+      // For larger numbers, treat as Excel serial
+      const excelEpoch = new Date(1899, 11, 30)
+      const date = new Date(excelEpoch.getTime() + dateStr * 86400000)
+      if (isValidPublicationDate(date)) {
+        return date
+      }
+      return null
+    }
+    
+    // Handle MM/DD/YYYY or DD/MM/YYYY format
     if (typeof dateStr === 'string' && dateStr.includes('/')) {
       const parts = dateStr.split('/')
       if (parts.length === 3) {
         let part1 = parseInt(parts[0])
         let part2 = parseInt(parts[1])
         let year = parseInt(parts[2])
-        if (year < 100) year += 2000
         
-        // Try MM/DD/YYYY first (if first part <= 12, assume it's month)
-        if (part1 <= 12 && part2 <= 31) {
-          const date1 = new Date(year, part1 - 1, part2)
-          // Try DD/MM/YYYY if first attempt seems wrong
-          if (part2 <= 12 && part1 > 12) {
-            return new Date(year, part2 - 1, part1)
+        // Handle 2-digit years: assume 20xx for years 00-30, 19xx for years 31-99
+        if (year < 100) {
+          year += year <= 30 ? 2000 : 1900
+        }
+        
+        // Try both MM/DD/YYYY and DD/MM/YYYY formats
+        let date1 = null, date2 = null
+        
+        // Try MM/DD/YYYY (if part1 could be month)
+        if (part1 >= 1 && part1 <= 12 && part2 >= 1 && part2 <= 31) {
+          date1 = new Date(year, part1 - 1, part2)
+        }
+        
+        // Try DD/MM/YYYY (if part2 could be month)
+        if (part2 >= 1 && part2 <= 12 && part1 >= 1 && part1 <= 31) {
+          date2 = new Date(year, part2 - 1, part1)
+        }
+        
+        // Prefer the one that makes sense (valid date in our range)
+        if (date1 && isValidPublicationDate(date1)) {
+          // If both are valid, prefer the one where first part is <= 12 (more likely to be month)
+          if (date2 && isValidPublicationDate(date2)) {
+            return part1 <= 12 ? date1 : date2
           }
           return date1
         }
-        // Otherwise try DD/MM/YYYY
-        if (part2 <= 12 && part1 <= 31) {
-          return new Date(year, part2 - 1, part1)
+        if (date2 && isValidPublicationDate(date2)) {
+          return date2
         }
       }
     }
@@ -46,12 +85,27 @@ const ExcelUpload = ({ onDataLoaded }) => {
     // Handle DD-MM-YYYY format
     if (typeof dateStr === 'string' && dateStr.includes('-') && !dateStr.match(/[A-Za-z]/)) {
       const parts = dateStr.split('-')
-      if (parts.length === 3 && parts[0].length <= 2) {
-        let day = parseInt(parts[0])
-        let month = parseInt(parts[1])
-        let year = parseInt(parts[2])
-        if (year < 100) year += 2000
-        return new Date(year, month - 1, day)
+      if (parts.length === 3) {
+        // Check if it's DD-MM-YYYY (first part is day, second is month)
+        if (parts[0].length <= 2 && parts[1].length <= 2 && parts[2].length === 4) {
+          let day = parseInt(parts[0])
+          let month = parseInt(parts[1])
+          let year = parseInt(parts[2])
+          const date = new Date(year, month - 1, day)
+          if (isValidPublicationDate(date)) {
+            return date
+          }
+        }
+        // Check if it's YYYY-MM-DD format
+        if (parts[0].length === 4 && parts[1].length <= 2 && parts[2].length <= 2) {
+          let year = parseInt(parts[0])
+          let month = parseInt(parts[1])
+          let day = parseInt(parts[2])
+          const date = new Date(year, month - 1, day)
+          if (isValidPublicationDate(date)) {
+            return date
+          }
+        }
       }
     }
     
@@ -64,12 +118,21 @@ const ExcelUpload = ({ onDataLoaded }) => {
       }
       const month = months[monthMatch[1].toLowerCase()]
       const day = parseInt(monthMatch[2])
-      return new Date(2024, month, day)
+      // Default to current year if no year specified, but validate
+      const currentYear = new Date().getFullYear()
+      const date = new Date(currentYear, month, day)
+      if (isValidPublicationDate(date)) {
+        return date
+      }
     }
     
     // Try standard Date parsing
     const date = new Date(dateStr)
-    return isNaN(date.getTime()) ? null : date
+    if (isValidPublicationDate(date)) {
+      return date
+    }
+    
+    return null
   }
 
   const extractAuthorName = (authorStr) => {
@@ -77,6 +140,19 @@ const ExcelUpload = ({ onDataLoaded }) => {
     // Extract name before colon or ID
     const match = authorStr.toString().match(/^([^:]+)/)
     return match ? match[1].trim() : authorStr.toString().trim()
+  }
+
+  const authorNameMap = {
+    'muhammad yaseen': 'Dr. Muhammad Yaseen',
+    'dr muhammad yaseen': 'Dr. Muhammad Yaseen',
+    'dr. muhammad yaseen': 'Dr. Muhammad Yaseen'
+  }
+
+  const normalizeAuthorName = (name) => {
+    if (!name) return 'Unknown'
+    const cleaned = name.replace(/\./g, '').replace(/\s+/g, ' ').trim()
+    const key = cleaned.toLowerCase()
+    return authorNameMap[key] || cleaned
   }
 
   const handleFileUpload = async (e) => {
@@ -169,10 +245,8 @@ const ExcelUpload = ({ onDataLoaded }) => {
             throw new Error('Excel file must contain "Title" and "Author" columns')
           }
 
-          // Parse data rows
+          // Parse data rows - Load ALL publications regardless of date
           const publications = []
-          const startDate = new Date(2024, 6, 1) // July 1, 2024
-          const endDate = new Date(2025, 5, 30) // June 30, 2025
 
           for (let i = 1; i < jsonData.length; i++) {
             const row = jsonData[i]
@@ -220,23 +294,23 @@ const ExcelUpload = ({ onDataLoaded }) => {
               }
             }
             
-            // Filter by publication date range (July 1, 2024 - June 30, 2025)
-            // Only include publications with valid dates within the range
-            if (pubDate) {
-              // Check if date is within range
-              if (pubDate >= startDate && pubDate <= endDate) {
-                publications.push({
-                  title: String(title).trim(),
-                  author: String(author).trim(),
-                  authorName: extractAuthorName(author),
-                  date: pubDate,
-                  dateStr: dateStr,
-                  journal: String(journal).trim(),
-                  scopus: String(scopus).toLowerCase().includes('yes') || String(scopus).toLowerCase() === 'true',
-                  impactFactor: impactFactor // Impact factor is calculated only for publications within date range
-                })
-              }
-            } else if (i <= 5) {
+            // Include ALL publications regardless of date
+            // Date filtering will be done via fiscal year filter in the dashboard
+            const authorNameRaw = extractAuthorName(author)
+            const authorName = normalizeAuthorName(authorNameRaw)
+
+            publications.push({
+              title: String(title).trim(),
+              author: String(author).trim(),
+              authorName: authorName,
+              date: pubDate, // Can be null if date parsing fails
+              dateStr: dateStr,
+              journal: String(journal).trim(),
+              scopus: String(scopus).toLowerCase().includes('yes') || String(scopus).toLowerCase() === 'true',
+              impactFactor: impactFactor
+            })
+            
+            if (!pubDate && i <= 5) {
               // Log first few rows with date parsing issues for debugging
               console.warn(`⚠️ Could not parse date for row ${i}:`, {
                 dateStr: dateStr,
@@ -246,30 +320,17 @@ const ExcelUpload = ({ onDataLoaded }) => {
           }
 
           if (publications.length === 0) {
-            throw new Error('No publications found in the date range July 1, 2024 - June 30, 2025')
+            throw new Error('No publications found in the Excel file. Please ensure the file contains valid data.')
           }
 
           // Debug: Log impact factor detection from Excel column
           const publicationsWithIF = publications.filter(p => p.impactFactor > 0)
           const totalIF = publications.reduce((sum, p) => sum + (p.impactFactor || 0), 0)
           
-          // Sample raw data for first few rows to debug
-          const sampleRows = []
-          for (let i = 1; i <= Math.min(5, jsonData.length - 1); i++) {
-            const row = jsonData[i]
-            if (row && row.length > 0) {
-              sampleRows.push({
-                rowIndex: i,
-                dateValue: row[dateIdx],
-                impactFactorValue: impactFactorIdx !== -1 ? row[impactFactorIdx] : 'N/A',
-                parsedDate: parseDate(row[dateIdx] || ''),
-                inRange: (() => {
-                  const d = parseDate(row[dateIdx] || '')
-                  return d && d >= startDate && d <= endDate
-                })()
-              })
-            }
-          }
+          // Get date range of loaded publications
+          const datesWithValues = publications.filter(p => p.date).map(p => p.date)
+          const minDate = datesWithValues.length > 0 ? new Date(Math.min(...datesWithValues)) : null
+          const maxDate = datesWithValues.length > 0 ? new Date(Math.max(...datesWithValues)) : null
           
           console.log('📊 Journal Impact Factor Calculation:', {
             totalPublications: publications.length,
@@ -278,12 +339,10 @@ const ExcelUpload = ({ onDataLoaded }) => {
             impactFactorColumnIndex: impactFactorIdx,
             impactFactorColumnFound: impactFactorIdx !== -1,
             impactFactorColumnName: impactFactorIdx !== -1 ? jsonData[0][impactFactorIdx] : 'NOT FOUND',
-            dateRange: 'July 1, 2024 - June 30, 2025',
-            dateFilter: {
-              startDate: startDate.toISOString(),
-              endDate: endDate.toISOString()
-            },
-            sampleRows: sampleRows,
+            dateRange: minDate && maxDate ? 
+              `${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()}` : 
+              'All publications (including those without dates)',
+            publicationsWithDates: datesWithValues.length,
             sampleImpactFactors: publications.slice(0, 10).map(p => ({
               title: p.title.substring(0, 40),
               publicationDate: p.date ? p.date.toLocaleDateString() : 'No date',
@@ -299,8 +358,10 @@ const ExcelUpload = ({ onDataLoaded }) => {
           } else {
             console.log(`✅ Journal Impact Factor column found at index ${impactFactorIdx}: "${jsonData[0][impactFactorIdx]}"`)
             console.log(`📈 Total Journal Impact Factor (Sum): ${totalIF.toFixed(2)}`)
-            console.log(`📅 Date Range: July 1, 2024 - June 30, 2025`)
-            console.log(`📄 Publications included: ${publications.length}`)
+            console.log(`📄 All publications loaded: ${publications.length}`)
+            if (minDate && maxDate) {
+              console.log(`📅 Publication date range: ${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()}`)
+            }
             if (publicationsWithIF.length === 0) {
               console.warn('⚠️ No publications with impact factor > 0 found. Check if impact factor values are numeric.')
             }
@@ -407,10 +468,10 @@ const ExcelUpload = ({ onDataLoaded }) => {
         <p className="text-sm text-blue-800 font-medium mb-2">Expected Excel Format:</p>
         <ul className="text-xs text-blue-700 space-y-1 list-disc list-inside">
           <li>Required columns: <strong>Title</strong>, <strong>Author</strong></li>
-          <li>Optional columns: <strong>Date</strong>, <strong>Journal</strong>, <strong>Scopus</strong>, <strong>Impact Factor</strong></li>
+          <li>Optional columns: <strong>Date of Publication</strong>, <strong>Journal</strong>, <strong>Scopus</strong>, <strong>Journal Impact Factor</strong></li>
           <li>Date format: MM/DD/YYYY, DD-MM-YYYY, or Excel date serial number</li>
           <li>Impact Factor: Numeric value (e.g., 3.5, 5.2)</li>
-          <li>Only publications between July 1, 2024 - June 30, 2025 will be analyzed</li>
+          <li>All publications from the Excel file will be loaded. Use fiscal year filters in the dashboard to filter by date range.</li>
         </ul>
       </div>
     </div>

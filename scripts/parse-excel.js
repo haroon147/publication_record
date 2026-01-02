@@ -10,11 +10,35 @@ const __dirname = path.dirname(__filename);
 const parseDate = (dateStr) => {
   if (!dateStr || dateStr === 'NA' || dateStr === '--' || dateStr === 'N/A' || dateStr === '') return null;
   
+  // Helper function to validate date is reasonable (between 2000 and 2030)
+  const isValidPublicationDate = (date) => {
+    if (!date || isNaN(date.getTime())) return false;
+    const year = date.getFullYear();
+    // Allow dates from 2000 to 2030 for publications
+    return year >= 2000 && year <= 2030;
+  };
+  
   // Handle Excel date serial number
   if (typeof dateStr === 'number') {
+    // Excel serial numbers for dates 2000-2030 are roughly between 36526 and 47482
+    // If the number is too small (< 30000), it's likely not a valid date serial
+    if (dateStr < 30000 && dateStr > 0) {
+      // Try as Excel serial number anyway
+      const excelEpoch = new Date(1899, 11, 30);
+      const date = new Date(excelEpoch.getTime() + dateStr * 86400000);
+      if (isValidPublicationDate(date)) {
+        return date;
+      }
+      // If invalid, return null
+      return null;
+    }
+    // For larger numbers, treat as Excel serial
     const excelEpoch = new Date(1899, 11, 30);
     const date = new Date(excelEpoch.getTime() + dateStr * 86400000);
-    return date;
+    if (isValidPublicationDate(date)) {
+      return date;
+    }
+    return null;
   }
   
   // Handle MM/DD/YYYY or DD/MM/YYYY format
@@ -24,19 +48,35 @@ const parseDate = (dateStr) => {
       let part1 = parseInt(parts[0]);
       let part2 = parseInt(parts[1]);
       let year = parseInt(parts[2]);
-      if (year < 100) year += 2000;
       
-      // Try MM/DD/YYYY first
-      if (part1 <= 12 && part2 <= 31) {
-        const date1 = new Date(year, part1 - 1, part2);
-        if (part2 <= 12 && part1 > 12) {
-          return new Date(year, part2 - 1, part1);
+      // Handle 2-digit years: assume 20xx for years 00-30, 19xx for years 31-99
+      if (year < 100) {
+        year += year <= 30 ? 2000 : 1900;
+      }
+      
+      // Try both MM/DD/YYYY and DD/MM/YYYY formats
+      let date1 = null, date2 = null;
+      
+      // Try MM/DD/YYYY (if part1 could be month)
+      if (part1 >= 1 && part1 <= 12 && part2 >= 1 && part2 <= 31) {
+        date1 = new Date(year, part1 - 1, part2);
+      }
+      
+      // Try DD/MM/YYYY (if part2 could be month)
+      if (part2 >= 1 && part2 <= 12 && part1 >= 1 && part1 <= 31) {
+        date2 = new Date(year, part2 - 1, part1);
+      }
+      
+      // Prefer the one that makes sense (valid date in our range)
+      if (date1 && isValidPublicationDate(date1)) {
+        // If both are valid, prefer the one where first part is <= 12 (more likely to be month)
+        if (date2 && isValidPublicationDate(date2)) {
+          return part1 <= 12 ? date1 : date2;
         }
         return date1;
       }
-      // Otherwise try DD/MM/YYYY
-      if (part2 <= 12 && part1 <= 31) {
-        return new Date(year, part2 - 1, part1);
+      if (date2 && isValidPublicationDate(date2)) {
+        return date2;
       }
     }
   }
@@ -44,24 +84,57 @@ const parseDate = (dateStr) => {
   // Handle DD-MM-YYYY format
   if (typeof dateStr === 'string' && dateStr.includes('-') && !dateStr.match(/[A-Za-z]/)) {
     const parts = dateStr.split('-');
-    if (parts.length === 3 && parts[0].length <= 2) {
-      let day = parseInt(parts[0]);
-      let month = parseInt(parts[1]);
-      let year = parseInt(parts[2]);
-      if (year < 100) year += 2000;
-      return new Date(year, month - 1, day);
+    if (parts.length === 3) {
+      // Check if it's DD-MM-YYYY (first part is day, second is month)
+      if (parts[0].length <= 2 && parts[1].length <= 2 && parts[2].length === 4) {
+        let day = parseInt(parts[0]);
+        let month = parseInt(parts[1]);
+        let year = parseInt(parts[2]);
+        const date = new Date(year, month - 1, day);
+        if (isValidPublicationDate(date)) {
+          return date;
+        }
+      }
+      // Check if it's YYYY-MM-DD format
+      if (parts[0].length === 4 && parts[1].length <= 2 && parts[2].length <= 2) {
+        let year = parseInt(parts[0]);
+        let month = parseInt(parts[1]);
+        let day = parseInt(parts[2]);
+        const date = new Date(year, month - 1, day);
+        if (isValidPublicationDate(date)) {
+          return date;
+        }
+      }
     }
   }
   
   // Try standard Date parsing
   const date = new Date(dateStr);
-  return isNaN(date.getTime()) ? null : date;
+  if (isValidPublicationDate(date)) {
+    return date;
+  }
+  
+  return null;
 };
 
 const extractAuthorName = (authorStr) => {
   if (!authorStr) return 'Unknown';
   const match = authorStr.toString().match(/^([^:]+)/);
   return match ? match[1].trim() : authorStr.toString().trim();
+};
+
+const authorNameMap = {
+  'muhammad yaseen': 'Dr. Muhammad Yaseen',
+  'dr muhammad yaseen': 'Dr. Muhammad Yaseen',
+  'dr. muhammad yaseen': 'Dr. Muhammad Yaseen',
+  'dr muhammad yaseen': 'Dr. Muhammad Yaseen'
+};
+
+const normalizeAuthorName = (name) => {
+  if (!name) return 'Unknown';
+  const cleaned = name.replace(/\./g, '').replace(/\s+/g, ' ').trim();
+  const key = cleaned.toLowerCase();
+  return authorNameMap[key] || cleaned;
 };
 
 const parseImpactFactor = (ifStr) => {
@@ -77,18 +150,22 @@ const parseImpactFactor = (ifStr) => {
   return 0;
 };
 
-// Read Excel file - try multiple locations
-let excelPath = path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx');
+// Read Excel file - try multiple locations (prioritize Publications.xlsx)
+let excelPath = path.join(__dirname, '..', 'Publications.xlsx');
 if (!fs.existsSync(excelPath)) {
   excelPath = path.join(__dirname, '..', 'publications.xlsx');
+}
+if (!fs.existsSync(excelPath)) {
+  excelPath = path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx');
 }
 if (!fs.existsSync(excelPath)) {
   excelPath = path.join(__dirname, '..', 'public', 'RSCI Research Record (Responses).xlsx');
 }
 if (!fs.existsSync(excelPath)) {
   console.error('Excel file not found. Tried:', [
-    path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx'),
+    path.join(__dirname, '..', 'Publications.xlsx'),
     path.join(__dirname, '..', 'publications.xlsx'),
+    path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx'),
     path.join(__dirname, '..', 'public', 'RSCI Research Record (Responses).xlsx')
   ]);
   process.exit(1);
@@ -179,12 +256,14 @@ for (let i = 1; i < jsonData.length; i++) {
 
   const pubDate = parseDate(dateStr);
   const impactFactor = parseImpactFactor(impactFactorStr);
-  
+  const authorNameRaw = extractAuthorName(authorStr);
+  const authorName = normalizeAuthorName(authorNameRaw);
+
   // Include ALL publications with valid data (date is optional but preferred)
   publications.push({
     title: titleStr,
     author: authorStr,
-    authorName: extractAuthorName(authorStr),
+    authorName: authorName,
     date: pubDate, // Can be null if date parsing fails
     journal: String(journal).trim() || '',
     scopus: String(scopus).toLowerCase().includes('yes') || String(scopus).toLowerCase() === 'true',
@@ -197,12 +276,52 @@ const datesWithValues = publications.filter(p => p.date).map(p => p.date);
 const minDate = datesWithValues.length > 0 ? new Date(Math.min(...datesWithValues)) : null;
 const maxDate = datesWithValues.length > 0 ? new Date(Math.max(...datesWithValues)) : null;
 
+// Calculate fiscal years from publications
+const getFiscalYear = (date) => {
+  if (!date) return null;
+  const year = date.getFullYear();
+  const month = date.getMonth(); // 0-11, where 6 = July
+  if (month >= 6) {
+    const shortYear = year % 100;
+    const nextShortYear = (shortYear + 1) % 100;
+    return `FY ${shortYear}-${nextShortYear.toString().padStart(2, '0')}`;
+  } else {
+    const shortYear = year % 100;
+    const prevShortYear = (shortYear - 1 + 100) % 100;
+    return `FY ${prevShortYear.toString().padStart(2, '0')}-${shortYear.toString().padStart(2, '0')}`;
+  }
+};
+
+const fiscalYears = new Set();
+publications.forEach(pub => {
+  if (pub.date) {
+    const fy = getFiscalYear(pub.date);
+    if (fy) fiscalYears.add(fy);
+  }
+});
+const sortedFiscalYears = Array.from(fiscalYears).sort((a, b) => {
+  const aMatch = a.match(/FY (\d{2})-(\d{2})/);
+  const bMatch = b.match(/FY (\d{2})-(\d{2})/);
+  if (!aMatch || !bMatch) return 0;
+  return parseInt(bMatch[1]) - parseInt(aMatch[1]); // Descending order
+});
+
 console.log(`\n✅ Extracted ${publications.length} publications from Excel file`);
 if (minDate && maxDate) {
   console.log(`Date range: ${minDate.toLocaleDateString()} - ${maxDate.toLocaleDateString()}`);
 } else {
   console.log(`Note: Some publications may not have valid dates`);
 }
+console.log(`📅 Fiscal years found: ${sortedFiscalYears.join(', ')}`);
+console.log(`📊 Publications by fiscal year:`);
+sortedFiscalYears.forEach(fy => {
+  const count = publications.filter(p => {
+    if (!p.date) return false;
+    const pubFY = getFiscalYear(p.date);
+    return pubFY === fy;
+  }).length;
+  console.log(`   ${fy}: ${count} publications`);
+});
 
 // Generate JavaScript file content
 const jsContent = `// Publication records data - ALL publications from Excel file

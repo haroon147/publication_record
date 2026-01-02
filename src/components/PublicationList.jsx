@@ -4,14 +4,12 @@ import { FileText, Search, Filter, Calendar, User, BookOpen, CheckCircle, XCircl
 const PublicationList = ({ 
   publications, 
   selectedFiscalYear, 
-  selectedFaculty,
   allFiscalYears = [],
-  allFacultyMembers = [],
-  onFiscalYearChange,
-  onFacultyChange
+  allFacultyMembers = []
 }) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterQuarter, setFilterQuarter] = useState('all')
+  const [selectedFaculty, setSelectedFaculty] = useState('all')
   const [sortBy, setSortBy] = useState('date') // date, author, title
 
   const uniqueAuthors = useMemo(() => {
@@ -59,7 +57,10 @@ const PublicationList = ({
       // Quarter filter
       const matchesQuarter = filterQuarter === 'all' || getQuarter(pub.date) === filterQuarter
 
-      return matchesSearch && matchesQuarter
+      // Faculty filter
+      const matchesFaculty = selectedFaculty === 'all' || pub.authorName === selectedFaculty
+
+      return matchesSearch && matchesQuarter && matchesFaculty
     })
 
     // Sort
@@ -80,71 +81,105 @@ const PublicationList = ({
     })
 
     return filtered
-  }, [publications, searchTerm, filterQuarter, sortBy])
+  }, [publications, searchTerm, filterQuarter, selectedFaculty, sortBy])
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="flex items-center gap-2 mb-6">
+    <div className="bg-gradient-to-br from-white to-slate-100 rounded-3xl border border-white/80 shadow-2xl shadow-blue-200/60 p-6">
+      <div className="flex flex-wrap items-center gap-3 mb-6">
         <FileText className="w-6 h-6 text-blue-600" />
-        <h3 className="text-xl font-bold text-gray-800">Publications</h3>
-        {selectedFiscalYear !== 'all' && (
-          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
-            {selectedFiscalYear}
-          </span>
-        )}
-        {selectedFaculty !== 'all' && (
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
-            {selectedFaculty}
-          </span>
-        )}
-        <span className="ml-auto text-sm text-gray-500">
-          {filteredAndSorted.length} of {publications.length} publication{publications.length !== 1 ? 's' : ''}
-        </span>
+        <div>
+          <h3 className="text-2xl font-bold text-gray-900">Publication Records</h3>
+          <p className="text-sm text-gray-500">
+            Showing {filteredAndSorted.length} of {publications.length} publication{publications.length !== 1 ? 's' : ''}
+          </p>
+        </div>
+        <div className="ml-auto flex flex-wrap gap-2">
+          {selectedFiscalYear !== 'all' && (
+            <span className="text-[0.65rem] font-semibold px-3 py-1 bg-blue-50 text-blue-700 rounded-full uppercase tracking-wider">
+              {selectedFiscalYear}
+            </span>
+          )}
+          {selectedFaculty !== 'all' && (
+            <span className="text-[0.65rem] font-semibold px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full uppercase tracking-wider">
+              {selectedFaculty}
+            </span>
+          )}
+        </div>
       </div>
 
-      {/* Filters */}
       <div className="mb-6 space-y-4">
-        <div className="flex flex-wrap gap-4">
-          {/* Search */}
-          <div className="flex-1 min-w-[200px]">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search publications..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+        <div className="grid gap-4 lg:grid-cols-2">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+            <input
+              type="text"
+              placeholder="Search publications..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+            />
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-2xl shadow-sm">
+              <User className="w-4 h-4 text-gray-500" />
+              <select
+                value={selectedFaculty}
+                onChange={(e) => setSelectedFaculty(e.target.value)}
+                className="bg-transparent focus:outline-none text-sm"
+              >
+                <option value="all">All Faculty Members</option>
+                {allFacultyMembers.map(faculty => (
+                  <option key={faculty} value={faculty}>{faculty}</option>
+                ))}
+              </select>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-2xl shadow-sm">
+              <Filter className="w-4 h-4 text-gray-500" />
+              <select
+                value={filterQuarter}
+                onChange={(e) => setFilterQuarter(e.target.value)}
+                className="bg-transparent focus:outline-none text-sm"
+              >
+                <option value="all">All Quarters</option>
+                <option value="Q1">Q1 (Jul-Sep)</option>
+                <option value="Q2">Q2 (Oct-Dec)</option>
+                <option value="Q3">Q3 (Jan-Mar)</option>
+                <option value="Q4">Q4 (Apr-Jun)</option>
+              </select>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-2xl shadow-sm">
+              <span className="text-gray-500 text-sm">Sort</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-transparent focus:outline-none text-sm"
+              >
+                <option value="date">Date</option>
+                <option value="author">Author</option>
+                <option value="title">Title</option>
+              </select>
             </div>
           </div>
-
-          {/* Quarter Filter */}
-          <div className="flex items-center gap-2">
-            <Filter className="w-5 h-5 text-gray-400" />
-            <select
-              value={filterQuarter}
-              onChange={(e) => setFilterQuarter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        </div>
+        <div className="flex flex-wrap gap-2 pt-2 border-t border-dashed border-slate-200">
+          <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Faculty directory</span>
+          {allFacultyMembers.slice(0, 12).map(faculty => (
+            <button
+              key={faculty}
+              className={`text-xs px-3 py-1 rounded-full border transition ${
+                selectedFaculty === faculty
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300'
+              }`}
+              onClick={() => setSelectedFaculty(faculty)}
             >
-              <option value="all">All Quarters</option>
-              <option value="Q1">Q1 (Jul-Sep)</option>
-              <option value="Q2">Q2 (Oct-Dec)</option>
-              <option value="Q3">Q3 (Jan-Mar)</option>
-              <option value="Q4">Q4 (Apr-Jun)</option>
-            </select>
-          </div>
-
-          {/* Sort */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            <option value="date">Sort by Date</option>
-            <option value="author">Sort by Author</option>
-            <option value="title">Sort by Title</option>
-          </select>
+              {faculty}
+            </button>
+          ))}
+          {allFacultyMembers.length > 12 && (
+            <span className="text-xs text-slate-400">+{allFacultyMembers.length - 12} more</span>
+          )}
         </div>
       </div>
 
@@ -155,55 +190,58 @@ const PublicationList = ({
           <p>No publications found matching your filters</p>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="grid gap-4">
           {filteredAndSorted.map((pub, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow"
+              className="bg-white border border-slate-100 rounded-3xl p-6 shadow-lg hover:-translate-y-1 transition-transform duration-150"
             >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex-1">
-                  <h4 className="font-semibold text-gray-800 mb-2 text-lg">
-                    {pub.title}
-                  </h4>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      <span className="font-medium">{pub.authorName}</span>
-                    </div>
-                    {pub.date && (
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{formatDate(pub.date)}</span>
-                        <span className="ml-1 px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">
-                          {getQuarter(pub.date)}
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-gray-900">{pub.title}</h4>
+                    <div className="flex flex-wrap gap-2 mt-2 text-xs uppercase tracking-wider text-slate-500">
+                      {pub.scopus && (
+                        <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center gap-1">
+                          <CheckCircle className="w-3 h-3" />
+                          Scopus
                         </span>
-                      </div>
+                      )}
+                      {!pub.scopus && (
+                        <span className="px-3 py-1 rounded-full bg-slate-50 text-slate-500 border border-slate-200 flex items-center gap-1">
+                          <XCircle className="w-3 h-3" />
+                          Not Indexed
+                        </span>
+                      )}
+                      {pub.impactFactor > 0 && (
+                        <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">
+                          IF {pub.impactFactor.toFixed(2)}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    {pub.date && (
+                      <p className="text-sm font-semibold text-gray-600">
+                        {formatDate(pub.date)}
+                      </p>
                     )}
-                    {pub.journal && (
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-4 h-4" />
-                        <span>{pub.journal}</span>
-                      </div>
-                    )}
-                    {pub.impactFactor > 0 && (
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-indigo-500" />
-                        <span className="font-semibold text-indigo-600">IF: {pub.impactFactor.toFixed(2)}</span>
-                      </div>
+                    {pub.date && (
+                      <span className="text-[0.65rem] font-semibold px-3 py-1 bg-blue-50 text-blue-700 rounded-full uppercase tracking-wide">
+                        {getQuarter(pub.date)}
+                      </span>
                     )}
                   </div>
                 </div>
-                <div className="ml-4 flex-shrink-0 flex flex-col items-end gap-2">
-                  {pub.scopus ? (
-                    <div className="flex items-center gap-1 text-green-600">
-                      <CheckCircle className="w-5 h-5" />
-                      <span className="text-xs font-medium">Scopus</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-1 text-gray-400">
-                      <XCircle className="w-5 h-5" />
-                      <span className="text-xs">Not Indexed</span>
+                <div className="flex flex-wrap gap-4 items-center text-sm text-gray-600">
+                  <div className="flex items-center gap-1">
+                    <User className="w-4 h-4 text-gray-400" />
+                    <span className="font-medium text-gray-800">{pub.authorName}</span>
+                  </div>
+                  {pub.journal && (
+                    <div className="flex items-center gap-1">
+                      <BookOpen className="w-4 h-4 text-gray-400" />
+                      <span>{pub.journal}</span>
                     </div>
                   )}
                 </div>

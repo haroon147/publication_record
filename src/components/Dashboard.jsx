@@ -8,7 +8,6 @@ import { getAllFiscalYears, filterByFiscalYear } from '../utils/fiscalYear'
 
 const Dashboard = ({ publications }) => {
   const [selectedFiscalYear, setSelectedFiscalYear] = useState('all')
-  const [selectedFaculty, setSelectedFaculty] = useState('all')
 
   // Get all unique faculty members (authors) from ALL publications
   const allFacultyMembers = useMemo(() => {
@@ -18,43 +17,19 @@ const Dashboard = ({ publications }) => {
 
   // Get all available fiscal years from ALL publications
   const availableFiscalYears = useMemo(() => {
-    return getAllFiscalYears(publications)
+    const fiscalYears = getAllFiscalYears(publications)
+    console.log('📅 Available fiscal years:', fiscalYears)
+    console.log('📊 Total publications:', publications.length)
+    return fiscalYears
   }, [publications])
 
-  // Filter publications based on fiscal year and faculty
+  // Filter publications based on fiscal year only
+  // Faculty filtering is now handled in PublicationList component
   const filteredPublications = useMemo(() => {
-    let filtered = filterByFiscalYear(publications, selectedFiscalYear)
-    
-    if (selectedFaculty !== 'all') {
-      filtered = filtered.filter(pub => pub.authorName === selectedFaculty)
-    }
-    
+    const filtered = filterByFiscalYear(publications, selectedFiscalYear)
+    console.log(`🔍 Filtered publications: ${filtered.length} of ${publications.length} (Fiscal Year: ${selectedFiscalYear})`)
     return filtered
-  }, [publications, selectedFiscalYear, selectedFaculty])
-
-  // Calculate all-time author counts from ALL publications (for leaderboard)
-  const allTimeAuthorCounts = useMemo(() => {
-    const counts = {}
-    publications.forEach(pub => {
-      const author = pub.authorName || 'Unknown'
-      counts[author] = (counts[author] || 0) + 1
-    })
-    return counts
-  }, [publications])
-
-  // Calculate all-time author impact factors from ALL publications
-  const allTimeAuthorImpactFactors = useMemo(() => {
-    const factors = {}
-    publications.forEach(pub => {
-      const author = pub.authorName || 'Unknown'
-      if (!factors[author]) {
-        factors[author] = { count: 0, impactFactor: 0 }
-      }
-      factors[author].count++
-      factors[author].impactFactor += (pub.impactFactor || 0)
-    })
-    return factors
-  }, [publications])
+  }, [publications, selectedFiscalYear])
 
   const stats = useMemo(() => {
     const total = filteredPublications.length
@@ -139,7 +114,7 @@ const Dashboard = ({ publications }) => {
       avgImpactFactor,
       authorImpactFactors
     }
-  }, [publications])
+  }, [filteredPublications])
 
   return (
     <div className="space-y-6">
@@ -184,23 +159,6 @@ const Dashboard = ({ publications }) => {
               ))}
             </select>
           </div>
-
-          {/* Faculty Member Filter */}
-          <div className="flex-1 min-w-[200px]">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Faculty Member
-            </label>
-            <select
-              value={selectedFaculty}
-              onChange={(e) => setSelectedFaculty(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="all">All Faculty Members</option>
-              {allFacultyMembers.map(faculty => (
-                <option key={faculty} value={faculty}>{faculty}</option>
-              ))}
-            </select>
-          </div>
         </div>
       </div>
 
@@ -209,18 +167,15 @@ const Dashboard = ({ publications }) => {
           <Statistics stats={stats} />
           <QuarterlyAnalysis quarters={stats.quarters} />
           <AuthorLeaderboard 
-            authorCounts={allTimeAuthorCounts} 
-            authorImpactFactors={allTimeAuthorImpactFactors}
+            publications={publications}
+            fiscalYears={availableFiscalYears}
             allTime={true}
           />
           <PublicationList 
             publications={filteredPublications}
             selectedFiscalYear={selectedFiscalYear}
-            selectedFaculty={selectedFaculty}
             allFiscalYears={availableFiscalYears}
             allFacultyMembers={allFacultyMembers}
-            onFiscalYearChange={setSelectedFiscalYear}
-            onFacultyChange={setSelectedFaculty}
           />
         </>
       ) : (
