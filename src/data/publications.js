@@ -1,7 +1,7 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-02T11:23:36.938Z
-// Total publications: 243
+// Generated on: 2026-01-02T12:08:32.058Z
+// Total publications: 245
 
 export const publicationsData = [
   {
@@ -866,6 +866,24 @@ export const publicationsData = [
     "date": new Date(2019, 8, 1),
     "journal": "tional Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "tional Journal of Computer Science Engineering (IJCSE)",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 11, 12),
+    "journal": "International Journal of Computer Science Engineering (IJCSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Improving Breast Cancer Detection in BUS Images Using Multimodal Deep Learning and Grad-CAM Fusion",
+    "author": "Mr. Muhammad Haroon : 6260",
+    "authorName": "Mr Muhammad Haroon",
+    "date": new Date(2025, 7, 14),
+    "journal": "International Conference on Smart Systems and Emerging Technologies.",
+    "scopus": true,
     "impactFactor": 0
   },
   {
