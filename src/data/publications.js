@@ -1,6 +1,6 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-02T03:26:12.585Z
+// Generated on: 2026-01-02T06:29:20.676Z
 // Total publications: 226
 
 export const publicationsData = [
