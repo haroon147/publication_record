@@ -80,7 +80,7 @@ const PublicationList = ({
     })
 
     return filtered
-  }, [publications, searchTerm, filterQuarter, filterAuthor, sortBy])
+  }, [publications, searchTerm, filterQuarter, sortBy])
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">

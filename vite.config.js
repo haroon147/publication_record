@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+// Use base path for production builds (GitHub Pages), but '/' for local development
+export default defineConfig(({ command, mode }) => ({
   plugins: [react()],
-  base: '/publication_record/',
-})
+  base: command === 'build' ? '/publication_record/' : '/',
+}))
 
