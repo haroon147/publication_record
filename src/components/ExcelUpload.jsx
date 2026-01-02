@@ -149,7 +149,10 @@ const ExcelUpload = ({ onDataLoaded }) => {
     'a kashif': 'Dr. Ayesha Kashif',
     'ayesha kashif': 'Dr. Ayesha Kashif',
     'dr ayesha kashif': 'Dr. Ayesha Kashif',
-    'dr. ayesha kashif': 'Dr. Ayesha Kashif'
+    'dr. ayesha kashif': 'Dr. Ayesha Kashif',
+    'jamal uddin': 'Dr. Jamal Uddin',
+    'dr jamal uddin': 'Dr. Jamal Uddin',
+    'dr. jamal uddin': 'Dr. Jamal Uddin'
   }
 
   const normalizeAuthorName = (name) => {

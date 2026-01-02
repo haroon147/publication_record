@@ -1,6 +1,6 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-02T12:08:32.058Z
+// Generated on: 2026-01-02T12:12:43.825Z
 // Total publications: 245
 
 export const publicationsData = [
@@ -1510,7 +1510,7 @@ export const publicationsData = [
   {
     "title": "Comprehensive Analysis of Computational Methods for Predicting Anti‑inflammatory Peptides",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Archives of Computational Methods in Engineering",
     "scopus": true,
@@ -1519,7 +1519,7 @@ export const publicationsData = [
   {
     "title": "AIPs-SnTCN: Predicting Anti-Inflammatory Peptides Using fastText and Transformer Encoder-Based Hybrid Word Embedding with Self-Normalized Temporal Convolutional Networks",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Journal of Chemical Information and Modeling",
     "scopus": true,
@@ -1528,7 +1528,7 @@ export const publicationsData = [
   {
     "title": "AFP-SPTS: An Accurate Prediction of Antifreeze Proteins Using Sequential and Pseudo-Tri-Slicing Evolutionary Features with an Extremely Randomized Tree",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Journal of Chemical Information and Modeling",
     "scopus": true,
@@ -1537,7 +1537,7 @@ export const publicationsData = [
   {
     "title": "A Huffman Code LSB based Image Steganography Technique Using Multi-Level Encryption and Achromatic Component of an image",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Scientific Reports.",
     "scopus": true,
@@ -1546,7 +1546,7 @@ export const publicationsData = [
   {
     "title": "Prediction of Antifreeze Proteins Using Machine Learning",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Scientific Reports.",
     "scopus": true,
@@ -1555,7 +1555,7 @@ export const publicationsData = [
   {
     "title": "Comparative Analysis of the Existing Methods for Prediction of Antifreeze Proteins",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Chemometrics and Intelligent Laboratory Systems",
     "scopus": true,
@@ -1564,7 +1564,7 @@ export const publicationsData = [
   {
     "title": "Multi Perspectives Steganography Algorithm for Color Images on Multiple-Formats",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Sustainability",
     "scopus": true,
@@ -1573,7 +1573,7 @@ export const publicationsData = [
   {
     "title": "Rough Set Based Information Theoretic Approach for Clustering Uncertain Categorical Data",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "PLoS One",
     "scopus": true,
@@ -1582,7 +1582,7 @@ export const publicationsData = [
   {
     "title": "An Empirical Analysis of Rough Set Categorical Clustering Techniques",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "PLoS One",
     "scopus": true,
@@ -1591,7 +1591,7 @@ export const publicationsData = [
   {
     "title": "AIPs-DeepEnC-GA: Predicting anti-inflammatory peptides using embedded evolutionary and sequential feature integration with genetic algorithm based deep ensemble model",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Chemometrics and Intelligent Laboratory Systems",
     "scopus": true,
@@ -1600,7 +1600,7 @@ export const publicationsData = [
   {
     "title": "A Comprehensive Study of Digital Image Steganographic Techniques",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "IEEE Access",
     "scopus": true,
@@ -1609,7 +1609,7 @@ export const publicationsData = [
   {
     "title": "A Novel Steganography Technique for Digital Images Using the Least Significant Bit Substitution Method,",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "IEEE Access",
     "scopus": true,
@@ -1618,7 +1618,7 @@ export const publicationsData = [
   {
     "title": "A Survey on Bug Prioritization",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Artificial Intelligence Review",
     "scopus": true,
@@ -1627,7 +1627,7 @@ export const publicationsData = [
   {
     "title": "Rough Set Based Information Theoretic Approach for Clustering Uncertain Categorical Data",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "PLOS One",
     "scopus": true,
@@ -1636,7 +1636,7 @@ export const publicationsData = [
   {
     "title": "An Empirical Analysis of Rough Set Categorical Clustering Techniques",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "PLOS One",
     "scopus": true,
@@ -1645,7 +1645,7 @@ export const publicationsData = [
   {
     "title": "A novel rough value set categorical clustering technique for supplier base management",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Computing (Vienna/New York)",
     "scopus": true,
@@ -1654,7 +1654,7 @@ export const publicationsData = [
   {
     "title": "A Proposed IoT-Enabled Smart Waste Bin Management System and Efficient Route Selection",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Journal of Computer Networks and Communications",
     "scopus": true,
@@ -1663,7 +1663,7 @@ export const publicationsData = [
   {
     "title": "Artificial bee colony algorithm used for load balancing in cloud computing: review",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
@@ -1672,7 +1672,7 @@ export const publicationsData = [
   {
     "title": "Corrupted MP4 Carving Using MP4-Karver",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "IAES International Journal of Artificial Intelligence (IJ-AI)",
     "scopus": true,
@@ -1681,7 +1681,7 @@ export const publicationsData = [
   {
     "title": "Fast attribute selection based on the rough set boundary region",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Periodicals of Engineering and Natural Sciences",
     "scopus": true,
@@ -1690,7 +1690,7 @@ export const publicationsData = [
   {
     "title": "Positive region: An enhancement of partitioning attribute based rough set for categorical data",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Periodicals of Engineering and Natural Sciences",
     "scopus": true,
@@ -1699,7 +1699,7 @@ export const publicationsData = [
   {
     "title": "A Comparative Analysis of Long Short-Term Memory Recurrent Neural Network Classifiers for Text Classification",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "The Sciencetech",
     "scopus": false,
@@ -1708,7 +1708,7 @@ export const publicationsData = [
   {
     "title": "Reduction of Defect Generation in Software Projects using LSS Approach",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "The Sciencetech",
     "scopus": false,
@@ -1717,7 +1717,7 @@ export const publicationsData = [
   {
     "title": "Solving Different Order Boundary Value Problems by Applying Homotopy Type Methods",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "Journal of Advances in Mathematics and Computer Science",
     "scopus": false,
@@ -1726,7 +1726,7 @@ export const publicationsData = [
   {
     "title": "Modified Variation of Parameters Method for System of PDEs",
     "author": "Jamal Uddin",
-    "authorName": "Jamal Uddin",
+    "authorName": "Dr. Jamal Uddin",
     "date": null,
     "journal": "International Journal of Modern Applied Physics",
     "scopus": false,
