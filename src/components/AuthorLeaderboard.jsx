@@ -36,7 +36,14 @@ const AuthorLeaderboard = ({
           ? authorStats.impact[name] / count
           : 0
       }))
-      .sort((a, b) => b.count - a.count)
+      .sort((a, b) => {
+        // First sort by publication count (descending)
+        if (b.count !== a.count) {
+          return b.count - a.count
+        }
+        // If counts are equal, sort by impact factor (descending)
+        return b.impactFactor - a.impactFactor
+      })
   }, [authorStats])
 
   const displayedAuthors = showAll ? sortedAuthors : sortedAuthors.slice(0, 10)
