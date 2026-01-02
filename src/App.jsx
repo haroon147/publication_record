@@ -53,7 +53,7 @@ function App() {
             University Publication Analytics System
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            Period: July 1, 2024 - June 30, 2025
+            All Time Publication Records
           </p>
         </header>
 

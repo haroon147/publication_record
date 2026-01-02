@@ -1,16 +1,18 @@
 import React, { useState, useMemo } from 'react'
 import { FileText, Search, Filter, Calendar, User, BookOpen, CheckCircle, XCircle, Star } from 'lucide-react'
 
-const PublicationList = ({ publications }) => {
+const PublicationList = ({ publications, allPublications, fiscalYear }) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterQuarter, setFilterQuarter] = useState('all')
   const [filterAuthor, setFilterAuthor] = useState('all')
   const [sortBy, setSortBy] = useState('date') // date, author, title
 
+  // Get all unique faculty members from all publications (for filter dropdown)
   const uniqueAuthors = useMemo(() => {
-    const authors = [...new Set(publications.map(p => p.authorName))].sort()
+    const allAuthors = allPublications || publications
+    const authors = [...new Set(allAuthors.map(p => p.authorName))].sort()
     return authors
-  }, [publications])
+  }, [allPublications, publications])
 
   const getQuarter = (date) => {
     if (!date) return null

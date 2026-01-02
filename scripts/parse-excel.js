@@ -77,10 +77,20 @@ const parseImpactFactor = (ifStr) => {
   return 0;
 };
 
-// Read Excel file
-const excelPath = path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx');
+// Read Excel file - try multiple locations
+let excelPath = path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx');
 if (!fs.existsSync(excelPath)) {
-  console.error('Excel file not found at:', excelPath);
+  excelPath = path.join(__dirname, '..', 'publications.xlsx');
+}
+if (!fs.existsSync(excelPath)) {
+  excelPath = path.join(__dirname, '..', 'public', 'RSCI Research Record (Responses).xlsx');
+}
+if (!fs.existsSync(excelPath)) {
+  console.error('Excel file not found. Tried:', [
+    path.join(__dirname, '..', 'dist', 'assets', 'RSCI Research Record (Responses).xlsx'),
+    path.join(__dirname, '..', 'publications.xlsx'),
+    path.join(__dirname, '..', 'public', 'RSCI Research Record (Responses).xlsx')
+  ]);
   process.exit(1);
 }
 
@@ -101,11 +111,28 @@ console.log('Headers:', jsonData[0]);
 
 const titleIdx = headerRow.findIndex(h => h.includes('title') || h.includes('paper') || h.includes('publication'));
 const authorIdx = headerRow.findIndex(h => (h.includes('author') || h.includes('name')) && !h.includes('co-author'));
-const dateIdx = headerRow.findIndex(h => 
-  h.includes('date of publication') || 
-  h.includes('publication date') ||
-  (h.includes('date') && !h.includes('timestamp'))
+
+// Prioritize "Date of Publication" column - this is the publication date, not entry date
+let dateIdx = headerRow.findIndex(h => 
+  h.toLowerCase() === 'date of publication' || 
+  h.toLowerCase().trim() === 'date of publication'
 );
+if (dateIdx === -1) {
+  dateIdx = headerRow.findIndex(h => 
+    h.toLowerCase().includes('date of publication') || 
+    h.toLowerCase().includes('publication date')
+  );
+}
+// Exclude timestamp, entry date, or submission date columns
+if (dateIdx === -1) {
+  dateIdx = headerRow.findIndex(h => 
+    h.toLowerCase().includes('date') && 
+    !h.toLowerCase().includes('timestamp') &&
+    !h.toLowerCase().includes('entry') &&
+    !h.toLowerCase().includes('submission') &&
+    !h.toLowerCase().includes('created')
+  );
+}
 const journalIdx = headerRow.findIndex(h => h.includes('journal') || h.includes('conference') || h.includes('venue'));
 const scopusIdx = headerRow.findIndex(h => h.includes('scopus') || h.includes('indexed'));
 
@@ -130,10 +157,8 @@ if (titleIdx === -1 || authorIdx === -1) {
   process.exit(1);
 }
 
-// Parse all data rows (no date filtering - get ALL records)
+// Parse ALL data rows - get ALL publications regardless of date
 const publications = [];
-const startDate = new Date(2024, 6, 1); // July 1, 2024
-const endDate = new Date(2025, 5, 30); // June 30, 2025
 
 for (let i = 1; i < jsonData.length; i++) {
   const row = jsonData[i];
@@ -155,8 +180,8 @@ for (let i = 1; i < jsonData.length; i++) {
   const pubDate = parseDate(dateStr);
   const impactFactor = parseImpactFactor(impactFactorStr);
   
-  // Only include publications with valid dates within the range
-  if (pubDate && pubDate >= startDate && pubDate <= endDate) {
+  // Include ALL publications with valid publication dates (no date range filtering)
+  if (pubDate) {
     publications.push({
       title: titleStr,
       author: authorStr,
@@ -169,8 +194,16 @@ for (let i = 1; i < jsonData.length; i++) {
   }
 }
 
-console.log(`\n✅ Extracted ${publications.length} publications from Excel file`);
-console.log(`Date range: July 1, 2024 - June 30, 2025`);
+// Sort by date (newest first) for better organization
+publications.sort((a, b) => {
+  if (!a.date && !b.date) return 0;
+  if (!a.date) return 1;
+  if (!b.date) return -1;
+  return b.date - a.date;
+});
+
+console.log(`\n✅ Extracted ${publications.length} publications from Excel file (ALL TIME)`);
+console.log(`Date range: All publications with valid publication dates`);
 
 // Generate JavaScript file content
 const jsContent = `// Publication records data - July 1, 2024 to June 30, 2025

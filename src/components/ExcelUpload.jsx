@@ -115,11 +115,28 @@ const ExcelUpload = ({ onDataLoaded }) => {
           
           const titleIdx = headerRow.findIndex(h => h.includes('title') || h.includes('paper') || h.includes('publication'))
           const authorIdx = headerRow.findIndex(h => (h.includes('author') || h.includes('name')) && !h.includes('co-author'))
-          const dateIdx = headerRow.findIndex(h => 
-            h.includes('date of publication') || 
-            h.includes('publication date') ||
-            (h.includes('date') && !h.includes('timestamp'))
+          
+          // Prioritize "Date of Publication" column - this is the publication date, not entry date
+          let dateIdx = headerRow.findIndex(h => 
+            h.toLowerCase() === 'date of publication' || 
+            h.toLowerCase().trim() === 'date of publication'
           )
+          if (dateIdx === -1) {
+            dateIdx = headerRow.findIndex(h => 
+              h.toLowerCase().includes('date of publication') || 
+              h.toLowerCase().includes('publication date')
+            )
+          }
+          // Exclude timestamp, entry date, or submission date columns
+          if (dateIdx === -1) {
+            dateIdx = headerRow.findIndex(h => 
+              h.toLowerCase().includes('date') && 
+              !h.toLowerCase().includes('timestamp') &&
+              !h.toLowerCase().includes('entry') &&
+              !h.toLowerCase().includes('submission') &&
+              !h.toLowerCase().includes('created')
+            )
+          }
           const journalIdx = headerRow.findIndex(h => h.includes('journal') || h.includes('conference') || h.includes('venue'))
           const scopusIdx = headerRow.findIndex(h => h.includes('scopus') || h.includes('indexed'))
           

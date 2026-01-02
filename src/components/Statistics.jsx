@@ -1,7 +1,30 @@
 import React from 'react'
 import { FileText, Award, CheckCircle, TrendingUp, Star } from 'lucide-react'
 
-const Statistics = ({ stats }) => {
+const Statistics = ({ stats, fiscalYear }) => {
+  const getFiscalYearLabel = (fy) => {
+    if (!fy || fy === 'all') return 'All Time'
+    const match = fy.match(/FY-(\d{2})-(\d{2})/);
+    if (match) {
+      const startYY = match[1];
+      const endYY = match[2];
+      return `FY ${startYY}-${endYY}`;
+    }
+    return fy;
+  };
+  
+  const getDateRange = (fy) => {
+    if (!fy || fy === 'all') return 'All Publications'
+    const match = fy.match(/FY-(\d{2})-(\d{2})/);
+    if (match) {
+      const startYY = parseInt(match[1]);
+      const endYY = parseInt(match[2]);
+      const startYear = startYY < 50 ? 2000 + startYY : 1900 + startYY;
+      const endYear = endYY < 50 ? 2000 + endYY : 1900 + endYY;
+      return `July 1, ${startYear} - June 30, ${endYear}`;
+    }
+    return 'All Publications';
+  };
   const statCards = [
     {
       icon: FileText,
@@ -12,7 +35,7 @@ const Statistics = ({ stats }) => {
     },
     {
       icon: Star,
-      label: 'Total Impact Factor (Jul 2024 - Jun 2025)',
+      label: `Total Impact Factor (${getFiscalYearLabel(fiscalYear)})`,
       value: stats.totalImpactFactor?.toFixed(2) || '0.00',
       subValue: `Average: ${stats.avgImpactFactor?.toFixed(2) || '0.00'}`,
       color: 'indigo',
@@ -46,7 +69,7 @@ const Statistics = ({ stats }) => {
             <Star className="w-12 h-12 text-white opacity-90" />
             <div className="text-right">
               <p className="text-white opacity-90 text-sm mb-2">Total Journal Impact Factor</p>
-              <p className="text-white opacity-75 text-xs">July 1, 2024 - June 30, 2025</p>
+              <p className="text-white opacity-75 text-xs">{getDateRange(fiscalYear)}</p>
             </div>
           </div>
           <div className="text-center">
@@ -59,7 +82,7 @@ const Statistics = ({ stats }) => {
             <p className="text-white opacity-60 text-sm mt-2">
               Sum of Journal Impact Factors from {stats.total || 0} publication{stats.total !== 1 ? 's' : ''} 
               <br />
-              (Based on publication dates: July 1, 2024 - June 30, 2025)
+              (Based on publication dates: {getDateRange(fiscalYear)})
             </p>
           </div>
         </div>
