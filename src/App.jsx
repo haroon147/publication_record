@@ -14,11 +14,21 @@ function App() {
     if (savedData) {
       try {
         const parsed = JSON.parse(savedData)
-        // Convert date strings back to Date objects (handle null dates)
-        const publicationsWithDates = parsed.map(pub => ({
-          ...pub,
-          date: pub.date && pub.date !== 'null' ? new Date(pub.date) : null
-        }))
+        // Convert date strings back to Date objects (handle null dates and validate)
+        const publicationsWithDates = parsed.map(pub => {
+          let date = null
+          if (pub.date && pub.date !== 'null') {
+            const dateObj = new Date(pub.date)
+            // Only use the date if it's valid
+            if (dateObj instanceof Date && !isNaN(dateObj.getTime())) {
+              date = dateObj
+            }
+          }
+          return {
+            ...pub,
+            date: date
+          }
+        })
         setPublications(publicationsWithDates)
         console.log('📂 Loaded saved publications from localStorage:', publicationsWithDates.length)
       } catch (error) {

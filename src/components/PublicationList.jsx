@@ -21,7 +21,12 @@ const PublicationList = ({
 
   const getQuarter = (date) => {
     if (!date) return null
-    const month = date.getMonth()
+    // Validate that date is a valid Date object
+    const dateObj = date instanceof Date ? date : new Date(date)
+    if (!(dateObj instanceof Date) || isNaN(dateObj.getTime())) {
+      return null
+    }
+    const month = dateObj.getMonth()
     if ([6, 7, 8].includes(month)) return 'Q1'
     if ([9, 10, 11].includes(month)) return 'Q2'
     if ([0, 1, 2].includes(month)) return 'Q3'
@@ -31,7 +36,12 @@ const PublicationList = ({
 
   const formatDate = (date) => {
     if (!date) return 'N/A'
-    return date.toLocaleDateString('en-US', { 
+    // Validate that date is a valid Date object
+    const dateObj = date instanceof Date ? date : new Date(date)
+    if (!(dateObj instanceof Date) || isNaN(dateObj.getTime())) {
+      return 'N/A'
+    }
+    return dateObj.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'short', 
       day: 'numeric' 

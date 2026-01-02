@@ -7,12 +7,15 @@
  * @returns {string|null} - Fiscal year string (e.g., "FY 24-25") or null if date is invalid
  */
 export const getFiscalYear = (date) => {
-  if (!date || !(date instanceof Date) || isNaN(date.getTime())) {
+  if (!date) return null
+  // Handle both Date objects and date strings
+  const dateObj = date instanceof Date ? date : new Date(date)
+  if (!(dateObj instanceof Date) || isNaN(dateObj.getTime())) {
     return null
   }
   
-  const year = date.getFullYear()
-  const month = date.getMonth() // 0-11, where 6 = July
+  const year = dateObj.getFullYear()
+  const month = dateObj.getMonth() // 0-11, where 6 = July
   
   // If month is July (6) or later, it's the start of the fiscal year
   // FY 24-25 means July 2024 to June 2025
@@ -120,6 +123,10 @@ export const filterByFiscalYear = (publications, fiscalYear) => {
   
   return publications.filter(pub => {
     if (!pub.date) return false
+    // Validate that date is a valid Date object
+    if (!(pub.date instanceof Date) || isNaN(pub.date.getTime())) {
+      return false
+    }
     return pub.date >= range.startDate && pub.date <= range.endDate
   })
 }
