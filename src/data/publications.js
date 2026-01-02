@@ -1,7 +1,7 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-02T10:24:04.334Z
-// Total publications: 227
+// Generated on: 2026-01-02T11:23:36.938Z
+// Total publications: 243
 
 export const publicationsData = [
   {
@@ -725,6 +725,150 @@ export const publicationsData = [
     "impactFactor": 1.8
   },
   {
+    "title": "Minimizing Inter-Dependencies in Functional Requirements for Timely Delivery of Software Projects: A Prioritization Approach Using AHP and Spanning Trees",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2025, 10, 18),
+    "journal": "Journal of Software: Evolution and Process",
+    "scopus": true,
+    "impactFactor": 1.8
+  },
+  {
+    "title": "Design of Minimal Spanning Treeand Analytic Hierarchical Process (SAHP) Based Hybrid Technique for Software Requirements Prioritization",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2025, 9, 9),
+    "journal": "IET SOFTWARE",
+    "scopus": true,
+    "impactFactor": 2.6
+  },
+  {
+    "title": "Maximizing Influence and Mitigating Harmful Viral Content in Social Networks",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2025, 10, 2),
+    "journal": "IJACSA",
+    "scopus": true,
+    "impactFactor": 0.7
+  },
+  {
+    "title": "Scalability and Limitations of Existing Software Requirements Prioritization Techniques: A Systematic Literature Review",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2025, 7, 4),
+    "journal": "JOURNAL OF SOFTWARE: EVOLUTION AND PROCESS",
+    "scopus": true,
+    "impactFactor": 1.8
+  },
+  {
+    "title": "Success Factors during Requirements Implementation in Global Software Development: A Systematic Literature Review",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 1, 3),
+    "journal": "International Journal of Computer Science and Software Engineering;",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "A Graph Based Approach to Prioritization of Software Functional Requirements",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 3, 4),
+    "journal": "International Journal of Computer Science and Software Engineering (IJCSSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "An Improved Framework for Requirement Implementation in the context of Global Software Development: A Systematic Literature Review Protocol",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2016, 9, 1),
+    "journal": "International Journal of Modern Nonlinear Theory and Application",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Requirements Management Model (RMM): A Proposed Model for Successful Delivery of Software Projects",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 5, 1),
+    "journal": "International Journal of Computer Applications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Practices for Effective Software Project Management in Global Software Development: A Systematic Literature Review",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 1, 2),
+    "journal": "International Journal of Computer Applications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "MINIMIZING INTER-DEPENDENCY ISSUES OF REQUIREMENTS IN PARALLEL DEVELOPING SOFTWARE PROJECTS WITH AHP",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 7, 1),
+    "journal": "An international journal of advance computer technology",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "An Approach for Managing Large-Sized Software Requirements during Prioritization",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2018, 11, 12),
+    "journal": "2018 IEEE Conference on Open Systems (ICOS)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Critical Challenges for Requirement Implementation in Context of Global Software Development: A Systematic Literature Review",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2015, 11, 23),
+    "journal": "2015 International Conference on Open Source Systems and Technologies (ICOSST)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Requirement Implementation Model (RIM) in the Context of Global Software Development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2015, 11, 12),
+    "journal": "2015 International Conference on Information and Communication Technologies (ICICT)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Requirement Elicitation Model (REM) in the Context of Global Software Development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2018, 11, 12),
+    "journal": "Global Journal of Computer Science and Technology",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Effective communication as critical success factor during requirement elicitation in global software development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 4, 5),
+    "journal": "International Journal of Computer Science Engineering (IJCSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Success factors during requirements implementation in global software development: An empirical study",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 8, 1),
+    "journal": "tional Journal of Computer Science Engineering (IJCSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
     "title": "Prediction of hydrogen generation from perhydro-dibenzyltoluene empowered with machine learning",
     "author": "Muhammad Adnan Khan",
     "authorName": "Muhammad Adnan Khan",
@@ -941,9 +1085,9 @@ export const publicationsData = [
     "impactFactor": 0
   },
   {
-    "title": "DETERMINING STUDENT&#39;S ONLINE ACADEMIC PERFORMANCE USING\r\n MACHINE LEARNING TECHNIQUES",
-    "author": "Atika Islam, Faisal Bukhari, Muhammad Awais Sattar, Ayesha Kashif",
-    "authorName": "Atika Islam, Faisal Bukhari, Muhammad Awais Sattar, Ayesha Kashif",
+    "title": "DETERMINING STUDENT&#39;S ONLINE ACADEMIC PERFORMANCE USING\n MACHINE LEARNING TECHNIQUES",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "",
     "scopus": false,
@@ -951,8 +1095,8 @@ export const publicationsData = [
   },
   {
     "title": "A Modern Approach to Include Representative Behaviour Models in Energy Simulations",
-    "author": "Kashif A., Ploix S., Dugdale J.",
-    "authorName": "Kashif A, Ploix S, Dugdale J",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "Towards Energy Smart Homes. Springer, Cham.",
     "scopus": false,
@@ -960,8 +1104,8 @@ export const publicationsData = [
   },
   {
     "title": "Simulating the dynamics of occupant behaviour for power management in residential buildings",
-    "author": "Ayesha Kashif, Stephane Ploix, Julie Dugdale, Xuan Hoa Binh Le.,",
-    "authorName": "Ayesha Kashif, Stephane Ploix, Julie Dugdale, Xuan Hoa Binh Le,",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "Energy and Buildings,",
     "scopus": false,
@@ -969,8 +1113,8 @@ export const publicationsData = [
   },
   {
     "title": "Simulating Occupants’ Behaviour for Energy Waste Reduction in Dwellings: A Multi Agent Methodology,",
-    "author": "Kashif Ayesha, Dugdale Julie, Ploix Stéphane",
-    "authorName": "Kashif Ayesha, Dugdale Julie, Ploix Stéphane",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "Advances in Complex Systems",
     "scopus": false,
@@ -978,8 +1122,8 @@ export const publicationsData = [
   },
   {
     "title": "Building Energy Co-Simulations: Assessing energy strategies in Active Buildings considering human behaviour.",
-    "author": "Ayesha Kashif, Stephane Ploix, Julie Dugdale.",
-    "authorName": "Ayesha Kashif, Stephane Ploix, Julie Dugdale",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "International Symposium on Sustainable Human-Building Ecosystems (ISSHBE), Carnegie Mellon University",
     "scopus": false,
@@ -987,8 +1131,8 @@ export const publicationsData = [
   },
   {
     "title": "Comparison between purely statistical and multi-agent based approaches for occupant behaviour modeling in buildings.",
-    "author": "K. Tijani., A. Kashif., S. Ploix., B. Haas., J. Dugdale., Q-D. Ngo.,",
-    "authorName": "K Tijani, A Kashif, S Ploix, B Haas, J Dugdale, Q-D Ngo,",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "IBPSA. Conference Francophone of the International Building Performance Simulation Association,",
     "scopus": false,
@@ -996,8 +1140,8 @@ export const publicationsData = [
   },
   {
     "title": "A New Co-Simulation Architecture for Mixing Dynamic Building Simulation and Agent Oriented Approach for Users Behaviour Modelling,",
-    "author": "S. Gaaloul, H.A. Dang, A. Kashif, B. Delinchant, F. Wurtz,",
-    "authorName": "S Gaaloul, HA Dang, A Kashif, B Delinchant, F Wurtz,",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "Building Simulation",
     "scopus": false,
@@ -1005,8 +1149,8 @@ export const publicationsData = [
   },
   {
     "title": "User Behaviour Modelling and Simulation for Energy Management in Domestic Settings.",
-    "author": "A. Kashif, S. Ploix, J. Dugdale,",
-    "authorName": "A Kashif, S Ploix, J Dugdale,",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "Simurex (Conception Optimisée du batiment par la simulation et le retour d'expérience),",
     "scopus": false,
@@ -1014,8 +1158,8 @@ export const publicationsData = [
   },
   {
     "title": "An agent based approach to find high energy consuming activities.",
-    "author": "A. Kashif, J. Dugdale, S. Ploix.,",
-    "authorName": "A Kashif, J Dugdale, S Ploix,",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "International Conference on Artificial Intelligence (ICAI),",
     "scopus": false,
@@ -1023,8 +1167,8 @@ export const publicationsData = [
   },
   {
     "title": "Agent based framework to simulate inhabitants' behaviour in domestic settings for energy management",
-    "author": "A. Kashif, X. H. Binh Le, J. Dugdale and S. Ploix",
-    "authorName": "A Kashif, X H Binh Le, J Dugdale and S Ploix",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "3rd International Conference on Agents and Artficial Intelligence (ICAART",
     "scopus": false,
@@ -1032,8 +1176,8 @@ export const publicationsData = [
   },
   {
     "title": "Simulating inhabitant behaviour to manage energy at home.",
-    "author": "X. H. Binh Le, A. Kashif, S. Ploix, J. Dugdale, M. Di Mascolo and S. Abras",
-    "authorName": "X H Binh Le, A Kashif, S Ploix, J Dugdale, M Di Mascolo and S Abras",
+    "author": "Dr. Ayesha Kashif",
+    "authorName": "Dr. Ayesha Kashif",
     "date": null,
     "journal": "IBPSA (International Building Performance Simulation Association",
     "scopus": false,
@@ -1238,7 +1382,7 @@ export const publicationsData = [
     "impactFactor": 3.48
   },
   {
-    "title": "Success factors analysis for requirement elicitation in global\r\n software development paradigm: An empirical study",
+    "title": "Success factors analysis for requirement elicitation in global\n software development paradigm: An empirical study",
     "author": "MUHAMMAD YASEEN",
     "authorName": "Dr. Muhammad Yaseen",
     "date": new Date(2024, 2, 22),
@@ -1247,7 +1391,7 @@ export const publicationsData = [
     "impactFactor": 2
   },
   {
-    "title": "A hybrid technique using minimal spanning tree and analytic\r\n hierarchical process to prioritize functional requirements for parallel\r\n software development",
+    "title": "A hybrid technique using minimal spanning tree and analytic\n hierarchical process to prioritize functional requirements for parallel\n software development",
     "author": "MUHAMMAD YASEEN",
     "authorName": "Dr. Muhammad Yaseen",
     "date": new Date(2024, 1, 23),

@@ -172,7 +172,7 @@ const Dashboard = ({ publications }) => {
             allTime={true}
           />
           <PublicationList 
-            publications={filteredPublications}
+            publications={publications}
             selectedFiscalYear={selectedFiscalYear}
             allFiscalYears={availableFiscalYears}
             allFacultyMembers={allFacultyMembers}

@@ -145,13 +145,32 @@ const ExcelUpload = ({ onDataLoaded }) => {
   const authorNameMap = {
     'muhammad yaseen': 'Dr. Muhammad Yaseen',
     'dr muhammad yaseen': 'Dr. Muhammad Yaseen',
-    'dr. muhammad yaseen': 'Dr. Muhammad Yaseen'
+    'dr. muhammad yaseen': 'Dr. Muhammad Yaseen',
+    'a kashif': 'Dr. Ayesha Kashif',
+    'ayesha kashif': 'Dr. Ayesha Kashif',
+    'dr ayesha kashif': 'Dr. Ayesha Kashif',
+    'dr. ayesha kashif': 'Dr. Ayesha Kashif'
   }
 
   const normalizeAuthorName = (name) => {
     if (!name) return 'Unknown'
     const cleaned = name.replace(/\./g, '').replace(/\s+/g, ' ').trim()
     const key = cleaned.toLowerCase()
+    
+    // Check if the name contains "A Kashif" or "Ayesha Kashif" and replace it
+    if (key.includes('a kashif') || key.includes('ayesha kashif')) {
+      // If it's just "A Kashif" or "Ayesha Kashif", return the normalized version
+      if (key === 'a kashif' || key === 'ayesha kashif' || key === 'dr ayesha kashif' || key === 'dr. ayesha kashif') {
+        return 'Dr. Ayesha Kashif'
+      }
+      // If it contains multiple authors, replace "A Kashif" with "Dr. Ayesha Kashif"
+      let normalized = cleaned.replace(/\bA\s+Kashif\b/gi, 'Dr. Ayesha Kashif')
+                               .replace(/\bAyesha\s+Kashif\b/gi, 'Dr. Ayesha Kashif')
+                               .replace(/\bDr\s+Dr\s+Ayesha\s+Kashif\b/gi, 'Dr. Ayesha Kashif')
+                               .replace(/\bDr\.\s+Dr\.\s+Ayesha\s+Kashif\b/gi, 'Dr. Ayesha Kashif')
+      return normalized
+    }
+    
     return authorNameMap[key] || cleaned
   }
 
