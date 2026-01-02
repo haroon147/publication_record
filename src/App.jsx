@@ -14,10 +14,10 @@ function App() {
     if (savedData) {
       try {
         const parsed = JSON.parse(savedData)
-        // Convert date strings back to Date objects
+        // Convert date strings back to Date objects (handle null dates)
         const publicationsWithDates = parsed.map(pub => ({
           ...pub,
-          date: pub.date ? new Date(pub.date) : null
+          date: pub.date && pub.date !== 'null' ? new Date(pub.date) : null
         }))
         setPublications(publicationsWithDates)
         console.log('📂 Loaded saved publications from localStorage:', publicationsWithDates.length)
@@ -53,7 +53,7 @@ function App() {
             University Publication Analytics System
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            All Time Publication Records
+            Complete Publication Records Database
           </p>
         </header>
 

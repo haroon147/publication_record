@@ -157,7 +157,7 @@ if (titleIdx === -1 || authorIdx === -1) {
   process.exit(1);
 }
 
-// Parse ALL data rows - get ALL publications regardless of date
+// Parse ALL data rows - extract ALL publications regardless of date
 const publications = [];
 
 for (let i = 1; i < jsonData.length; i++) {
@@ -180,43 +180,43 @@ for (let i = 1; i < jsonData.length; i++) {
   const pubDate = parseDate(dateStr);
   const impactFactor = parseImpactFactor(impactFactorStr);
   
-  // Include ALL publications with valid publication dates (no date range filtering)
-  if (pubDate) {
-    publications.push({
-      title: titleStr,
-      author: authorStr,
-      authorName: extractAuthorName(authorStr),
-      date: pubDate,
-      journal: String(journal).trim() || '',
-      scopus: String(scopus).toLowerCase().includes('yes') || String(scopus).toLowerCase() === 'true',
-      impactFactor: impactFactor
-    });
-  }
+  // Include ALL publications with valid data (date is optional but preferred)
+  publications.push({
+    title: titleStr,
+    author: authorStr,
+    authorName: extractAuthorName(authorStr),
+    date: pubDate, // Can be null if date parsing fails
+    journal: String(journal).trim() || '',
+    scopus: String(scopus).toLowerCase().includes('yes') || String(scopus).toLowerCase() === 'true',
+    impactFactor: impactFactor
+  });
 }
 
-// Sort by date (newest first) for better organization
-publications.sort((a, b) => {
-  if (!a.date && !b.date) return 0;
-  if (!a.date) return 1;
-  if (!b.date) return -1;
-  return b.date - a.date;
-});
+// Calculate date range from actual data
+const datesWithValues = publications.filter(p => p.date).map(p => p.date);
+const minDate = datesWithValues.length > 0 ? new Date(Math.min(...datesWithValues)) : null;
+const maxDate = datesWithValues.length > 0 ? new Date(Math.max(...datesWithValues)) : null;
 
-console.log(`\n✅ Extracted ${publications.length} publications from Excel file (ALL TIME)`);
-console.log(`Date range: All publications with valid publication dates`);
+console.log(`\n✅ Extracted ${publications.length} publications from Excel file`);
+if (minDate && maxDate) {
+  console.log(`Date range: ${minDate.toLocaleDateString()} - ${maxDate.toLocaleDateString()}`);
+} else {
+  console.log(`Note: Some publications may not have valid dates`);
+}
 
 // Generate JavaScript file content
-const jsContent = `// Publication records data - July 1, 2024 to June 30, 2025
+const jsContent = `// Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
 // Generated on: ${new Date().toISOString()}
+// Total publications: ${publications.length}
 
 export const publicationsData = ${JSON.stringify(publications.map(pub => ({
   ...pub,
-  date: pub.date.toISOString()
+  date: pub.date ? pub.date.toISOString() : null
 })), null, 2).replace(/"date":\s*"([^"]+)"/g, (match, dateStr) => {
   const date = new Date(dateStr);
   return `"date": new Date(${date.getFullYear()}, ${date.getMonth()}, ${date.getDate()})`;
-})}
+}).replace(/"date":\s*null/g, '"date": null')}
 `;
 
 // Write to publications.js

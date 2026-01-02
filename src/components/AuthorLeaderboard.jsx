@@ -1,7 +1,7 @@
 import React from 'react'
 import { Trophy, Medal, Award, Star } from 'lucide-react'
 
-const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime }) => {
+const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime = false }) => {
   const sortedAuthors = Object.entries(authorCounts)
     .map(([name, count]) => ({ 
       name, 
@@ -31,19 +31,15 @@ const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime }) => {
     <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="flex items-center gap-2 mb-6">
         <Trophy className="w-6 h-6 text-yellow-500" />
-        <h3 className="text-xl font-bold text-gray-800">Top Contributors</h3>
+        <h3 className="text-xl font-bold text-gray-800">
+          {allTime ? 'All-Time Top Contributors' : 'Top Contributors'}
+        </h3>
         {allTime && (
-          <span className="ml-auto text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
-            All Time Entries
+          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+            Based on all entries
           </span>
         )}
       </div>
-      
-      {allTime && (
-        <p className="text-sm text-gray-600 mb-4 bg-gray-50 p-3 rounded-lg border border-gray-200">
-          Rankings are based on <strong>all-time publication entries</strong> across all fiscal years, showing who has made the maximum number of entries.
-        </p>
-      )}
 
       {sortedAuthors.length === 0 ? (
         <p className="text-gray-500 text-center py-8">No author data available</p>
@@ -60,10 +56,7 @@ const AuthorLeaderboard = ({ authorCounts, authorImpactFactors, allTime }) => {
               <div className="flex-1 min-w-0">
                 <p className="font-semibold text-gray-800 truncate">{author.name}</p>
                 <div className="flex items-center gap-3 mt-1">
-                  <p className="text-sm text-gray-500">
-                    <span className="font-semibold text-gray-700">{author.count}</span> publication{author.count !== 1 ? 's' : ''} 
-                    {allTime && <span className="text-blue-600 font-medium"> (all time)</span>}
-                  </p>
+                  <p className="text-sm text-gray-500">{author.count} publication{author.count !== 1 ? 's' : ''}</p>
                   {author.impactFactor > 0 && (
                     <div className="flex items-center gap-1 text-sm">
                       <Star className="w-3 h-3 text-indigo-500" />

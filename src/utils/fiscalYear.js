@@ -1,93 +1,126 @@
-// Fiscal Year utilities
-// Fiscal years run from July 1 to June 30
-// FY-24-25 = July 1, 2024 to June 30, 2025
+// Utility functions for fiscal year calculations
+// Fiscal year runs from July 1 to June 30
 
+/**
+ * Get fiscal year for a given date
+ * @param {Date} date - Publication date
+ * @returns {string|null} - Fiscal year string (e.g., "FY 24-25") or null if date is invalid
+ */
 export const getFiscalYear = (date) => {
-  if (!date) return null;
-  
-  const year = date.getFullYear();
-  const month = date.getMonth(); // 0-11 (Jan = 0, Dec = 11)
-  
-  // If month is July (6) to December (11), fiscal year starts in current year
-  // If month is January (0) to June (5), fiscal year started in previous year
-  if (month >= 6) {
-    // July to December: FY-YY-(YY+1)
-    const fyStart = year;
-    const fyEnd = year + 1;
-    return {
-      code: `FY-${String(fyStart).slice(-2)}-${String(fyEnd).slice(-2)}`,
-      startYear: fyStart,
-      endYear: fyEnd,
-      startDate: new Date(fyStart, 6, 1), // July 1
-      endDate: new Date(fyEnd, 5, 30) // June 30
-    };
-  } else {
-    // January to June: FY-(YY-1)-YY
-    const fyStart = year - 1;
-    const fyEnd = year;
-    return {
-      code: `FY-${String(fyStart).slice(-2)}-${String(fyEnd).slice(-2)}`,
-      startYear: fyStart,
-      endYear: fyEnd,
-      startDate: new Date(fyStart, 6, 1), // July 1
-      endDate: new Date(fyEnd, 5, 30) // June 30
-    };
+  if (!date || !(date instanceof Date) || isNaN(date.getTime())) {
+    return null
   }
-};
+  
+  const year = date.getFullYear()
+  const month = date.getMonth() // 0-11, where 6 = July
+  
+  // If month is July (6) or later, it's the start of the fiscal year
+  // FY 24-25 means July 2024 to June 2025
+  if (month >= 6) {
+    // July-December: FY YY-(YY+1)
+    const shortYear = year % 100
+    const nextShortYear = (shortYear + 1) % 100
+    return `FY ${shortYear}-${nextShortYear.toString().padStart(2, '0')}`
+  } else {
+    // January-June: FY (YY-1)-YY
+    const shortYear = year % 100
+    const prevShortYear = (shortYear - 1 + 100) % 100
+    return `FY ${prevShortYear.toString().padStart(2, '0')}-${shortYear.toString().padStart(2, '0')}`
+  }
+}
 
-export const getFiscalYearRange = (fyCode) => {
-  // Parse FY-24-25 format
-  const match = fyCode.match(/FY-(\d{2})-(\d{2})/);
-  if (!match) return null;
+/**
+ * Get date range for a fiscal year
+ * @param {string} fiscalYear - Fiscal year string (e.g., "FY 24-25")
+ * @returns {{startDate: Date, endDate: Date}|null} - Date range or null if invalid
+ */
+export const getFiscalYearRange = (fiscalYear) => {
+  if (!fiscalYear || !fiscalYear.startsWith('FY ')) {
+    return null
+  }
   
-  const startYY = parseInt(match[1]);
-  const endYY = parseInt(match[2]);
+  const match = fiscalYear.match(/FY (\d{2})-(\d{2})/)
+  if (!match) {
+    return null
+  }
   
-  // Convert YY to full year (assuming 2000s)
-  const startYear = startYY < 50 ? 2000 + startYY : 1900 + startYY;
-  const endYear = endYY < 50 ? 2000 + endYY : 1900 + endYY;
+  const startShortYear = parseInt(match[1])
+  const endShortYear = parseInt(match[2])
   
-  return {
-    startDate: new Date(startYear, 6, 1), // July 1
-    endDate: new Date(endYear, 5, 30) // June 30
-  };
-};
+  // Determine full years
+  // If end year is less than start year, it means we're in the 2000s
+  // Otherwise, we need to determine based on current date
+  const currentYear = new Date().getFullYear()
+  const currentCentury = Math.floor(currentYear / 100) * 100
+  
+  let startYear = currentCentury + startShortYear
+  let endYear = currentCentury + endShortYear
+  
+  // If end year seems to be in the past, it might be next century
+  if (endYear < startYear) {
+    endYear += 100
+  }
+  
+  // If start year seems too far in the future, adjust
+  if (startYear > currentYear + 10) {
+    startYear -= 100
+    endYear -= 100
+  }
+  
+  const startDate = new Date(startYear, 6, 1) // July 1
+  const endDate = new Date(endYear, 5, 30) // June 30
+  
+  return { startDate, endDate }
+}
 
+/**
+ * Get all fiscal years from publications
+ * @param {Array} publications - Array of publication objects
+ * @returns {Array} - Sorted array of fiscal year strings
+ */
 export const getAllFiscalYears = (publications) => {
-  const fySet = new Set();
+  const fiscalYears = new Set()
   
   publications.forEach(pub => {
     if (pub.date) {
-      const fy = getFiscalYear(pub.date);
+      const fy = getFiscalYear(pub.date)
       if (fy) {
-        fySet.add(fy.code);
+        fiscalYears.add(fy)
       }
     }
-  });
+  })
   
-  // Convert to array and sort (newest first)
-  const fiscalYears = Array.from(fySet).sort((a, b) => {
-    const matchA = a.match(/FY-(\d{2})-(\d{2})/);
-    const matchB = b.match(/FY-(\d{2})-(\d{2})/);
-    if (!matchA || !matchB) return 0;
+  // Sort fiscal years (most recent first)
+  return Array.from(fiscalYears).sort((a, b) => {
+    const aMatch = a.match(/FY (\d{2})-(\d{2})/)
+    const bMatch = b.match(/FY (\d{2})-(\d{2})/)
+    if (!aMatch || !bMatch) return 0
     
-    const startYYA = parseInt(matchA[1]);
-    const startYYB = parseInt(matchB[1]);
-    return startYYB - startYYA; // Descending order (newest first)
-  });
-  
-  return fiscalYears;
-};
+    const aYear = parseInt(aMatch[1])
+    const bYear = parseInt(bMatch[1])
+    return bYear - aYear // Descending order
+  })
+}
 
-export const filterByFiscalYear = (publications, fyCode) => {
-  if (!fyCode || fyCode === 'all') return publications;
+/**
+ * Filter publications by fiscal year
+ * @param {Array} publications - Array of publication objects
+ * @param {string} fiscalYear - Fiscal year string (e.g., "FY 24-25") or "all"
+ * @returns {Array} - Filtered publications
+ */
+export const filterByFiscalYear = (publications, fiscalYear) => {
+  if (fiscalYear === 'all') {
+    return publications
+  }
   
-  const range = getFiscalYearRange(fyCode);
-  if (!range) return publications;
+  const range = getFiscalYearRange(fiscalYear)
+  if (!range) {
+    return publications
+  }
   
   return publications.filter(pub => {
-    if (!pub.date) return false;
-    return pub.date >= range.startDate && pub.date <= range.endDate;
-  });
-};
+    if (!pub.date) return false
+    return pub.date >= range.startDate && pub.date <= range.endDate
+  })
+}
 

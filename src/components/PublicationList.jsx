@@ -1,18 +1,23 @@
 import React, { useState, useMemo } from 'react'
 import { FileText, Search, Filter, Calendar, User, BookOpen, CheckCircle, XCircle, Star } from 'lucide-react'
 
-const PublicationList = ({ publications, allPublications, fiscalYear }) => {
+const PublicationList = ({ 
+  publications, 
+  selectedFiscalYear, 
+  selectedFaculty,
+  allFiscalYears = [],
+  allFacultyMembers = [],
+  onFiscalYearChange,
+  onFacultyChange
+}) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterQuarter, setFilterQuarter] = useState('all')
-  const [filterAuthor, setFilterAuthor] = useState('all')
   const [sortBy, setSortBy] = useState('date') // date, author, title
 
-  // Get all unique faculty members from all publications (for filter dropdown)
   const uniqueAuthors = useMemo(() => {
-    const allAuthors = allPublications || publications
-    const authors = [...new Set(allAuthors.map(p => p.authorName))].sort()
+    const authors = [...new Set(publications.map(p => p.authorName))].sort()
     return authors
-  }, [allPublications, publications])
+  }, [publications])
 
   const getQuarter = (date) => {
     if (!date) return null
@@ -44,10 +49,7 @@ const PublicationList = ({ publications, allPublications, fiscalYear }) => {
       // Quarter filter
       const matchesQuarter = filterQuarter === 'all' || getQuarter(pub.date) === filterQuarter
 
-      // Author filter
-      const matchesAuthor = filterAuthor === 'all' || pub.authorName === filterAuthor
-
-      return matchesSearch && matchesQuarter && matchesAuthor
+      return matchesSearch && matchesQuarter
     })
 
     // Sort
@@ -74,9 +76,19 @@ const PublicationList = ({ publications, allPublications, fiscalYear }) => {
     <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="flex items-center gap-2 mb-6">
         <FileText className="w-6 h-6 text-blue-600" />
-        <h3 className="text-xl font-bold text-gray-800">All Publications</h3>
+        <h3 className="text-xl font-bold text-gray-800">Publications</h3>
+        {selectedFiscalYear !== 'all' && (
+          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+            {selectedFiscalYear}
+          </span>
+        )}
+        {selectedFaculty !== 'all' && (
+          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+            {selectedFaculty}
+          </span>
+        )}
         <span className="ml-auto text-sm text-gray-500">
-          {filteredAndSorted.length} of {publications.length} publications
+          {filteredAndSorted.length} of {publications.length} publication{publications.length !== 1 ? 's' : ''}
         </span>
       </div>
 
@@ -112,18 +124,6 @@ const PublicationList = ({ publications, allPublications, fiscalYear }) => {
               <option value="Q4">Q4 (Apr-Jun)</option>
             </select>
           </div>
-
-          {/* Author Filter */}
-          <select
-            value={filterAuthor}
-            onChange={(e) => setFilterAuthor(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            <option value="all">All Authors</option>
-            {uniqueAuthors.map(author => (
-              <option key={author} value={author}>{author}</option>
-            ))}
-          </select>
 
           {/* Sort */}
           <select

@@ -7,45 +7,73 @@ import { BarChart3, Database, Filter } from 'lucide-react'
 import { getAllFiscalYears, filterByFiscalYear } from '../utils/fiscalYear'
 
 const Dashboard = ({ publications }) => {
-  const [selectedFiscalYear, setSelectedFiscalYear] = useState('FY-24-25') // Default to current FY
-  
-  // Get all unique fiscal years from publications
-  const fiscalYears = useMemo(() => {
-    const allFYs = getAllFiscalYears(publications);
-    return ['all', ...allFYs]; // Add 'all' option
-  }, [publications]);
-  
-  // Filter publications by selected fiscal year
+  const [selectedFiscalYear, setSelectedFiscalYear] = useState('all')
+  const [selectedFaculty, setSelectedFaculty] = useState('all')
+
+  // Get all unique faculty members (authors) from ALL publications
+  const allFacultyMembers = useMemo(() => {
+    const authors = [...new Set(publications.map(p => p.authorName))].sort()
+    return authors
+  }, [publications])
+
+  // Get all available fiscal years from ALL publications
+  const availableFiscalYears = useMemo(() => {
+    return getAllFiscalYears(publications)
+  }, [publications])
+
+  // Filter publications based on fiscal year and faculty
   const filteredPublications = useMemo(() => {
-    return filterByFiscalYear(publications, selectedFiscalYear);
-  }, [publications, selectedFiscalYear]);
-  
+    let filtered = filterByFiscalYear(publications, selectedFiscalYear)
+    
+    if (selectedFaculty !== 'all') {
+      filtered = filtered.filter(pub => pub.authorName === selectedFaculty)
+    }
+    
+    return filtered
+  }, [publications, selectedFiscalYear, selectedFaculty])
+
+  // Calculate all-time author counts from ALL publications (for leaderboard)
+  const allTimeAuthorCounts = useMemo(() => {
+    const counts = {}
+    publications.forEach(pub => {
+      const author = pub.authorName || 'Unknown'
+      counts[author] = (counts[author] || 0) + 1
+    })
+    return counts
+  }, [publications])
+
+  // Calculate all-time author impact factors from ALL publications
+  const allTimeAuthorImpactFactors = useMemo(() => {
+    const factors = {}
+    publications.forEach(pub => {
+      const author = pub.authorName || 'Unknown'
+      if (!factors[author]) {
+        factors[author] = { count: 0, impactFactor: 0 }
+      }
+      factors[author].count++
+      factors[author].impactFactor += (pub.impactFactor || 0)
+    })
+    return factors
+  }, [publications])
+
   const stats = useMemo(() => {
     const total = filteredPublications.length
     
-    // Count by author (all-time entries for leaderboard)
+    // Count by author (from filtered publications)
     const authorCounts = {}
-    publications.forEach(pub => {
+    filteredPublications.forEach(pub => {
       const author = pub.authorName || 'Unknown'
       authorCounts[author] = (authorCounts[author] || 0) + 1
     })
     
-    // Count by author for filtered fiscal year
-    const filteredAuthorCounts = {}
-    filteredPublications.forEach(pub => {
-      const author = pub.authorName || 'Unknown'
-      filteredAuthorCounts[author] = (filteredAuthorCounts[author] || 0) + 1
-    })
-    
-    // Top author in selected fiscal year
-    const topAuthor = Object.entries(filteredAuthorCounts).reduce((a, b) => 
-      filteredAuthorCounts[a[0]] > filteredAuthorCounts[b[0]] ? a : b, ['Unknown', 0]
+    const topAuthor = Object.entries(authorCounts).reduce((a, b) => 
+      authorCounts[a[0]] > authorCounts[b[0]] ? a : b, ['Unknown', 0]
     )
     
-    // Count Scopus indexed (for filtered fiscal year)
+    // Count Scopus indexed (from filtered publications)
     const scopusCount = filteredPublications.filter(p => p.scopus).length
     
-    // Calculate total impact factor for filtered fiscal year
+    // Calculate total impact factor from filtered publications (based on publication dates)
     // Note: pub.date is the "Date of Publication" from the Excel file, not the entry/timestamp date
     const totalImpactFactor = filteredPublications.reduce((sum, pub) => {
       // Only count impact factor if publication has a valid publication date
@@ -57,12 +85,12 @@ const Dashboard = ({ publications }) => {
     }, 0)
     const avgImpactFactor = total > 0 ? totalImpactFactor / total : 0
     
-    // Count publications with valid dates and impact factors (for filtered fiscal year)
+    // Count publications with valid dates and impact factors (from filtered publications)
     const publicationsWithDateAndIF = filteredPublications.filter(p => p.date && (p.impactFactor || 0) > 0)
     
-    // Count by author with impact factor (all-time for leaderboard)
+    // Count by author with impact factor (from filtered publications)
     const authorImpactFactors = {}
-    publications.forEach(pub => {
+    filteredPublications.forEach(pub => {
       const author = pub.authorName || 'Unknown'
       if (!authorImpactFactors[author]) {
         authorImpactFactors[author] = { count: 0, impactFactor: 0 }
@@ -80,7 +108,6 @@ const Dashboard = ({ publications }) => {
       Q4: { months: [3, 4, 5], name: 'Q4 (Apr-Jun)', count: 0, impactFactor: 0 }
     }
     
-    // Quarterly breakdown for filtered fiscal year
     filteredPublications.forEach(pub => {
       // Use publication date (Date of Publication) for quarterly calculations
       if (pub.date) {
@@ -107,12 +134,12 @@ const Dashboard = ({ publications }) => {
       topAuthor: { name: topAuthor[0], count: topAuthor[1] },
       scopusCount,
       quarters,
-      authorCounts, // All-time counts for leaderboard
+      authorCounts,
       totalImpactFactor,
       avgImpactFactor,
-      authorImpactFactors // All-time impact factors for leaderboard
+      authorImpactFactors
     }
-  }, [filteredPublications, publications])
+  }, [publications])
 
   return (
     <div className="space-y-6">
@@ -125,43 +152,75 @@ const Dashboard = ({ publications }) => {
           <div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
             <Database className="w-4 h-4 text-green-600" />
             <span>{publications.length} total publication{publications.length !== 1 ? 's' : ''} loaded</span>
-            {selectedFiscalYear !== 'all' && (
-              <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium">
-                {filteredPublications.length} in {selectedFiscalYear}
+            {filteredPublications.length !== publications.length && (
+              <span className="text-blue-600">
+                ({filteredPublications.length} filtered)
               </span>
             )}
           </div>
         </div>
-        
-        {/* Fiscal Year Filter */}
-        <div className="flex items-center gap-2">
-          <Filter className="w-5 h-5 text-gray-400" />
-          <select
-            value={selectedFiscalYear}
-            onChange={(e) => setSelectedFiscalYear(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
-          >
-            <option value="all">All Time</option>
-            {fiscalYears.filter(fy => fy !== 'all').map(fy => (
-              <option key={fy} value={fy}>{fy}</option>
-            ))}
-          </select>
+      </div>
+
+      {/* Filters */}
+      <div className="bg-white rounded-lg shadow-lg p-4">
+        <div className="flex items-center gap-2 mb-4">
+          <Filter className="w-5 h-5 text-gray-600" />
+          <h3 className="text-lg font-semibold text-gray-800">Filters</h3>
+        </div>
+        <div className="flex flex-wrap gap-4">
+          {/* Fiscal Year Filter */}
+          <div className="flex-1 min-w-[200px]">
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Fiscal Year
+            </label>
+            <select
+              value={selectedFiscalYear}
+              onChange={(e) => setSelectedFiscalYear(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">All Fiscal Years</option>
+              {availableFiscalYears.map(fy => (
+                <option key={fy} value={fy}>{fy}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* Faculty Member Filter */}
+          <div className="flex-1 min-w-[200px]">
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Faculty Member
+            </label>
+            <select
+              value={selectedFaculty}
+              onChange={(e) => setSelectedFaculty(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">All Faculty Members</option>
+              {allFacultyMembers.map(faculty => (
+                <option key={faculty} value={faculty}>{faculty}</option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
       {publications.length > 0 ? (
         <>
-          <Statistics stats={stats} fiscalYear={selectedFiscalYear} />
+          <Statistics stats={stats} />
           <QuarterlyAnalysis quarters={stats.quarters} />
           <AuthorLeaderboard 
-            authorCounts={stats.authorCounts} 
-            authorImpactFactors={stats.authorImpactFactors}
+            authorCounts={allTimeAuthorCounts} 
+            authorImpactFactors={allTimeAuthorImpactFactors}
             allTime={true}
           />
           <PublicationList 
-            publications={filteredPublications} 
-            allPublications={publications}
-            fiscalYear={selectedFiscalYear}
+            publications={filteredPublications}
+            selectedFiscalYear={selectedFiscalYear}
+            selectedFaculty={selectedFaculty}
+            allFiscalYears={availableFiscalYears}
+            allFacultyMembers={allFacultyMembers}
+            onFiscalYearChange={setSelectedFiscalYear}
+            onFacultyChange={setSelectedFaculty}
           />
         </>
       ) : (
