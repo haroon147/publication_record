@@ -1,7 +1,7 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-02T12:12:43.825Z
-// Total publications: 245
+// Generated on: 2026-01-06T04:21:17.777Z
+// Total publications: 270
 
 export const publicationsData = [
   {
@@ -885,6 +885,231 @@ export const publicationsData = [
     "journal": "International Conference on Smart Systems and Emerging Technologies.",
     "scopus": true,
     "impactFactor": 0
+  },
+  {
+    "title": "Effective Negotiations Practices in Global Software Development: A Systematic Literature Review",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 0, 1),
+    "journal": "International Journal of Computer Science Engineering (IJCSE",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Importance of Requirements Prioritization in Parallel Developing Software Projects",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 2, 1),
+    "journal": "International Journal of Computer Science Engineering (IJCSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Effective Negotiation Practices in Global Software Development: An Empirical Evaluation",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 4, 2),
+    "journal": "International Journal of Computer Science Engineering (IJCSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Effective Requirement Elicitation Process using Developed Open Source Software Systems",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 8, 1),
+    "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Prioritization of Software Functional Requirements: A Novel Approach using AHP and Spanning Tree",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 1, 2),
+    "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "IDENTIFICATION OF CHALLENGES DURING REQUIREMENTS IMPLEMENTATION IN GLOBAL SOFTWARE DEVELOPMENT: A SYSTEMATIC LITERATURE REVIEW",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 3, 30),
+    "journal": "JOURNAL OF SOFTWARE ENGINEERING & INTELLIGENT SYSTEMS",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "USING CUMULATIVE VOTING AND PRIORITY GROUPS TO PRIORITIZE FUNCTIONAL REQUIREMENTS: ODOO ERP AS CASE STUDY",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 7, 2),
+    "journal": "JOURNAL OF SOFTWARE ENGINEERING & INTELLIGENT SYSTEMS",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Inter-organizational Learning and Knowledge Sharing Management in Global Software Development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 1, 2),
+    "journal": "International Journal of Scientific Research in Research Paper . Computer Science and Engineering",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Colloboration as Success Factor during Requirement Elicitation in Global Software Development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 2, 1),
+    "journal": "International Journal of Scientific Research in Research Paper . Multidisciplinary Studies",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Enhancing Integrity Technique Using Distributed Query Operation",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 1, 2),
+    "journal": "Recent Trends and Advances in Wireless and IoT-enabled Networks. EAI/Springer Innovations in Communication and Computing. Springer, Cham",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "International Journal of Computer Science Engineering (IJCSE)",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 7, 2),
+    "journal": "International Journal of Computer Science Engineering (IJCSE)",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Validation of Practices for Effective Communication during Requirements Elicitation in Global Software Development",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 3, 4),
+    "journal": "International Journal of Computer Applications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Practices for Effective Software Project Management in Global Software Development: A Systematic Literature Review",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2020, 1, 2),
+    "journal": "International Journal of Computer Applications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Identification of Practices for Proper Implementation of Requirements in Global Software Development: A Systematic Literature Review Protocol",
+    "author": "Dr. Muhammad Yaseen : 5769",
+    "authorName": "Dr. Muhammad Yaseen",
+    "date": new Date(2019, 9, 2),
+    "journal": "International Journal of Computer Applications",
+    "scopus": false,
+    "impactFactor": 0
+  },
+  {
+    "title": "Smart buildings: Federated learning-driven secure, transparent and smart energy management system using XAI",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 5, 30),
+    "journal": "Energy reports",
+    "scopus": true,
+    "impactFactor": 4.7
+  },
+  {
+    "title": "Big Data-Driven Federated Learning Model for Scalable and Privacy-Preserving Cyber Threat Detection in IoT-Enabled Healthcare Systems",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 11, 18),
+    "journal": "Computers, Materials & Continua",
+    "scopus": true,
+    "impactFactor": 1.7
+  },
+  {
+    "title": "Interpretable Federated Learning Model for Cyber Intrusion Detection in Smart Cities with Privacy-Preserving Feature Selection",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 8, 18),
+    "journal": "Computers, Materials & Continua",
+    "scopus": true,
+    "impactFactor": 1.7
+  },
+  {
+    "title": "Weighted explainable federated learning for privacy-preserving and scalable energy optimization in autonomous vehicular networks",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 7, 20),
+    "journal": "Egyptian Informatics Journal",
+    "scopus": true,
+    "impactFactor": 4.3
+  },
+  {
+    "title": "Privacy-Preserving Interpretability: An Explainable Federated Learning Model for Predictive Maintenance in Sustainable Manufacturing and Industry 4.0",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 5, 6),
+    "journal": "AI",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Navigating the future of higher education in Saudi Arabia: implementing AI, machine learning, and big data for sustainable university development",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 5, 3),
+    "journal": "Discover Sustainability",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Smart sustainable cyber security: modelling an interpretable and transparent threat detection with explainable artificial intelligence",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 4, 24),
+    "journal": "Discover Sustainability",
+    "scopus": true,
+    "impactFactor": 3
+  },
+  {
+    "title": "Blockchain enabled IoMT and transfer learning for ocular disease classification",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 4, 5),
+    "journal": "Discover Applied Sciences",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "A swin transformer and CNN fusion framework for accurate Parkinson disease classification in MRI",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 3, 29),
+    "journal": "Scientific Reports",
+    "scopus": true,
+    "impactFactor": 3.2
+  },
+  {
+    "title": "Secure and Transparent Banking: Explainable AI-Driven Federated Learning Model for Financial Fraud Detection",
+    "author": "Dr. Muhammad Adnan Khan : 3320",
+    "authorName": "Dr Muhammad Adnan Khan",
+    "date": new Date(2025, 2, 27),
+    "journal": "Journal of Risk and Financial Management",
+    "scopus": true,
+    "impactFactor": 0
+  },
+  {
+    "title": "Digital Forensics as Advanced Ransomware Pre‐Attack Detection Algorithm for Endpoint Data Protection",
+    "author": "Mr. Sajid Hussnain Raza – N/A",
+    "authorName": "Mr Sajid Hussnain Raza – N/A",
+    "date": new Date(2022, 6, 6),
+    "journal": "Security and Communication Networks",
+    "scopus": true,
+    "impactFactor": 1.454
   },
   {
     "title": "Prediction of hydrogen generation from perhydro-dibenzyltoluene empowered with machine learning",
