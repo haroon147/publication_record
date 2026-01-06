@@ -1,6 +1,6 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-01-06T04:21:17.777Z
+// Generated on: 2026-01-06T04:26:06.339Z
 // Total publications: 270
 
 export const publicationsData = [
@@ -1015,7 +1015,7 @@ export const publicationsData = [
   {
     "title": "Smart buildings: Federated learning-driven secure, transparent and smart energy management system using XAI",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 5, 30),
     "journal": "Energy reports",
     "scopus": true,
@@ -1024,7 +1024,7 @@ export const publicationsData = [
   {
     "title": "Big Data-Driven Federated Learning Model for Scalable and Privacy-Preserving Cyber Threat Detection in IoT-Enabled Healthcare Systems",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 11, 18),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
@@ -1033,7 +1033,7 @@ export const publicationsData = [
   {
     "title": "Interpretable Federated Learning Model for Cyber Intrusion Detection in Smart Cities with Privacy-Preserving Feature Selection",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 8, 18),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
@@ -1042,7 +1042,7 @@ export const publicationsData = [
   {
     "title": "Weighted explainable federated learning for privacy-preserving and scalable energy optimization in autonomous vehicular networks",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 7, 20),
     "journal": "Egyptian Informatics Journal",
     "scopus": true,
@@ -1051,7 +1051,7 @@ export const publicationsData = [
   {
     "title": "Privacy-Preserving Interpretability: An Explainable Federated Learning Model for Predictive Maintenance in Sustainable Manufacturing and Industry 4.0",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 5, 6),
     "journal": "AI",
     "scopus": true,
@@ -1060,7 +1060,7 @@ export const publicationsData = [
   {
     "title": "Navigating the future of higher education in Saudi Arabia: implementing AI, machine learning, and big data for sustainable university development",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 5, 3),
     "journal": "Discover Sustainability",
     "scopus": true,
@@ -1069,7 +1069,7 @@ export const publicationsData = [
   {
     "title": "Smart sustainable cyber security: modelling an interpretable and transparent threat detection with explainable artificial intelligence",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 4, 24),
     "journal": "Discover Sustainability",
     "scopus": true,
@@ -1078,7 +1078,7 @@ export const publicationsData = [
   {
     "title": "Blockchain enabled IoMT and transfer learning for ocular disease classification",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 4, 5),
     "journal": "Discover Applied Sciences",
     "scopus": true,
@@ -1087,7 +1087,7 @@ export const publicationsData = [
   {
     "title": "A swin transformer and CNN fusion framework for accurate Parkinson disease classification in MRI",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 3, 29),
     "journal": "Scientific Reports",
     "scopus": true,
@@ -1096,7 +1096,7 @@ export const publicationsData = [
   {
     "title": "Secure and Transparent Banking: Explainable AI-Driven Federated Learning Model for Financial Fraud Detection",
     "author": "Dr. Muhammad Adnan Khan : 3320",
-    "authorName": "Dr Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 2, 27),
     "journal": "Journal of Risk and Financial Management",
     "scopus": true,
@@ -1114,7 +1114,7 @@ export const publicationsData = [
   {
     "title": "Prediction of hydrogen generation from perhydro-dibenzyltoluene empowered with machine learning",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2023, 9, 11),
     "journal": "International Journal of Hydrogen Energy",
     "scopus": true,
@@ -1123,7 +1123,7 @@ export const publicationsData = [
   {
     "title": "Data Fusion Architecture Empowered with Deep Learning for Breast Cancer Classification",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2023, 10, 21),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
@@ -1132,7 +1132,7 @@ export const publicationsData = [
   {
     "title": "HCDP-DELM: Heterogeneous Chronic Disease Prediction with Temporal Perspective Enabled Deep Extreme Learning Machine",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 0, 25),
     "journal": "Knowledge-Based Systems",
     "scopus": true,
@@ -1141,7 +1141,7 @@ export const publicationsData = [
   {
     "title": "FedCSCD-GAN: A secure and collaborative framework for clinical cancer diagnosis via optimized federated learning and GAN",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 0, 3),
     "journal": "Biomedical Signal Processing and Control",
     "scopus": true,
@@ -1150,7 +1150,7 @@ export const publicationsData = [
   {
     "title": "Smart Energy Management System Using Machine Learning",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 0, 30),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
@@ -1159,7 +1159,7 @@ export const publicationsData = [
   {
     "title": "Supervised Machine Learning-Based Prediction of Hydrogen Storage Classes Utilizing Dibenzyltoluene as an Organic Carrier",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 2, 13),
     "journal": "Molecules",
     "scopus": true,
@@ -1168,7 +1168,7 @@ export const publicationsData = [
   {
     "title": "Optimizing semantic error detection through weighted federated machine learning: A comprehensive approach",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 2, 13),
     "journal": "International Journal of Applied and Advanced Sciences",
     "scopus": true,
@@ -1177,7 +1177,7 @@ export const publicationsData = [
   {
     "title": "Federated Machine Learning Based Fetal Health Prediction Empowered with Bio-Signal Cardiotocography",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 3, 26),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
@@ -1186,7 +1186,7 @@ export const publicationsData = [
   {
     "title": "Identification of kidney stones in KUB X-ray images using VGG16 empowered with explainable artificial intelligence",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 5, 5),
     "journal": "Scientific Reports",
     "scopus": true,
@@ -1195,7 +1195,7 @@ export const publicationsData = [
   {
     "title": "Fuzzy-Based Fusion Model for β-Thalassemia Carriers Prediction Using Machine Learning Technique",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 3, 25),
     "journal": "Advances in Fuzzy Systems",
     "scopus": true,
@@ -1204,7 +1204,7 @@ export const publicationsData = [
   {
     "title": "Cervical Cancer Prediction Empowered with Federated Machine Learning",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 3, 25),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
@@ -1213,7 +1213,7 @@ export const publicationsData = [
   {
     "title": "Enhancing smart grid electricity prediction with the fusion of intelligent modeling and XAI integration",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 4, 16),
     "journal": "International Journal of Applied and Advanced Sciences",
     "scopus": true,
@@ -1222,7 +1222,7 @@ export const publicationsData = [
   {
     "title": "Emerging research trends in artificial intelligence for cancer diagnostic systems: A comprehensive review",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 8, 15),
     "journal": "Heliyon",
     "scopus": true,
@@ -1231,7 +1231,7 @@ export const publicationsData = [
   {
     "title": "Transition-aware human activity recognition using an ensemble deep learning framework",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 9, 9),
     "journal": "Computers in Human Behavior",
     "scopus": true,
@@ -1240,7 +1240,7 @@ export const publicationsData = [
   {
     "title": "Genetic Diversity and Forensic Utility of X-STR Loci in Punjabi and Kashmiri Populations: Insights into Population Structure and Ancestry",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 9, 28),
     "journal": "Genes",
     "scopus": true,
@@ -1249,7 +1249,7 @@ export const publicationsData = [
   {
     "title": "Connectivity index of interval-valued fuzzy graphs with application",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 9, 28),
     "journal": "Scientific Reports",
     "scopus": true,
@@ -1258,7 +1258,7 @@ export const publicationsData = [
   {
     "title": "Fuzzy-Based Weighted Federated Machine Learning Approach for Sustainable Energy Management with IoE Integration",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 4, 21),
     "journal": "2024 Systems and Information Engineering Design Symposium (SIEDS)",
     "scopus": true,
@@ -1267,7 +1267,7 @@ export const publicationsData = [
   {
     "title": "Emerging Technologies for Enhancing Robust Cybersecurity Measures for Business Intelligence in Healthcare 5.0",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": null,
     "journal": "Strengthening Industrial Cybersecurity to Protect Business Intelligence",
     "scopus": true,
@@ -1276,7 +1276,7 @@ export const publicationsData = [
   {
     "title": "GRADATIONAL PAVEMENT CRACKS SEGMENTATION USING FUZZY INFERENCE SYSTEM",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2024",
     "scopus": false,
@@ -1285,7 +1285,7 @@ export const publicationsData = [
   {
     "title": "A Comparative Study of Machine Learning Algorithms and Factors Involved in the Prediction of Heart Disease",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2025",
     "scopus": false,
@@ -1294,7 +1294,7 @@ export const publicationsData = [
   {
     "title": "Unveiling the Enigma through Deep Learning : Exploring Multifaceted Human Personality Traits",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2026",
     "scopus": false,
@@ -1303,7 +1303,7 @@ export const publicationsData = [
   {
     "title": "Security Threats and Attacks in IoT-Based Home Automation",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2029",
     "scopus": false,
@@ -1312,7 +1312,7 @@ export const publicationsData = [
   {
     "title": "Diabetes Prediction Empowered with Multi-level Data Fusion and Machine Learning",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
@@ -1321,7 +1321,7 @@ export const publicationsData = [
   {
     "title": "A Mechanism for Bitcoin Price Forecasting using Deep Learning",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 7, 23),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
@@ -2275,7 +2275,7 @@ export const publicationsData = [
   {
     "title": "Transition-aware human activity recognition using an ensemble deep learning framework",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 9, 9),
     "journal": "Journal",
     "scopus": true,
@@ -2284,7 +2284,7 @@ export const publicationsData = [
   {
     "title": "Genetic Diversity and Forensic Utility of X-STR Loci in Punjabi and Kashmiri Populations: Insights into Population Structure and Ancestry",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 9, 28),
     "journal": "Journal",
     "scopus": true,
@@ -2293,7 +2293,7 @@ export const publicationsData = [
   {
     "title": "Optimizing smart home energy management for sustainability using machine learning technique",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2024, 10, 25),
     "journal": "Journal",
     "scopus": true,
@@ -2302,7 +2302,7 @@ export const publicationsData = [
   {
     "title": "Smart buildings: Federated learning-driven secure, transparent and smart energy management system using XAI",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 0, 30),
     "journal": "Journal",
     "scopus": true,
@@ -2311,7 +2311,7 @@ export const publicationsData = [
   {
     "title": "Facial expression recognition using visible and IR by early fusion of deep learning with attention mechanism",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 11, 3),
     "journal": "Journal",
     "scopus": true,
@@ -2320,7 +2320,7 @@ export const publicationsData = [
   {
     "title": "Secure and Transparent Banking: Explainable AI-Driven Federated Learning Model for Financial Fraud Detection",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 2, 27),
     "journal": "Journal",
     "scopus": true,
@@ -2329,7 +2329,7 @@ export const publicationsData = [
   {
     "title": "A swin transformer and CNN fusion framework for accurate Parkinson disease classification in MRI",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 3, 29),
     "journal": "Journal",
     "scopus": true,
@@ -2338,7 +2338,7 @@ export const publicationsData = [
   {
     "title": "Blockchain enabled IoMT and transfer learning for ocular disease classification",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 4, 5),
     "journal": "Journal",
     "scopus": true,
@@ -2347,7 +2347,7 @@ export const publicationsData = [
   {
     "title": "Smart Sustainable Cyber Security: Modelling an Interpretable and Transparent Threat Detection with Explainable Artificial Intelligence",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 4, 15),
     "journal": "Journal",
     "scopus": true,
@@ -2356,7 +2356,7 @@ export const publicationsData = [
   {
     "title": "Machine Learning Applications in UAV Swarms Book Title: Unmanned Aerial Vehicles Swarm for Protecting Smart Cities: Future Trends and Challenges",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 0, 3),
     "journal": "Book Chapter",
     "scopus": true,
@@ -2365,7 +2365,7 @@ export const publicationsData = [
   {
     "title": "A Privacy-Preserving and Adversarially Robust Hybrid Deep-Quantum Model for CPS Security",
     "author": "Muhammad Adnan Khan",
-    "authorName": "Muhammad Adnan Khan",
+    "authorName": "Dr. Muhammad Adnan Khan",
     "date": new Date(2025, 6, 5),
     "journal": "Conference",
     "scopus": true,
