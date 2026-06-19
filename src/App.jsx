@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Dashboard from './components/Dashboard'
-import { FileText } from 'lucide-react'
+import { BookMarked, Sparkles } from 'lucide-react'
 import { publicationsData } from './data/publications'
 
 const STORAGE_KEY = 'publication_records'
@@ -43,23 +43,49 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-3">
-            <FileText className="w-10 h-10 text-blue-600" />
-            Publication Record Portal
-          </h1>
-          <p className="text-gray-600 text-lg">
-            University Publication Analytics System
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Complete Publication Records Database
-          </p>
-        </header>
-
-        <Dashboard publications={publications} />
+    <div className="min-h-screen relative overflow-x-hidden bg-[#f4f6fb]">
+      {/* Decorative background */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-[28rem] h-[28rem] bg-brand-300/30 rounded-full blur-3xl" />
+        <div className="absolute -top-20 right-0 w-[24rem] h-[24rem] bg-purple-300/30 rounded-full blur-3xl" />
+        <div className="absolute top-[40rem] left-1/3 w-[22rem] h-[22rem] bg-sky-200/30 rounded-full blur-3xl" />
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#1e293b 1px, transparent 1px), linear-gradient(90deg, #1e293b 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
       </div>
+
+      <header className="sticky top-0 z-20 bg-white/70 backdrop-blur-xl border-b border-slate-200/70">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center gap-4">
+          <div className="flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-600 to-purple-600 shadow-lg shadow-brand-600/30 shrink-0">
+            <BookMarked className="w-6 h-6 text-white" />
+          </div>
+          <div className="min-w-0">
+            <h1 className="font-display text-lg sm:text-xl font-bold text-slate-900 tracking-tight truncate">
+              Publication Record Portal
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-500 truncate">
+              University Publication Analytics System
+            </p>
+          </div>
+          <div className="ml-auto hidden sm:flex items-center gap-1.5 text-xs font-medium text-brand-700 bg-brand-50 border border-brand-100 px-3 py-1.5 rounded-full">
+            <Sparkles className="w-3.5 h-3.5" />
+            Live Records
+          </div>
+        </div>
+      </header>
+
+      <main className="container mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <Dashboard publications={publications} />
+      </main>
+
+      <footer className="container mx-auto px-4 sm:px-6 pb-8 pt-4 text-center text-xs text-slate-400">
+        Complete Publication Records Database
+      </footer>
     </div>
   )
 }

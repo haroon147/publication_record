@@ -1,6 +1,6 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-06-17T11:05:31.046Z
+// Generated on: 2026-06-19T17:59:08.626Z
 // Total publications: 338
 
 export const publicationsData = [
@@ -2527,7 +2527,7 @@ export const publicationsData = [
   {
     "title": "Design of an Efficient and Provable Secure Key Exchange Protocol for HTTP Cookies",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2024, 6, 18),
     "journal": "Computers, Materials and Continua",
     "scopus": true,
@@ -2536,7 +2536,7 @@ export const publicationsData = [
   {
     "title": "Towards classification and comprehensive analysis of AI-based COVID-19 diagnostic techniques: A survey",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2024, 3, 6),
     "journal": "Artificial Intelligence in Medicine",
     "scopus": true,
@@ -2545,7 +2545,7 @@ export const publicationsData = [
   {
     "title": "APT Adversarial Defence Mechanism for Industrial IoT Enabled Cyber-Physical System",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 6, 3),
     "journal": "IEEE Access",
     "scopus": true,
@@ -2554,7 +2554,7 @@ export const publicationsData = [
   {
     "title": "Recognizing factors effecting the use of mobile banking apps through sentiment and thematic analysis on user reviews",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 6, 13),
     "journal": "Neural Computing and Applications",
     "scopus": true,
@@ -2563,7 +2563,7 @@ export const publicationsData = [
   {
     "title": "Blockchain and IIoT Enabled Solution for Social Distancing and Isolation Management to Prevent Pandemics",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 5, 9),
     "journal": "Computers, Materials and Continua",
     "scopus": true,
@@ -2572,7 +2572,7 @@ export const publicationsData = [
   {
     "title": "Blockchain-Enabled VANET for Smart Solid Waste Management",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 0, 9),
     "journal": "IEEE Access",
     "scopus": true,
@@ -2581,7 +2581,7 @@ export const publicationsData = [
   {
     "title": "CNN-Based Automatic Helmet Violation Detection of Motorcyclists for an Intelligent Transportation System",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 9, 17),
     "journal": "Mathematical Problems in Engineering",
     "scopus": true,
@@ -2590,7 +2590,7 @@ export const publicationsData = [
   {
     "title": "A Reliable Framework for Secure Communication and Health Assessment of Soldiers in the Battlefield",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 9, 27),
     "journal": "SAGE Open",
     "scopus": true,
@@ -2599,7 +2599,7 @@ export const publicationsData = [
   {
     "title": "Brain Tumor Detection using Decision-Based Fusion Empowered with Fuzzy Logic",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 7, 21),
     "journal": "Mathematical Problems in Engineering",
     "scopus": true,
@@ -2608,7 +2608,7 @@ export const publicationsData = [
   {
     "title": "Blockchain-Based Authentication and Trust Management Mechanism for Smart Cities",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 2, 29),
     "journal": "Sensors",
     "scopus": true,
@@ -2617,7 +2617,7 @@ export const publicationsData = [
   {
     "title": "An Effective Video Summarization Framework Based on the Object of Interest Using Deep Learning",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 4, 12),
     "journal": "Mathematical Problems in Engineering",
     "scopus": true,
@@ -2626,7 +2626,7 @@ export const publicationsData = [
   {
     "title": "An Intelligent System to Detect Advanced Persistent Threats in Industrial Internet of Things (I-IoT)",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 1, 28),
     "journal": "Electronics (Switzerland)",
     "scopus": true,
@@ -2635,7 +2635,7 @@ export const publicationsData = [
   {
     "title": "Assistive Devices Analysis for Visually Impaired Persons: A Review on Taxonomy",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 0, 26),
     "journal": "IEEE Access",
     "scopus": true,
@@ -2644,7 +2644,7 @@ export const publicationsData = [
   {
     "title": "CNN-Based Object Recognition and Tracking System to Assist Visually Impaired People",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 0, 31),
     "journal": "IEEE Access",
     "scopus": true,
@@ -2653,7 +2653,7 @@ export const publicationsData = [
   {
     "title": "Feature Selection Empowered by Self-Inertia Weight Adaptive Particle Swarm Optimization for Text Classification",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 11, 4),
     "journal": "Applied Artificial Intelligence",
     "scopus": true,
@@ -2662,7 +2662,7 @@ export const publicationsData = [
   {
     "title": "Long Multi-digit Number Recognition from Images Empowered by Deep Convolutional Neural Networks",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 8, 13),
     "journal": "Computer Journal",
     "scopus": true,
@@ -2671,7 +2671,7 @@ export const publicationsData = [
   {
     "title": "Detection of Abnormalities in Real-Time Computer Network Traffic Empowered by Machine Learning",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 6, 5),
     "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
     "scopus": true,
@@ -2680,7 +2680,7 @@ export const publicationsData = [
   {
     "title": "Analysis of authorship attribution technique on Urdu tweets empowered by machine learning",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 6, 5),
     "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
     "scopus": true,
@@ -2689,7 +2689,7 @@ export const publicationsData = [
   {
     "title": "Social Distancing and Isolation Management Using\nMachine-to-Machine Technologies to Prevent Pandemics",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 2, 1),
     "journal": "Computers, Materials and Continua",
     "scopus": true,
@@ -2698,7 +2698,7 @@ export const publicationsData = [
   {
     "title": "Video Summarization Techniques: A Review",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 1, 10),
     "journal": "International Journal of Scientific and Technology Research",
     "scopus": true,
@@ -2707,7 +2707,7 @@ export const publicationsData = [
   {
     "title": "Multistage Segmentation of Prostate Cancer Tissues Using Sample Entropy Texture Analysis",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 11, 4),
     "journal": "Entropy",
     "scopus": true,
@@ -2716,7 +2716,7 @@ export const publicationsData = [
   {
     "title": "Semantic Analysis to Identify Students’ Feedback",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 9, 13),
     "journal": "Computer Journal",
     "scopus": true,
@@ -2725,7 +2725,7 @@ export const publicationsData = [
   {
     "title": "RESTCub: A Language Independent Middleware for Cognitive Robot",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 9, 1),
     "journal": "International Journal of Humanoid Robotics",
     "scopus": true,
@@ -2734,7 +2734,7 @@ export const publicationsData = [
   {
     "title": "A passive technique for detecting copy-move forgeries by image feature matching",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 7, 24),
     "journal": "Multimedia Tools and Applications",
     "scopus": true,
@@ -2743,7 +2743,7 @@ export const publicationsData = [
   {
     "title": "How Secure Is Your Cloud: Classification of Security Threats and Countermeasures Within Cloud Computing?",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 4, 5),
     "journal": "International Journal of Computer Science and Network Security",
     "scopus": true,
@@ -2752,7 +2752,7 @@ export const publicationsData = [
   {
     "title": "Low Complexity High Efficiency Coding of Light Fields using Ensemble Classifier",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2019, 7, 20),
     "journal": "Journal of Visual Communication and Image Representation",
     "scopus": true,
@@ -2761,7 +2761,7 @@ export const publicationsData = [
   {
     "title": "Towards Reducing the Damage of Fire through Firefighting Autonomous Robot",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": null,
     "journal": "Technical journal, UET Taxila",
     "scopus": false,
@@ -2770,7 +2770,7 @@ export const publicationsData = [
   {
     "title": "Fast video encoding based on random forests",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2019, 1, 5),
     "journal": "Journal of Real-Time Image Processing",
     "scopus": false,
@@ -2779,7 +2779,7 @@ export const publicationsData = [
   {
     "title": "A generalized multi-layer framework for video coding to select prediction parameters",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2018, 2, 16),
     "journal": "IEEE Access",
     "scopus": true,
@@ -2788,7 +2788,7 @@ export const publicationsData = [
   {
     "title": "DoS/DDoS Detection for Healthcare in Internet of Things",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2018, 1, 10),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
@@ -2797,7 +2797,7 @@ export const publicationsData = [
   {
     "title": "An Efficient Scheme for Real-time Information Storage and Retrieval Systems: A Hybrid Approach",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2017, 8, 8),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
@@ -2806,7 +2806,7 @@ export const publicationsData = [
   {
     "title": "Towards Securing Medical Documents from Insider Attacks",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2016, 8, 10),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
@@ -2815,7 +2815,7 @@ export const publicationsData = [
   {
     "title": "An efficient inter prediction mode selection scheme for advanced video coding based on motion homogeneity and residual complexity",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2016, 7, 31),
     "journal": "IEEJ Transactions on Electrical and Electronic Engineering",
     "scopus": true,
@@ -2824,7 +2824,7 @@ export const publicationsData = [
   {
     "title": "A First Step toward Reducing Insider Threats in Government Organization",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2016, 5, 10),
     "journal": "International Journal of Computer Science and Network Security",
     "scopus": true,
@@ -2833,7 +2833,7 @@ export const publicationsData = [
   {
     "title": "A hybrid scheme based on pipelining and multitasking in mobile application processors for advanced video coding",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2015, 9, 25),
     "journal": "Scientific Programming",
     "scopus": true,
@@ -2842,7 +2842,7 @@ export const publicationsData = [
   {
     "title": "Using Genetic Algorithm to Minimize False Alarms in Insider Threats Detection of Information Misuse in Windows Environment",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2014, 10, 11),
     "journal": "Mathematical Problems in engineering journal",
     "scopus": true,
@@ -2851,7 +2851,7 @@ export const publicationsData = [
   {
     "title": "A Hybrid Approach for Heart Disease Prediction using Genetic Algorithm and SVM",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2024, 2, 21),
     "journal": "5th International Conference on Advancements in Computational Sciences (ICACS)",
     "scopus": false,
@@ -2860,7 +2860,7 @@ export const publicationsData = [
   {
     "title": "Leukemia Cells Classification using Deep Learning Approaches",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2024, 2, 19),
     "journal": "25th International Multitopic Conference (INMIC)",
     "scopus": false,
@@ -2869,7 +2869,7 @@ export const publicationsData = [
   {
     "title": "Towards Classification and Analysis of Ransomware Detection Techniques",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 3, 20),
     "journal": "4th International Conference on Computing, Mathematics and Engineering Technologies (iCoMET)",
     "scopus": false,
@@ -2878,7 +2878,7 @@ export const publicationsData = [
   {
     "title": "A Deep Learning based Human Detection and Tracking for Security Surveillance System",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 2, 22),
     "journal": "4th International Conference on Computing and Data Science (CONF-CDS 2022), 2023",
     "scopus": false,
@@ -2887,7 +2887,7 @@ export const publicationsData = [
   {
     "title": "An Automatic Wound Detection System Empowered by Deep Learning",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2023, 2, 22),
     "journal": "4th International Conference on Computing and Data Science (CONF-CDS 2022), 2023",
     "scopus": false,
@@ -2896,7 +2896,7 @@ export const publicationsData = [
   {
     "title": "Vulnerabilities and Security Threats for IoT in Transportation and Fleet Management",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 0, 19),
     "journal": "4th International Conference on Computing & Information Sciences (ICCIS), 2021",
     "scopus": false,
@@ -2905,7 +2905,7 @@ export const publicationsData = [
   {
     "title": "Comparative Analysis of Traditional and Software Defined Networks",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 8, 6),
     "journal": "Mohammad Ali Jinnah University International Conference on Computing (MAJICC), 2021",
     "scopus": false,
@@ -2914,7 +2914,7 @@ export const publicationsData = [
   {
     "title": "Malware Detection Using Machine Learning Algorithms for Windows Platform",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 3, 21),
     "journal": "15th International Conference on Information Technology and Applications (ICITA), 2021",
     "scopus": false,
@@ -2923,7 +2923,7 @@ export const publicationsData = [
   {
     "title": "Ethical Hacking Methodologies: A Comparative Analysis",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2021, 8, 6),
     "journal": "Mohammad Ali Jinnah University International Conference on Computing (MAJICC), 2021",
     "scopus": false,
@@ -2932,7 +2932,7 @@ export const publicationsData = [
   {
     "title": "Survey on Sentiment Analysis of User Reviews",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 0, 31),
     "journal": "4th international conference on innovative Computing, 2021",
     "scopus": false,
@@ -2941,7 +2941,7 @@ export const publicationsData = [
   {
     "title": "A Comprehensive Survey of Sentiment Analysis Based on User Opinion",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2022, 0, 19),
     "journal": "4th International Conference on Computing & Information Sciences (ICCIS),  2021",
     "scopus": false,
@@ -2950,7 +2950,7 @@ export const publicationsData = [
   {
     "title": "Reliability Management Framework and Recommender System for Hyper-converged Infrastructure Data Centers",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 3, 23),
     "journal": "3rd International Conference on Computing, Mathematics and Engineering Technologies (iCoMET), 2020",
     "scopus": false,
@@ -2959,7 +2959,7 @@ export const publicationsData = [
   {
     "title": "DNA Compression using an innovative Index based Coding Algorithm",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 2, 5),
     "journal": "22nd International Multi Topic Conference (IEEE INMIC 2019) 2019",
     "scopus": false,
@@ -2968,7 +2968,7 @@ export const publicationsData = [
   {
     "title": "PARK MY RIE: Your True Parking Companion",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 4, 9),
     "journal": "International Conference on Intelligent Technologies and applications (INTAP 2019)",
     "scopus": false,
@@ -2977,7 +2977,7 @@ export const publicationsData = [
   {
     "title": "Cloud Computing: A Paradigm of more Insider Threats",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 0, 9),
     "journal": "4th International Conference on Information System Engineering (ICISE2019), May 4-6, 2019",
     "scopus": false,
@@ -2986,7 +2986,7 @@ export const publicationsData = [
   {
     "title": "A Comparison of Detection Techniques for Attacks on MANETs",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 0, 9),
     "journal": "4th International Conference on Information System Engineering (ICISE2019), May 4-6, 2019",
     "scopus": false,
@@ -2995,7 +2995,7 @@ export const publicationsData = [
   {
     "title": "An Automatic Accident Detection System: A Hybrid Solution",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2020, 0, 9),
     "journal": "4th International Conference on Information System Engineering (ICISE2019), May 4-6, 2019",
     "scopus": false,
@@ -3004,7 +3004,7 @@ export const publicationsData = [
   {
     "title": "An Efficient scheme for intra prediction blocks size and mode selection in advanced video coding",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2016, 1, 29),
     "journal": "13th International Conference on Frontiers of Information Technology (FIT 2015), Dec 14-16, 2015",
     "scopus": false,
@@ -3013,7 +3013,7 @@ export const publicationsData = [
   {
     "title": "Exploiting MB level parallelism in H.264/AVC encoder for multicore platform",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2015, 3, 2),
     "journal": "11th International Conference on Computer Systems and Applications (AICCSA), 2014",
     "scopus": false,
@@ -3022,7 +3022,7 @@ export const publicationsData = [
   {
     "title": "A Novel Application to Secure Misuse of Information in Critical Organizations for Windows Environment",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2014, 10, 20),
     "journal": "Fifth International Conference on Computing, Communications and Networking Technologies (ICCCNT), 2014",
     "scopus": false,
@@ -3031,7 +3031,7 @@ export const publicationsData = [
   {
     "title": "Towards a realistic Risk Assessment Methodology for insider threats of information misuse",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2015, 5, 8),
     "journal": "12th International Conference on Frontiers of Information Technology, 2014",
     "scopus": false,
@@ -3040,7 +3040,7 @@ export const publicationsData = [
   {
     "title": "Optimized implementation of Motion Compensation for H.264/AVC Decoder",
     "author": "Muhammad Asif",
-    "authorName": "Muhammad Asif",
+    "authorName": "Dr. Muhammad Asif",
     "date": new Date(2011, 1, 10),
     "journal": "5th International Conference on Computer Sciences and Convergence Information Technology, 2010.",
     "scopus": false,

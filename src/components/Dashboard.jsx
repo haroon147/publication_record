@@ -117,18 +117,20 @@ const Dashboard = ({ publications }) => {
   }, [filteredPublications])
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 animate-fade-in-up">
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-            <BarChart3 className="w-6 h-6 text-blue-600" />
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 shadow-md shadow-brand-500/30">
+              <BarChart3 className="w-5 h-5 text-white" />
+            </span>
             Analytics Dashboard
           </h2>
-          <div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
-            <Database className="w-4 h-4 text-green-600" />
+          <div className="flex items-center gap-2 mt-2.5 text-sm text-slate-500">
+            <Database className="w-4 h-4 text-emerald-500" />
             <span>{publications.length} total publication{publications.length !== 1 ? 's' : ''} loaded</span>
             {filteredPublications.length !== publications.length && (
-              <span className="text-blue-600">
+              <span className="text-brand-600 font-medium">
                 ({filteredPublications.length} filtered)
               </span>
             )}
@@ -137,21 +139,21 @@ const Dashboard = ({ publications }) => {
       </div>
 
       {/* Filters */}
-      <div className="bg-white rounded-lg shadow-lg p-4">
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/70 p-4 sm:p-5">
         <div className="flex items-center gap-2 mb-4">
-          <Filter className="w-5 h-5 text-gray-600" />
-          <h3 className="text-lg font-semibold text-gray-800">Filters</h3>
+          <Filter className="w-4.5 h-4.5 text-slate-400" />
+          <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">Filters</h3>
         </div>
         <div className="flex flex-wrap gap-4">
           {/* Fiscal Year Filter */}
-          <div className="flex-1 min-w-[200px]">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+          <div className="flex-1 min-w-[220px]">
+            <label className="block text-xs font-medium text-slate-500 mb-1.5">
               Fiscal Year
             </label>
             <select
               value={selectedFiscalYear}
               onChange={(e) => setSelectedFiscalYear(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-slate-200 rounded-xl bg-white text-sm text-slate-700 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-shadow"
             >
               <option value="all">All Fiscal Years</option>
               {availableFiscalYears.map(fy => (
@@ -166,12 +168,12 @@ const Dashboard = ({ publications }) => {
         <>
           <Statistics stats={stats} />
           <QuarterlyAnalysis quarters={stats.quarters} />
-          <AuthorLeaderboard 
+          <AuthorLeaderboard
             publications={publications}
             fiscalYears={availableFiscalYears}
             allTime={true}
           />
-          <PublicationList 
+          <PublicationList
             publications={publications}
             selectedFiscalYear={selectedFiscalYear}
             allFiscalYears={availableFiscalYears}
@@ -179,10 +181,10 @@ const Dashboard = ({ publications }) => {
           />
         </>
       ) : (
-        <div className="bg-white rounded-lg shadow-lg p-12 text-center">
-          <Database className="w-20 h-20 text-gray-300 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-gray-700 mb-2">No Publications Found</h3>
-          <p className="text-gray-500">No publication data is currently available.</p>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/70 p-12 text-center">
+          <Database className="w-16 h-16 text-slate-200 mx-auto mb-4" />
+          <h3 className="text-lg font-semibold text-slate-700 mb-1">No Publications Found</h3>
+          <p className="text-slate-400 text-sm">No publication data is currently available.</p>
         </div>
       )}
     </div>

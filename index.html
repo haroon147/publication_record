@@ -5,7 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publication Record Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Lexend', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#eef4ff',
+                100: '#e0eaff',
+                200: '#c7d7fe',
+                300: '#a4bcfd',
+                400: '#8098f9',
+                500: '#6172f3',
+                600: '#444ce7',
+                700: '#3538cd',
+                800: '#2d31a6',
+                900: '#2a2e83',
+              },
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: 0, transform: 'translateY(8px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.45s ease-out both',
+            },
+          },
+        },
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

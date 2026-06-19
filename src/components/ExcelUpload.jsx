@@ -155,7 +155,10 @@ const ExcelUpload = ({ onDataLoaded }) => {
     'dr. jamal uddin': 'Dr. Jamal Uddin',
     'muhammad adnan khan': 'Dr. Muhammad Adnan Khan',
     'dr muhammad adnan khan': 'Dr. Muhammad Adnan Khan',
-    'dr. muhammad adnan khan': 'Dr. Muhammad Adnan Khan'
+    'dr. muhammad adnan khan': 'Dr. Muhammad Adnan Khan',
+    'muhammad asif': 'Dr. Muhammad Asif',
+    'dr muhammad asif': 'Dr. Muhammad Asif',
+    'dr. muhammad asif': 'Dr. Muhammad Asif'
   }
 
   const normalizeAuthorName = (name) => {
@@ -421,7 +424,7 @@ const ExcelUpload = ({ onDataLoaded }) => {
 
   return (
     <div className="w-full">
-      <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 hover:border-blue-400 transition-colors">
+      <div className="relative border-2 border-dashed border-slate-200 rounded-2xl p-8 hover:border-brand-300 hover:bg-brand-50/30 transition-colors bg-white/60">
         <input
           type="file"
           accept=".xlsx,.xls,.csv"
@@ -436,16 +439,18 @@ const ExcelUpload = ({ onDataLoaded }) => {
         >
           {loading ? (
             <>
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
-              <p className="text-gray-600">Processing file...</p>
+              <div className="animate-spin rounded-full h-10 w-10 border-2 border-brand-200 border-t-brand-600 mb-4"></div>
+              <p className="text-slate-500 text-sm">Processing file...</p>
             </>
           ) : (
             <>
-              <Upload className="w-12 h-12 text-blue-500 mb-4" />
-              <p className="text-lg font-semibold text-gray-700 mb-2">
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-purple-600 shadow-md shadow-brand-500/30 mb-4">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <p className="text-base font-semibold text-slate-700 mb-1">
                 Click to upload Excel file
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-xs text-slate-400">
                 Supports .xlsx, .xls, and .csv files
               </p>
             </>
@@ -455,23 +460,23 @@ const ExcelUpload = ({ onDataLoaded }) => {
 
       {file && !loading && uploadInfo && (
         <div className="mt-4 space-y-2">
-          <div className="flex items-center gap-2 text-green-600">
-            <FileCheck className="w-5 h-5" />
+          <div className="flex items-center gap-2 text-emerald-600">
+            <FileCheck className="w-4 h-4" />
             <span className="text-sm font-medium">{file.name}</span>
           </div>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-sm">
-            <p className="text-green-800 font-medium">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-sm">
+            <p className="text-emerald-800 font-medium">
               ✓ {uploadInfo.totalPublications} publications loaded
             </p>
             {uploadInfo.impactFactorColumnFound ? (
-              <p className="text-green-700 mt-1">
+              <p className="text-emerald-700 mt-1 text-xs">
                 Impact Factor column detected: {uploadInfo.publicationsWithIF} publications have impact factors
                 {uploadInfo.totalImpactFactor > 0 && (
                   <span className="font-semibold"> (Total IF: {uploadInfo.totalImpactFactor.toFixed(2)})</span>
                 )}
               </p>
             ) : (
-              <p className="text-yellow-700 mt-1">
+              <p className="text-amber-700 mt-1 text-xs">
                 ⚠ Impact Factor column not found. Please ensure your Excel file has a column named "Impact Factor", "IF", or "Impact Factor"
               </p>
             )}
@@ -480,18 +485,18 @@ const ExcelUpload = ({ onDataLoaded }) => {
       )}
 
       {error && (
-        <div className="mt-4 bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+        <div className="mt-4 bg-red-50 border border-red-200 rounded-xl p-4 flex items-start gap-3">
           <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
           <div>
-            <p className="text-red-800 font-medium">Error</p>
-            <p className="text-red-600 text-sm mt-1">{error}</p>
+            <p className="text-red-800 font-medium text-sm">Error</p>
+            <p className="text-red-600 text-xs mt-1">{error}</p>
           </div>
         </div>
       )}
 
-      <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-        <p className="text-sm text-blue-800 font-medium mb-2">Expected Excel Format:</p>
-        <ul className="text-xs text-blue-700 space-y-1 list-disc list-inside">
+      <div className="mt-6 p-4 bg-brand-50/60 border border-brand-100 rounded-xl">
+        <p className="text-sm text-brand-800 font-medium mb-2">Expected Excel Format:</p>
+        <ul className="text-xs text-brand-700/90 space-y-1 list-disc list-inside">
           <li>Required columns: <strong>Title</strong>, <strong>Author</strong></li>
           <li>Optional columns: <strong>Date of Publication</strong>, <strong>Journal</strong>, <strong>Scopus</strong>, <strong>Journal Impact Factor</strong></li>
           <li>Date format: MM/DD/YYYY, DD-MM-YYYY, or Excel date serial number</li>

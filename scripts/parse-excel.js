@@ -136,7 +136,10 @@ const authorNameMap = {
   'dr. jamal uddin': 'Dr. Jamal Uddin',
   'muhammad adnan khan': 'Dr. Muhammad Adnan Khan',
   'dr muhammad adnan khan': 'Dr. Muhammad Adnan Khan',
-  'dr. muhammad adnan khan': 'Dr. Muhammad Adnan Khan'
+  'dr. muhammad adnan khan': 'Dr. Muhammad Adnan Khan',
+  'muhammad asif': 'Dr. Muhammad Asif',
+  'dr muhammad asif': 'Dr. Muhammad Asif',
+  'dr. muhammad asif': 'Dr. Muhammad Asif'
 };
 
 const normalizeAuthorName = (name) => {

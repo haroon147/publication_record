@@ -2,6 +2,9 @@ import React, { useMemo, useState } from 'react'
 import { Trophy, Medal, Award, Star } from 'lucide-react'
 import { filterByFiscalYear } from '../utils/fiscalYear'
 
+// Former faculty - excluded from the leaderboard but still kept in publication records
+const LEADERBOARD_EXCLUDED_AUTHORS = ['Dr Saman Riaz', 'Dr Farrukh Arslan']
+
 const AuthorLeaderboard = ({
   publications = [],
   fiscalYears = [],
@@ -20,6 +23,7 @@ const AuthorLeaderboard = ({
     const impact = {}
     visiblePublications.forEach(pub => {
       const author = pub.authorName || 'Unknown'
+      if (LEADERBOARD_EXCLUDED_AUTHORS.includes(author)) return
       counts[author] = (counts[author] || 0) + 1
       impact[author] = (impact[author] || 0) + (pub.impactFactor || 0)
     })
@@ -56,18 +60,20 @@ const AuthorLeaderboard = ({
   }
 
   const getRankColor = (index) => {
-    if (index === 0) return 'bg-yellow-50 border-yellow-200'
-    if (index === 1) return 'bg-gray-50 border-gray-200'
-    if (index === 2) return 'bg-amber-50 border-amber-200'
-    return 'bg-white border-gray-200'
+    if (index === 0) return 'bg-amber-50/80 border-amber-200'
+    if (index === 1) return 'bg-slate-50 border-slate-200'
+    if (index === 2) return 'bg-orange-50/70 border-orange-200'
+    return 'bg-white border-slate-100'
   }
 
   return (
-    <div className="bg-white rounded-3xl shadow-2xl p-6 border border-white/70">
+    <div className="bg-white/85 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/70 p-6 sm:p-7">
       <div className="flex flex-wrap items-center gap-3 mb-6">
-        <div className="flex items-center gap-2">
-          <Trophy className="w-6 h-6 text-yellow-500" />
-          <h3 className="text-xl font-bold text-gray-800">
+        <div className="flex items-center gap-2.5">
+          <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-md shadow-amber-500/30">
+            <Trophy className="w-4.5 h-4.5 text-white" />
+          </span>
+          <h3 className="text-lg font-bold text-slate-900">
             {allTime ? 'All-Time Top Contributors' : 'Top Contributors'}
           </h3>
         </div>
@@ -78,7 +84,7 @@ const AuthorLeaderboard = ({
           <select
             value={selectedFiscalYear}
             onChange={(e) => setSelectedFiscalYear(e.target.value)}
-            className="text-[0.65rem] px-3 py-1 border border-slate-200 rounded-full bg-white focus:outline-none"
+            className="text-[0.65rem] px-3 py-1 border border-slate-200 rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-brand-500"
           >
             <option value="all">All Fiscal Years</option>
             {fiscalYears.map(fy => (
@@ -89,28 +95,28 @@ const AuthorLeaderboard = ({
       </div>
 
       {displayedAuthors.length === 0 ? (
-        <p className="text-gray-500 text-center py-8">No author data available</p>
+        <p className="text-slate-400 text-center py-8 text-sm">No author data available</p>
       ) : (
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {displayedAuthors.map((author, index) => (
             <div
               key={author.name}
-              className={`flex items-center gap-4 p-4 rounded-lg border-2 ${getRankColor(index)} transition-all hover:shadow-md`}
+              className={`flex items-center gap-4 p-4 rounded-xl border ${getRankColor(index)} transition-all hover:shadow-md hover:-translate-y-0.5`}
             >
               <div className="flex-shrink-0">
                 {getRankIcon(index)}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-gray-800 truncate">{author.name}</p>
-                <div className="flex items-center gap-3 mt-1">
-                  <p className="text-sm text-gray-500">{author.count} publication{author.count !== 1 ? 's' : ''}</p>
+                <p className="font-semibold text-slate-800 truncate text-sm">{author.name}</p>
+                <div className="flex flex-wrap items-center gap-3 mt-1">
+                  <p className="text-xs text-slate-400">{author.count} publication{author.count !== 1 ? 's' : ''}</p>
                   {author.impactFactor > 0 && (
-                    <div className="flex items-center gap-1 text-sm">
-                      <Star className="w-3 h-3 text-indigo-500" />
-                      <span className="text-indigo-600 font-medium">
+                    <div className="flex items-center gap-1 text-xs">
+                      <Star className="w-3 h-3 text-brand-500" />
+                      <span className="text-brand-600 font-medium">
                         IF: {author.impactFactor.toFixed(2)}
                       </span>
-                      <span className="text-gray-400 text-xs">
+                      <span className="text-slate-400">
                         (avg: {author.avgImpactFactor.toFixed(2)})
                       </span>
                     </div>
@@ -118,9 +124,9 @@ const AuthorLeaderboard = ({
                 </div>
               </div>
               <div className="flex-shrink-0">
-                <div className="w-16 bg-gray-200 rounded-full h-2">
+                <div className="w-16 bg-slate-100 rounded-full h-2 overflow-hidden">
                   <div
-                    className="bg-blue-500 h-2 rounded-full transition-all"
+                    className="bg-gradient-to-r from-brand-500 to-purple-500 h-2 rounded-full transition-all duration-500"
                     style={{
                       width: `${(author.count / (sortedAuthors[0]?.count || 1)) * 100}%`
                     }}
@@ -135,7 +141,7 @@ const AuthorLeaderboard = ({
       {sortedAuthors.length > 10 && (
         <div className="mt-4 flex justify-end">
           <button
-            className="text-sm px-3 py-1 rounded-full border border-blue-200 text-blue-600 hover:bg-blue-50 transition"
+            className="text-xs font-medium px-3.5 py-1.5 rounded-full border border-brand-200 text-brand-600 hover:bg-brand-50 transition-colors"
             onClick={() => setShowAll(value => !value)}
           >
             {showAll ? 'Show Top 10' : 'View All Faculty'}
@@ -144,10 +150,10 @@ const AuthorLeaderboard = ({
       )}
 
       {sortedAuthors.length > 0 && (
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <p className="text-sm text-gray-600 text-center">
-            <span className="font-semibold text-gray-800">{sortedAuthors[0].name}</span> leads with{' '}
-            <span className="font-semibold text-blue-600">{sortedAuthors[0].count}</span> publication{sortedAuthors[0].count !== 1 ? 's' : ''}
+        <div className="mt-6 pt-6 border-t border-slate-100">
+          <p className="text-sm text-slate-500 text-center">
+            <span className="font-semibold text-slate-800">{sortedAuthors[0].name}</span> leads with{' '}
+            <span className="font-semibold text-brand-600">{sortedAuthors[0].count}</span> publication{sortedAuthors[0].count !== 1 ? 's' : ''}
           </p>
         </div>
       )}

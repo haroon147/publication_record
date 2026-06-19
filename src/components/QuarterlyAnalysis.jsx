@@ -6,47 +6,52 @@ const QuarterlyAnalysis = ({ quarters }) => {
   const maxImpactFactor = Math.max(...Object.values(quarters).map(q => q.impactFactor || 0))
   
   const quarterData = [
-    { key: 'Q1', data: quarters.Q1, color: 'bg-blue-500', months: 'July - September' },
-    { key: 'Q2', data: quarters.Q2, color: 'bg-green-500', months: 'October - December' },
-    { key: 'Q3', data: quarters.Q3, color: 'bg-purple-500', months: 'January - March' },
-    { key: 'Q4', data: quarters.Q4, color: 'bg-orange-500', months: 'April - June' }
+    { key: 'Q1', data: quarters.Q1, color: 'from-blue-500 to-blue-600', dot: 'bg-blue-500', months: 'July - September' },
+    { key: 'Q2', data: quarters.Q2, color: 'from-emerald-500 to-emerald-600', dot: 'bg-emerald-500', months: 'October - December' },
+    { key: 'Q3', data: quarters.Q3, color: 'from-purple-500 to-purple-600', dot: 'bg-purple-500', months: 'January - March' },
+    { key: 'Q4', data: quarters.Q4, color: 'from-orange-500 to-orange-600', dot: 'bg-orange-500', months: 'April - June' }
   ]
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="flex items-center gap-2 mb-6">
-        <Calendar className="w-6 h-6 text-blue-600" />
-        <h3 className="text-xl font-bold text-gray-800">Quarterly Breakdown</h3>
+    <div className="bg-white/85 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/70 p-6 sm:p-7">
+      <div className="flex items-center gap-2.5 mb-6">
+        <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 shadow-md shadow-brand-500/30">
+          <Calendar className="w-4.5 h-4.5 text-white" />
+        </span>
+        <h3 className="text-lg font-bold text-slate-900">Quarterly Breakdown</h3>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-5">
         {quarterData.map((quarter) => (
           <div key={quarter.key} className="space-y-2">
             <div className="flex justify-between items-center">
-              <div>
-                <p className="font-semibold text-gray-800">{quarter.data.name}</p>
-                <p className="text-sm text-gray-500">{quarter.months}</p>
+              <div className="flex items-center gap-2.5">
+                <span className={`w-2.5 h-2.5 rounded-full ${quarter.dot}`} />
+                <div>
+                  <p className="font-semibold text-slate-800 text-sm">{quarter.data.name}</p>
+                  <p className="text-xs text-slate-400">{quarter.months}</p>
+                </div>
               </div>
               <div className="text-right">
-                <p className="text-2xl font-bold text-gray-800">{quarter.data.count}</p>
-                <p className="text-xs text-gray-500">publications</p>
+                <p className="text-xl font-bold text-slate-800">{quarter.data.count}</p>
+                <p className="text-[0.65rem] text-slate-400 uppercase tracking-wide">publications</p>
                 {quarter.data.impactFactor > 0 && (
-                  <p className="text-sm font-semibold text-indigo-600 mt-1">
+                  <p className="text-xs font-semibold text-brand-600 mt-0.5">
                     IF: {quarter.data.impactFactor.toFixed(2)}
                   </p>
                 )}
               </div>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+            <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
               <div
-                className={`${quarter.color} h-full rounded-full transition-all duration-500 flex items-center justify-end pr-2`}
+                className={`bg-gradient-to-r ${quarter.color} h-full rounded-full transition-all duration-700 ease-out flex items-center justify-end pr-2`}
                 style={{
                   width: maxCount > 0 ? `${(quarter.data.count / maxCount) * 100}%` : '0%',
-                  minWidth: quarter.data.count > 0 ? '20px' : '0%'
+                  minWidth: quarter.data.count > 0 ? '24px' : '0%'
                 }}
               >
                 {quarter.data.count > 0 && (
-                  <span className="text-white text-xs font-medium">
+                  <span className="text-white text-[0.65rem] font-semibold">
                     {Math.round((quarter.data.count / maxCount) * 100)}%
                   </span>
                 )}
@@ -56,20 +61,20 @@ const QuarterlyAnalysis = ({ quarters }) => {
         ))}
       </div>
 
-      <div className="mt-6 pt-6 border-t border-gray-200">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+      <div className="mt-6 pt-6 border-t border-slate-100">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
           {quarterData.map((quarter) => (
-            <div key={quarter.key} className="text-center p-3 bg-gray-50 rounded-lg">
-              <p className="text-2xl font-bold text-gray-800">{quarter.data.count}</p>
-              <p className="text-xs text-gray-600 mt-1">{quarter.key}</p>
+            <div key={quarter.key} className="text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <p className="text-xl font-bold text-slate-800">{quarter.data.count}</p>
+              <p className="text-[0.65rem] text-slate-500 mt-0.5 font-medium uppercase tracking-wide">{quarter.key}</p>
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {quarterData.map((quarter) => (
-            <div key={`${quarter.key}-if`} className="text-center p-3 bg-indigo-50 rounded-lg">
-              <p className="text-2xl font-bold text-indigo-800">{quarter.data.impactFactor?.toFixed(2) || '0.00'}</p>
-              <p className="text-xs text-indigo-600 mt-1">Impact Factor</p>
+            <div key={`${quarter.key}-if`} className="text-center p-3 bg-brand-50 rounded-xl border border-brand-100/70">
+              <p className="text-xl font-bold text-brand-700">{quarter.data.impactFactor?.toFixed(2) || '0.00'}</p>
+              <p className="text-[0.65rem] text-brand-500 mt-0.5 font-medium uppercase tracking-wide">Impact Factor</p>
             </div>
           ))}
         </div>
