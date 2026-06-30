@@ -123,6 +123,51 @@ const extractAuthorName = (authorStr) => {
   return match ? match[1].trim() : authorStr.toString().trim();
 };
 
+const PAKISTAN_KEYWORDS = [
+  'pakistan', 'islamabad', 'lahore', 'karachi', 'peshawar', 'quetta',
+  'multan', 'rawalpindi', 'faisalabad', 'riphah', 'nust', 'lums',
+  'fast', 'comsats', 'qau', 'uet', 'bahria', 'air university', 'punjab',
+  'hitec', 'giki', 'szabist', 'iqra', 'hamdard', 'aiou', 'iiui',
+  'nu-fast', 'paf', 'pieas', 'ucp', 'uog', 'pu ', 'bzu', 'uom',
+  'fjwu', 'kiu', 'aku ', 'ned ', 'muet', 'ssuet', 'uol ', 'gcuf',
+  'pmas', 'hazara', 'islamia', 'sargodha', 'gujrat', 'namal', 'cust'
+];
+
+const INTERNATIONAL_KEYWORDS = [
+  ' usa', ' uk', 'united kingdom', 'united states', ' china', 'saudi',
+  'turkey', 'malaysia', 'jordan', 'egypt', 'germany', 'france',
+  'australia', 'canada', 'sweden', 'norway', 'south korea', 'korea',
+  'japan', 'india', 'iran', 'iraq', 'qatar', ' uae', 'emirates',
+  'bahrain', 'kuwait', 'oman', 'belgium', 'netherlands', 'spain',
+  'italy', 'switzerland', 'austria', 'denmark', 'finland', 'portugal',
+  'greece', 'russia', 'ukraine', 'thailand', 'indonesia', 'singapore',
+  'hong kong', 'taiwan', 'new zealand', 'south africa', 'nigeria',
+  'kenya', 'morocco', 'brazil', 'mexico', 'argentina', 'colombia',
+  'london', 'oxford', 'cambridge', 'mit ', 'stanford', 'harvard',
+  'beijing', 'shanghai', 'dubai', 'abu dhabi', 'riyadh', 'ankara',
+  'kuala lumpur', 'tokyo', 'seoul', 'amsterdam', 'paris', 'berlin',
+  'rome', 'madrid', 'brussels', 'vienna', 'zurich', 'stockholm',
+  'oslo', 'copenhagen', 'helsinki', 'lisbon', 'athens', 'moscow',
+  'istanbul', 'tehran', 'baghdad', 'amman', 'cairo', 'lagos',
+  'nairobi', 'casablanca', 'tunis', 'algiers', 'sao paulo', 'mexico city'
+];
+
+const detectCollaboration = (coAuthorStr) => {
+  if (!coAuthorStr) return null;
+  const cleaned = String(coAuthorStr).trim();
+  if (!cleaned || cleaned === 'NA' || cleaned === 'N/A' ||
+      cleaned === 'None' || cleaned === '-' || cleaned === 'n/a') return null;
+
+  const lower = cleaned.toLowerCase();
+  const hasForeign = INTERNATIONAL_KEYWORDS.some(kw => lower.includes(kw));
+  if (hasForeign) return 'international';
+
+  const hasPakistan = PAKISTAN_KEYWORDS.some(kw => lower.includes(kw));
+  if (hasPakistan) return 'national';
+
+  return 'unknown';
+};
+
 const authorNameMap = {
   'muhammad yaseen': 'Dr. Muhammad Yaseen',
   'dr muhammad yaseen': 'Dr. Muhammad Yaseen',
@@ -246,6 +291,7 @@ if (dateIdx === -1) {
 }
 const journalIdx = headerRow.findIndex(h => h.includes('journal') || h.includes('conference') || h.includes('venue'));
 const scopusIdx = headerRow.findIndex(h => h.includes('scopus') || h.includes('indexed'));
+const coAuthorIdx = headerRow.findIndex(h => h.includes('co-author') || (h.includes('co') && h.includes('author')));
 
 let impactFactorIdx = headerRow.findIndex(h => h === 'journal impact factor' || h.trim() === 'journal impact factor');
 if (impactFactorIdx === -1) {
@@ -261,7 +307,7 @@ if (impactFactorIdx === -1) {
   impactFactorIdx = headerRow.findIndex(h => h === 'if' || (h.includes('if') && !h.includes('information')));
 }
 
-console.log('Column indices:', { titleIdx, authorIdx, dateIdx, journalIdx, scopusIdx, impactFactorIdx });
+console.log('Column indices:', { titleIdx, authorIdx, dateIdx, journalIdx, scopusIdx, impactFactorIdx, coAuthorIdx });
 
 if (titleIdx === -1 || authorIdx === -1) {
   console.error('Excel file must contain "Title" and "Author" columns');
@@ -281,6 +327,7 @@ for (let i = 1; i < jsonData.length; i++) {
   const journal = row[journalIdx] || '';
   const scopus = row[scopusIdx] || '';
   const impactFactorStr = impactFactorIdx !== -1 ? (row[impactFactorIdx] || '') : '';
+  const coAuthorStr = coAuthorIdx !== -1 ? (row[coAuthorIdx] || '') : '';
   
   const titleStr = String(title).trim();
   const authorStr = String(author).trim();
@@ -293,6 +340,8 @@ for (let i = 1; i < jsonData.length; i++) {
   const authorNameRaw = extractAuthorName(authorStr);
   const authorName = normalizeAuthorName(authorNameRaw);
 
+  const collaborationType = detectCollaboration(coAuthorStr);
+
   // Include ALL publications with valid data (date is optional but preferred)
   publications.push({
     title: titleStr,
@@ -301,7 +350,8 @@ for (let i = 1; i < jsonData.length; i++) {
     date: pubDate, // Can be null if date parsing fails
     journal: String(journal).trim() || '',
     scopus: String(scopus).toLowerCase().includes('yes') || String(scopus).toLowerCase() === 'true',
-    impactFactor: impactFactor
+    impactFactor: impactFactor,
+    collaborationType: collaborationType // null | 'national' | 'international' | 'unknown'
   });
 }
 
@@ -340,7 +390,15 @@ const sortedFiscalYears = Array.from(fiscalYears).sort((a, b) => {
   return parseInt(bMatch[1]) - parseInt(aMatch[1]); // Descending order
 });
 
+const intlCollab = publications.filter(p => p.collaborationType === 'international').length;
+const natCollab = publications.filter(p => p.collaborationType === 'national').length;
+const scopusCount = publications.filter(p => p.scopus).length;
+const ifNonScopus = publications.filter(p => p.impactFactor > 0 && !p.scopus).length;
+const nonIf = publications.filter(p => !p.impactFactor || p.impactFactor === 0).length;
+
 console.log(`\n✅ Extracted ${publications.length} publications from Excel file`);
+console.log(`📈 Scopus Indexed: ${scopusCount} | IF Non-Scopus: ${ifNonScopus} | Non-IF/HEC: ${nonIf}`);
+console.log(`🌍 International Collaboration: ${intlCollab} | 🏠 National Collaboration: ${natCollab}`);
 if (minDate && maxDate) {
   console.log(`Date range: ${minDate.toLocaleDateString()} - ${maxDate.toLocaleDateString()}`);
 } else {

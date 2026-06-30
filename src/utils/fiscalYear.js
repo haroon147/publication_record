@@ -2,6 +2,22 @@
 // Fiscal year runs from July 1 to June 30
 
 /**
+ * Get the fiscal quarter for a given date
+ * Q1: Jul-Sep, Q2: Oct-Dec, Q3: Jan-Mar, Q4: Apr-Jun
+ */
+export const getQuarter = (date) => {
+  if (!date) return null
+  const dateObj = date instanceof Date ? date : new Date(date)
+  if (isNaN(dateObj.getTime())) return null
+  const month = dateObj.getMonth()
+  if ([6, 7, 8].includes(month)) return 'Q1'
+  if ([9, 10, 11].includes(month)) return 'Q2'
+  if ([0, 1, 2].includes(month)) return 'Q3'
+  if ([3, 4, 5].includes(month)) return 'Q4'
+  return null
+}
+
+/**
  * Get fiscal year for a given date
  * @param {Date} date - Publication date
  * @returns {string|null} - Fiscal year string (e.g., "FY 24-25") or null if date is invalid

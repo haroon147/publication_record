@@ -1,6 +1,6 @@
 // Publication records data - ALL publications from Excel file
 // Auto-generated from Excel file: RSCI Research Record (Responses).xlsx
-// Generated on: 2026-06-30T07:39:58.531Z
+// Generated on: 2026-06-30T07:58:18.236Z
 // Total publications: 360
 
 export const publicationsData = [
@@ -11,7 +11,8 @@ export const publicationsData = [
     "date": new Date(2011, 10, 8),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "national"
   },
   {
     "title": "Evidence in software architecture, a systematic literature review",
@@ -20,7 +21,8 @@ export const publicationsData = [
     "date": new Date(2013, 3, 14),
     "journal": "EASE: Evaluation and Assessment in Software Engineering",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Software Engineering Ethics in Pakistani Software Development Industry",
@@ -29,7 +31,8 @@ export const publicationsData = [
     "date": new Date(2013, 9, 1),
     "journal": "WASET Dubai, UAE International Conference",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Minimizing big data problems using cloud computing based on Hadoop architecture",
@@ -38,7 +41,8 @@ export const publicationsData = [
     "date": new Date(2014, 11, 15),
     "journal": "International Symposium on High Capacity Optical Networks and Enabling Technologies, HONET",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Performance Evaluation and Comparison of EQM with RED, SFQ, and REM, TCP Congestion Control Algorithms Using NS-2",
@@ -47,7 +51,8 @@ export const publicationsData = [
     "date": new Date(2015, 10, 30),
     "journal": "International Journal of Computer Science and Telecommunications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A novel approach to super quality software development using workflows",
@@ -56,7 +61,8 @@ export const publicationsData = [
     "date": new Date(2016, 9, 20),
     "journal": "IEEE 7th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Modeling and Fuzzy Logic Control of a Quadrotor UAV",
@@ -65,7 +71,8 @@ export const publicationsData = [
     "date": new Date(2017, 7, 8),
     "journal": "International Research Journal of Engineering and Technology (IRJET)",
     "scopus": false,
-    "impactFactor": 8.2
+    "impactFactor": 8.2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Quadrotor Control using Adaptive Fuzzy PD Technique",
@@ -74,7 +81,8 @@ export const publicationsData = [
     "date": new Date(2017, 7, 8),
     "journal": "Quadrotor Control using Adaptive Fuzzy PD Technique",
     "scopus": false,
-    "impactFactor": 8.2
+    "impactFactor": 8.2,
+    "collaborationType": "unknown"
   },
   {
     "title": "PID Control of A Quadrotor UAV",
@@ -83,7 +91,8 @@ export const publicationsData = [
     "date": new Date(2017, 7, 8),
     "journal": "International Research Journal of Engineering and Technology (IRJET)",
     "scopus": false,
-    "impactFactor": 8.2
+    "impactFactor": 8.2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Adaptive Fuzzy PID Control of a Quadrotor UAV",
@@ -92,7 +101,8 @@ export const publicationsData = [
     "date": new Date(2017, 9, 5),
     "journal": "The 5th Arab Robotics Conference",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Collaborative filtering based online recommendation systems: A survey",
@@ -101,7 +111,8 @@ export const publicationsData = [
     "date": new Date(2018, 2, 22),
     "journal": "2017 International Conference on Information and Communication Technologies (ICICT)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Analysis of Interactive Utilization of CPU between Host and Guests in a Cloud Setup",
@@ -110,7 +121,8 @@ export const publicationsData = [
     "date": new Date(2018, 4, 20),
     "journal": "Computer Science and Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Comparison of Routing Protocols in Wireless Mesh Network on the Basis of Performance",
@@ -119,7 +131,8 @@ export const publicationsData = [
     "date": new Date(2018, 9, 20),
     "journal": "International Journal of Networks and Communications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Estimation Of Phantom Vortex Size For Liquid Gas Separation Using Electrical Tomography",
@@ -128,7 +141,8 @@ export const publicationsData = [
     "date": new Date(2019, 4, 15),
     "journal": "nternational Interdisciplinary PhD Workshop 2019 Wismar, Germany",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Application of the 2D-ERT to evaluate phantom circumscribed regions in various sucrose solution concentrations",
@@ -137,7 +151,8 @@ export const publicationsData = [
     "date": new Date(2019, 4, 17),
     "journal": "2019 International Interdisciplinary PhD Workshop (IIPhDW)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "UML-SR: A Novel Security Requirements Specification Language",
@@ -146,7 +161,8 @@ export const publicationsData = [
     "date": new Date(2019, 6, 25),
     "journal": "IEEE  Sofia, Bulgaria",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "On the Combination of Finite State Transducers and Finite Automata with Translucent Letter",
@@ -155,7 +171,8 @@ export const publicationsData = [
     "date": new Date(2019, 9, 13),
     "journal": "Middle-European Conference on Applied Theoretical Computer science (MATCOS) 2019",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Ontology-oriented software effort estimation system for E-commerce applications based on extreme programming and scrum methodologies",
@@ -164,7 +181,8 @@ export const publicationsData = [
     "date": new Date(2019, 10, 11),
     "journal": "The Computer Journal",
     "scopus": true,
-    "impactFactor": 1.5
+    "impactFactor": 1.5,
+    "collaborationType": "national"
   },
   {
     "title": "TRANSDUCED-INPUT AUTOMATA WITH TRANSLUCENT LETTERS",
@@ -173,7 +191,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 1),
     "journal": "Comptes rendus de l’Acade'mie bulgare des Sciences, Vol 73, No1, pp.33-39",
     "scopus": true,
-    "impactFactor": 0.3
+    "impactFactor": 0.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Symptoms Motif Detection of Polio at Early Stages By Using Data Visual Analytics: Polio Free Pakistan",
@@ -182,7 +201,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 18),
     "journal": "International Bhurban Conference on Applied Sciences and Technology",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Controlled Inline Fluid Separation Based on Smart Process Tomography Sensors",
@@ -191,7 +211,8 @@ export const publicationsData = [
     "date": new Date(2020, 2, 27),
     "journal": "Chemie Ingenieur Technik",
     "scopus": true,
-    "impactFactor": 1.91
+    "impactFactor": 1.91,
+    "collaborationType": "international"
   },
   {
     "title": "Multichannel Capacitive Imaging of Gas Vortex in Swirling Two-Phase Flows Using Parametric Reconstruction",
@@ -200,7 +221,8 @@ export const publicationsData = [
     "date": new Date(2020, 3, 8),
     "journal": "IEEE- Access",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "international"
   },
   {
     "title": "Electrical Resistance Tomography for Control Applications: Quantitative Study of the Gas-Liquid Distribution inside A Cyclone",
@@ -209,7 +231,8 @@ export const publicationsData = [
     "date": new Date(2020, 9, 25),
     "journal": "MDPI Sensors",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "international"
   },
   {
     "title": "Scaling Of Electrical Resistance Tomography Data Of Swirled Liquid-Gas Separation Using Fast Camera Imaging",
@@ -218,7 +241,8 @@ export const publicationsData = [
     "date": new Date(2020, 11, 9),
     "journal": "Wirtualne SYMPOZJUM ŚRODOWISKOWE PTZE",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Quantitative Evaluations with 2d Electrical Resistance Tomography in the Low-Conductivity Solutions Using 3d-Printed Phantoms and Sucrose Crystal Agglomerate Assessments",
@@ -227,7 +251,8 @@ export const publicationsData = [
     "date": new Date(2021, 0, 14),
     "journal": "MDPI Sensors",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Analysis of Machine Learning Techniques for Detection Framework for DNA Repair Genes to help Diagnose Cancer: A Systematic Literature Review",
@@ -236,7 +261,8 @@ export const publicationsData = [
     "date": new Date(2021, 1, 1),
     "journal": "IEEE",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Analysis of Machine Learning Techniques for Detection of Tumor Suppressor Genes for Early Detection of Cancer: A Systematic Literature Review",
@@ -245,7 +271,8 @@ export const publicationsData = [
     "date": new Date(2021, 1, 2),
     "journal": "IEEE",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "VTA-SMAC: Variable Traffic-Adaptive Duty Cycled Sensor MAC Protocol to Enhance Overall QoS of S-MAC Protocol",
@@ -254,7 +281,8 @@ export const publicationsData = [
     "date": new Date(2021, 2, 3),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.6
+    "impactFactor": 3.6,
+    "collaborationType": "international"
   },
   {
     "title": "Detection of impostor and tampered segments in audio by using an intelligent system",
@@ -263,7 +291,8 @@ export const publicationsData = [
     "date": new Date(2021, 2, 21),
     "journal": "Computers and Electrical Engineering",
     "scopus": true,
-    "impactFactor": 4.1
+    "impactFactor": 4.1,
+    "collaborationType": "international"
   },
   {
     "title": "Implementing Multilabeling, ADASYN, and ReliefF Techniques for Classification of Breast Cancer Diagnostic through Machine Learning: Efficient Computer-Aided Diagnostic System",
@@ -272,7 +301,8 @@ export const publicationsData = [
     "date": new Date(2021, 2, 23),
     "journal": "Journal of Healthcare Engineering",
     "scopus": false,
-    "impactFactor": 3.822
+    "impactFactor": 3.822,
+    "collaborationType": "national"
   },
   {
     "title": "Control of a Gas-Liquid Inline Swirl Separator Based on Tomographic Measurements",
@@ -281,7 +311,8 @@ export const publicationsData = [
     "date": new Date(2021, 3, 14),
     "journal": "IFAC-PapersOnLine",
     "scopus": true,
-    "impactFactor": 0.4
+    "impactFactor": 0.4,
+    "collaborationType": "international"
   },
   {
     "title": "ECM-MAC: An Efficient Collision Mitigation Strategy in Contention Based MAC Protocol",
@@ -290,7 +321,8 @@ export const publicationsData = [
     "date": new Date(2021, 3, 30),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.6
+    "impactFactor": 3.6,
+    "collaborationType": "international"
   },
   {
     "title": "Towards The Combination Of Data Reduction And Augmented Reality For Online And Onsite ERT-Based Monitoring Of Inline Fluid Separation",
@@ -299,7 +331,8 @@ export const publicationsData = [
     "date": new Date(2021, 8, 15),
     "journal": "10th World Congress on Industrial Process Tomography",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Analysis of machine learning techniques for detection of tumor suppressor genes for early detection of cancer: A systematic literature review",
@@ -308,7 +341,8 @@ export const publicationsData = [
     "date": new Date(2021, 10, 9),
     "journal": "International Conference on Innovative Computing (ICIC)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Analysis of machine learning techniques for detection framework for DNA repair genes to help diagnose cancer: A systematic literature review",
@@ -317,7 +351,8 @@ export const publicationsData = [
     "date": new Date(2021, 10, 9),
     "journal": "2021 International Conference on Innovative Computing (ICIC)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "A Novel AI-Based Stock Market Prediction Using Machine  Learning Algorithm",
@@ -326,7 +361,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 1),
     "journal": "Scientific Programming",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Artificial Subjectivity: Personal Semantic Memory Model for Cognitive Agents",
@@ -335,7 +371,8 @@ export const publicationsData = [
     "date": new Date(2022, 1, 11),
     "journal": "Applied sciences",
     "scopus": true,
-    "impactFactor": 2.79
+    "impactFactor": 2.79,
+    "collaborationType": "national"
   },
   {
     "title": "A Fast Electrical Resistivity-Based Algorithm to Measure and Visualize Two-Phase Swirling Flows",
@@ -344,7 +381,8 @@ export const publicationsData = [
     "date": new Date(2022, 1, 25),
     "journal": "MDPI Sensors",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "international"
   },
   {
     "title": "Machine Learning with Data Balancing Technique for IoT Attack and Anomalies Detection",
@@ -353,7 +391,8 @@ export const publicationsData = [
     "date": new Date(2022, 2, 14),
     "journal": "2022 Second International Conference on Distributed Computing and High Performance Computing (DCHPC)",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Parallel Implementation of FEM Solver for Shared Memory Using OpenMP",
@@ -362,7 +401,8 @@ export const publicationsData = [
     "date": new Date(2022, 2, 19),
     "journal": "Hindawi Mathematical Problems in Engineering",
     "scopus": true,
-    "impactFactor": 1.3
+    "impactFactor": 1.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "Success factors analysis for requirement elicitation in global  software development paradigm: An empirical study",
@@ -371,7 +411,8 @@ export const publicationsData = [
     "date": new Date(2022, 3, 6),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Towards Tomography-Based Real-Time Control of Multiphase Flows: A Proof of Concept in Inline Fluid Separation",
@@ -380,7 +421,8 @@ export const publicationsData = [
     "date": new Date(2022, 5, 8),
     "journal": "MDPI Sensor",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Context-Based Emotion Predictor: A Decision- Making Framework for Mobile Data",
@@ -389,7 +431,8 @@ export const publicationsData = [
     "date": new Date(2022, 5, 16),
     "journal": "Mobile Information Systems",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Context-Based Emotion Predictor: A Decision- Making Framework for Mobile Data",
@@ -398,7 +441,8 @@ export const publicationsData = [
     "date": new Date(2022, 5, 16),
     "journal": "Mobile Information Systems",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Estimation of outliers in cognitive networks spectrum sensing",
@@ -407,7 +451,8 @@ export const publicationsData = [
     "date": new Date(2022, 5, 23),
     "journal": "Lahore Garrison University Research Journal of Computer Science and IT",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Deep Learning-based Environmental Sound Classification Using Feature Fusion and Data Enhancement",
@@ -416,7 +461,8 @@ export const publicationsData = [
     "date": new Date(2022, 5, 29),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Context Aware Evapotranspiration (ETs) for Saline Soils reclamation",
@@ -425,7 +471,8 @@ export const publicationsData = [
     "date": new Date(2022, 8, 12),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Transformer-Based Multilingual Speech Emotion Recognition Using Data Augmentation and Feature Fusion",
@@ -434,7 +481,8 @@ export const publicationsData = [
     "date": new Date(2022, 8, 14),
     "journal": "Applied Sciences",
     "scopus": true,
-    "impactFactor": 2.5
+    "impactFactor": 2.5,
+    "collaborationType": "unknown"
   },
   {
     "title": "Crowd Anomaly Detection in Video Frames Using Fine-Tuned AlexNet Model",
@@ -443,7 +491,8 @@ export const publicationsData = [
     "date": new Date(2022, 8, 28),
     "journal": "Electronics",
     "scopus": true,
-    "impactFactor": 2.6
+    "impactFactor": 2.6,
+    "collaborationType": "unknown"
   },
   {
     "title": "A hybrid technique using minimal spanning tree and analytic  hierarchical process to prioritize functional requirements for parallel  software development",
@@ -452,7 +501,8 @@ export const publicationsData = [
     "date": new Date(2023, 1, 12),
     "journal": "Requirements Engineering",
     "scopus": true,
-    "impactFactor": 2.1
+    "impactFactor": 2.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Detection and Analysis of Active Attacks using Honeypot",
@@ -461,7 +511,8 @@ export const publicationsData = [
     "date": new Date(2023, 2, 24),
     "journal": "ational Journal of Computer Applications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Speech Emotion Recognition through Hybrid Features and Convolutional Neural Network",
@@ -470,7 +521,8 @@ export const publicationsData = [
     "date": new Date(2023, 3, 10),
     "journal": "Applied Sciences",
     "scopus": true,
-    "impactFactor": 2.5
+    "impactFactor": 2.5,
+    "collaborationType": "unknown"
   },
   {
     "title": "IoT Based Smart Baby Monitoring System with EmotionRecognition Using Machine Learning",
@@ -479,7 +531,8 @@ export const publicationsData = [
     "date": new Date(2023, 3, 11),
     "journal": "Hindawi Wireless Communications and Mobile Computing",
     "scopus": true,
-    "impactFactor": 4.6
+    "impactFactor": 4.6,
+    "collaborationType": "international"
   },
   {
     "title": "A Comprehensive Survey on the Cooperation of Fog Computing Paradigm-based IoT Applications: Layered Architecture, Real-Time Security Issues, and Solutions",
@@ -488,7 +541,8 @@ export const publicationsData = [
     "date": new Date(2023, 6, 12),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "international"
   },
   {
     "title": "Empirical exploration of critical challenges of requirements  implementation in global software development",
@@ -497,7 +551,8 @@ export const publicationsData = [
     "date": new Date(2023, 6, 14),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Journal of Software: Evolution and Process",
@@ -506,7 +561,8 @@ export const publicationsData = [
     "date": new Date(2023, 7, 17),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "IoT and Ensemble Long Short Term Memory-based Evapotranspiration Forecasting of Riyadh",
@@ -515,7 +571,8 @@ export const publicationsData = [
     "date": new Date(2023, 8, 1),
     "journal": "Sensors",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Reducing Dataset Specificity for Deepfakes Using Ensemble Learning",
@@ -524,7 +581,8 @@ export const publicationsData = [
     "date": new Date(2023, 8, 7),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 5.3
+    "impactFactor": 5.3,
+    "collaborationType": "national"
   },
   {
     "title": "Requirement elicitation model for global software  development vendors",
@@ -533,7 +591,8 @@ export const publicationsData = [
     "date": new Date(2023, 9, 3),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "NA",
@@ -542,7 +601,8 @@ export const publicationsData = [
     "date": new Date(2023, 11, 12),
     "journal": "NA",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Perception of Health Risks and Strategies for Mitigation among Male and Female Users of Cosmetics in the District of Kasur",
@@ -551,7 +611,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 1),
     "journal": "JDSS",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Federated Learning for Privacy-Preserving Intrusion Detection in Software-Defined Networks",
@@ -560,7 +621,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 2),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "national"
   },
   {
     "title": "Emergence of Novel WEDEx-Kerberotic Cryptographic Framework to Strengthen the Cloud Data Security against Malicious Attacks",
@@ -569,7 +631,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 13),
     "journal": "MDPI Symmetry",
     "scopus": true,
-    "impactFactor": 2.2
+    "impactFactor": 2.2,
+    "collaborationType": "international"
   },
   {
     "title": "Computational Insight into the Physical Properties of Bulk MP (M =  Li, Na, K) for Energy Applications",
@@ -578,7 +641,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 16),
     "journal": "ACS OMEGA",
     "scopus": true,
-    "impactFactor": 4.1
+    "impactFactor": 4.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Prevalence of an Identity Crisis Within the Transgender Population of Pakistan",
@@ -587,7 +651,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 28),
     "journal": "Annals of Human and Social Sciences",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Machine Learning for Improved Threat Detection: LightGBM vs. CatBoost",
@@ -596,7 +661,8 @@ export const publicationsData = [
     "date": new Date(2024, 5, 1),
     "journal": "Journal of Computing & Biomedical Informatics",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Securing IoT: Balancing Privacy and Attack Prediction",
@@ -605,7 +671,8 @@ export const publicationsData = [
     "date": new Date(2024, 5, 1),
     "journal": "Journal of Computing & Biomedical Informatics",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Short-term solar photovoltaic power forecasting using ensemble forecasting strategy for renewable resources based power systems",
@@ -614,7 +681,8 @@ export const publicationsData = [
     "date": new Date(2024, 5, 4),
     "journal": "Engineering Research Express",
     "scopus": true,
-    "impactFactor": 1.5
+    "impactFactor": 1.5,
+    "collaborationType": "international"
   },
   {
     "title": "https://scholar.google.com/citations?user=b0CGq_wAAAAJ&hl=en&authuser=2",
@@ -623,7 +691,8 @@ export const publicationsData = [
     "date": new Date(2024, 5, 20),
     "journal": "Research Reports on Computer Science",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "RapidMiner-based Clustering Techniques for Enhancing Intrusion Detection System (IDS) Performance",
@@ -632,7 +701,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 2),
     "journal": "Journal of Computing & Biomedical Informatics",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Forensic Strategies for Revealing Memory Artifacts in IoT Devices",
@@ -641,7 +711,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 1),
     "journal": "Journal of Computing & Biomedical Informatics",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Improving DeepFake Detection: A Comprehensive Reviewof Adversarial Robustness, Real-Time Processing and Evaluation Metrics",
@@ -650,7 +721,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 1),
     "journal": "Journal of Computing & Biomedical Informatics",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "ext-Generation Block Ciphers: Achieving Superior Memory Efficiency and Cryptographic Robustness for IoT Devices",
@@ -659,7 +731,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 23),
     "journal": "Cryptography-mdpi",
     "scopus": true,
-    "impactFactor": 1.8
+    "impactFactor": 1.8,
+    "collaborationType": "national"
   },
   {
     "title": "Explanatory and predictive modeling of cybersecurity behaviors using protection motivation theory",
@@ -668,7 +741,8 @@ export const publicationsData = [
     "date": new Date(2024, 10, 12),
     "journal": "Computers & Security",
     "scopus": true,
-    "impactFactor": 4.8
+    "impactFactor": 4.8,
+    "collaborationType": "unknown"
   },
   {
     "title": "Convolutional Neural Networks: A Comprehensive Evaluation and Benchmarking of Pooling Layer Variants",
@@ -677,7 +751,8 @@ export const publicationsData = [
     "date": new Date(2024, 10, 12),
     "journal": "MDPI Symmetry",
     "scopus": true,
-    "impactFactor": 2.2
+    "impactFactor": 2.2,
+    "collaborationType": "international"
   },
   {
     "title": "A Robust Hybrid Machine Learning based Implications and Preventions of Social Media Blackmailing and Cyber bullying: A Systematic Approach",
@@ -686,7 +761,8 @@ export const publicationsData = [
     "date": new Date(2025, 1, 9),
     "journal": "The Asian Bulletin of Big Data Management (ABBDM) is a peer-reviewed journal recognized by the higher education commission of Pakistan in Y category",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Next Word Prediction for Urdu using Deep Learning Techniques",
@@ -695,7 +771,8 @@ export const publicationsData = [
     "date": new Date(2025, 1, 27),
     "journal": "VFAST Transactions on Software Engineering",
     "scopus": true,
-    "impactFactor": 0.3
+    "impactFactor": 0.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "Crime Forecasting Using Data Analytics in Pakistan",
@@ -704,7 +781,8 @@ export const publicationsData = [
     "date": new Date(2025, 2, 1),
     "journal": "Journal of Computing & Biomedical Informatics (JCBI)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Efficient and Sustainable Video Surveillance Using CNN-LSTM Model for Suspicious Activity Detection",
@@ -713,7 +791,8 @@ export const publicationsData = [
     "date": new Date(2025, 2, 2),
     "journal": "VFAST Transactions on Software Engineering",
     "scopus": false,
-    "impactFactor": 0.3
+    "impactFactor": 0.3,
+    "collaborationType": "national"
   },
   {
     "title": "Cluster Analysis of Security Threats in Web Applications: A Multiphase SDLC Analysis",
@@ -722,7 +801,8 @@ export const publicationsData = [
     "date": new Date(2025, 8, 22),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 1.8
+    "impactFactor": 1.8,
+    "collaborationType": "international"
   },
   {
     "title": "Minimizing Inter-Dependencies in Functional Requirements for Timely Delivery of Software Projects: A Prioritization Approach Using AHP and Spanning Trees",
@@ -731,7 +811,8 @@ export const publicationsData = [
     "date": new Date(2025, 10, 18),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 1.8
+    "impactFactor": 1.8,
+    "collaborationType": "international"
   },
   {
     "title": "Design of Minimal Spanning Treeand Analytic Hierarchical Process (SAHP) Based Hybrid Technique for Software Requirements Prioritization",
@@ -740,7 +821,8 @@ export const publicationsData = [
     "date": new Date(2025, 9, 9),
     "journal": "IET SOFTWARE",
     "scopus": true,
-    "impactFactor": 2.6
+    "impactFactor": 2.6,
+    "collaborationType": "national"
   },
   {
     "title": "Maximizing Influence and Mitigating Harmful Viral Content in Social Networks",
@@ -749,7 +831,8 @@ export const publicationsData = [
     "date": new Date(2025, 10, 2),
     "journal": "IJACSA",
     "scopus": true,
-    "impactFactor": 0.7
+    "impactFactor": 0.7,
+    "collaborationType": "international"
   },
   {
     "title": "Scalability and Limitations of Existing Software Requirements Prioritization Techniques: A Systematic Literature Review",
@@ -758,7 +841,8 @@ export const publicationsData = [
     "date": new Date(2025, 7, 4),
     "journal": "JOURNAL OF SOFTWARE: EVOLUTION AND PROCESS",
     "scopus": true,
-    "impactFactor": 1.8
+    "impactFactor": 1.8,
+    "collaborationType": "national"
   },
   {
     "title": "Success Factors during Requirements Implementation in Global Software Development: A Systematic Literature Review",
@@ -767,7 +851,8 @@ export const publicationsData = [
     "date": new Date(2019, 1, 3),
     "journal": "International Journal of Computer Science and Software Engineering;",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "A Graph Based Approach to Prioritization of Software Functional Requirements",
@@ -776,7 +861,8 @@ export const publicationsData = [
     "date": new Date(2020, 3, 4),
     "journal": "International Journal of Computer Science and Software Engineering (IJCSSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "An Improved Framework for Requirement Implementation in the context of Global Software Development: A Systematic Literature Review Protocol",
@@ -785,7 +871,8 @@ export const publicationsData = [
     "date": new Date(2016, 9, 1),
     "journal": "International Journal of Modern Nonlinear Theory and Application",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Requirements Management Model (RMM): A Proposed Model for Successful Delivery of Software Projects",
@@ -794,7 +881,8 @@ export const publicationsData = [
     "date": new Date(2019, 5, 1),
     "journal": "International Journal of Computer Applications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Practices for Effective Software Project Management in Global Software Development: A Systematic Literature Review",
@@ -803,7 +891,8 @@ export const publicationsData = [
     "date": new Date(2020, 1, 2),
     "journal": "International Journal of Computer Applications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "MINIMIZING INTER-DEPENDENCY ISSUES OF REQUIREMENTS IN PARALLEL DEVELOPING SOFTWARE PROJECTS WITH AHP",
@@ -812,7 +901,8 @@ export const publicationsData = [
     "date": new Date(2019, 7, 1),
     "journal": "An international journal of advance computer technology",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "An Approach for Managing Large-Sized Software Requirements during Prioritization",
@@ -821,7 +911,8 @@ export const publicationsData = [
     "date": new Date(2018, 11, 12),
     "journal": "2018 IEEE Conference on Open Systems (ICOS)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Critical Challenges for Requirement Implementation in Context of Global Software Development: A Systematic Literature Review",
@@ -830,7 +921,8 @@ export const publicationsData = [
     "date": new Date(2015, 11, 23),
     "journal": "2015 International Conference on Open Source Systems and Technologies (ICOSST)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Requirement Implementation Model (RIM) in the Context of Global Software Development",
@@ -839,7 +931,8 @@ export const publicationsData = [
     "date": new Date(2015, 11, 12),
     "journal": "2015 International Conference on Information and Communication Technologies (ICICT)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Requirement Elicitation Model (REM) in the Context of Global Software Development",
@@ -848,7 +941,8 @@ export const publicationsData = [
     "date": new Date(2018, 11, 12),
     "journal": "Global Journal of Computer Science and Technology",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Effective communication as critical success factor during requirement elicitation in global software development",
@@ -857,7 +951,8 @@ export const publicationsData = [
     "date": new Date(2019, 4, 5),
     "journal": "International Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Success factors during requirements implementation in global software development: An empirical study",
@@ -866,7 +961,8 @@ export const publicationsData = [
     "date": new Date(2019, 8, 1),
     "journal": "tional Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "tional Journal of Computer Science Engineering (IJCSE)",
@@ -875,7 +971,8 @@ export const publicationsData = [
     "date": new Date(2019, 11, 12),
     "journal": "International Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Improving Breast Cancer Detection in BUS Images Using Multimodal Deep Learning and Grad-CAM Fusion",
@@ -884,7 +981,8 @@ export const publicationsData = [
     "date": new Date(2025, 7, 14),
     "journal": "International Conference on Smart Systems and Emerging Technologies.",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Effective Negotiations Practices in Global Software Development: A Systematic Literature Review",
@@ -893,7 +991,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 1),
     "journal": "International Journal of Computer Science Engineering (IJCSE",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Importance of Requirements Prioritization in Parallel Developing Software Projects",
@@ -902,7 +1001,8 @@ export const publicationsData = [
     "date": new Date(2020, 2, 1),
     "journal": "International Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Effective Negotiation Practices in Global Software Development: An Empirical Evaluation",
@@ -911,7 +1011,8 @@ export const publicationsData = [
     "date": new Date(2020, 4, 2),
     "journal": "International Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Effective Requirement Elicitation Process using Developed Open Source Software Systems",
@@ -920,7 +1021,8 @@ export const publicationsData = [
     "date": new Date(2020, 8, 1),
     "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Prioritization of Software Functional Requirements: A Novel Approach using AHP and Spanning Tree",
@@ -929,7 +1031,8 @@ export const publicationsData = [
     "date": new Date(2020, 1, 2),
     "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "IDENTIFICATION OF CHALLENGES DURING REQUIREMENTS IMPLEMENTATION IN GLOBAL SOFTWARE DEVELOPMENT: A SYSTEMATIC LITERATURE REVIEW",
@@ -938,7 +1041,8 @@ export const publicationsData = [
     "date": new Date(2019, 3, 30),
     "journal": "JOURNAL OF SOFTWARE ENGINEERING & INTELLIGENT SYSTEMS",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "USING CUMULATIVE VOTING AND PRIORITY GROUPS TO PRIORITIZE FUNCTIONAL REQUIREMENTS: ODOO ERP AS CASE STUDY",
@@ -947,7 +1051,8 @@ export const publicationsData = [
     "date": new Date(2020, 7, 2),
     "journal": "JOURNAL OF SOFTWARE ENGINEERING & INTELLIGENT SYSTEMS",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Inter-organizational Learning and Knowledge Sharing Management in Global Software Development",
@@ -956,7 +1061,8 @@ export const publicationsData = [
     "date": new Date(2020, 1, 2),
     "journal": "International Journal of Scientific Research in Research Paper . Computer Science and Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Colloboration as Success Factor during Requirement Elicitation in Global Software Development",
@@ -965,7 +1071,8 @@ export const publicationsData = [
     "date": new Date(2020, 2, 1),
     "journal": "International Journal of Scientific Research in Research Paper . Multidisciplinary Studies",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Enhancing Integrity Technique Using Distributed Query Operation",
@@ -974,7 +1081,8 @@ export const publicationsData = [
     "date": new Date(2019, 1, 2),
     "journal": "Recent Trends and Advances in Wireless and IoT-enabled Networks. EAI/Springer Innovations in Communication and Computing. Springer, Cham",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "International Journal of Computer Science Engineering (IJCSE)",
@@ -983,7 +1091,8 @@ export const publicationsData = [
     "date": new Date(2020, 7, 2),
     "journal": "International Journal of Computer Science Engineering (IJCSE)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Validation of Practices for Effective Communication during Requirements Elicitation in Global Software Development",
@@ -992,7 +1101,8 @@ export const publicationsData = [
     "date": new Date(2020, 3, 4),
     "journal": "International Journal of Computer Applications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Practices for Effective Software Project Management in Global Software Development: A Systematic Literature Review",
@@ -1001,7 +1111,8 @@ export const publicationsData = [
     "date": new Date(2020, 1, 2),
     "journal": "International Journal of Computer Applications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Identification of Practices for Proper Implementation of Requirements in Global Software Development: A Systematic Literature Review Protocol",
@@ -1010,7 +1121,8 @@ export const publicationsData = [
     "date": new Date(2019, 9, 2),
     "journal": "International Journal of Computer Applications",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "Smart buildings: Federated learning-driven secure, transparent and smart energy management system using XAI",
@@ -1019,7 +1131,8 @@ export const publicationsData = [
     "date": new Date(2025, 5, 30),
     "journal": "Energy reports",
     "scopus": true,
-    "impactFactor": 4.7
+    "impactFactor": 4.7,
+    "collaborationType": "international"
   },
   {
     "title": "Big Data-Driven Federated Learning Model for Scalable and Privacy-Preserving Cyber Threat Detection in IoT-Enabled Healthcare Systems",
@@ -1028,7 +1141,8 @@ export const publicationsData = [
     "date": new Date(2025, 11, 18),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 1.7
+    "impactFactor": 1.7,
+    "collaborationType": "unknown"
   },
   {
     "title": "Interpretable Federated Learning Model for Cyber Intrusion Detection in Smart Cities with Privacy-Preserving Feature Selection",
@@ -1037,7 +1151,8 @@ export const publicationsData = [
     "date": new Date(2025, 8, 18),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 1.7
+    "impactFactor": 1.7,
+    "collaborationType": "unknown"
   },
   {
     "title": "Weighted explainable federated learning for privacy-preserving and scalable energy optimization in autonomous vehicular networks",
@@ -1046,7 +1161,8 @@ export const publicationsData = [
     "date": new Date(2025, 7, 20),
     "journal": "Egyptian Informatics Journal",
     "scopus": true,
-    "impactFactor": 4.3
+    "impactFactor": 4.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "Privacy-Preserving Interpretability: An Explainable Federated Learning Model for Predictive Maintenance in Sustainable Manufacturing and Industry 4.0",
@@ -1055,7 +1171,8 @@ export const publicationsData = [
     "date": new Date(2025, 5, 6),
     "journal": "AI",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Navigating the future of higher education in Saudi Arabia: implementing AI, machine learning, and big data for sustainable university development",
@@ -1064,7 +1181,8 @@ export const publicationsData = [
     "date": new Date(2025, 5, 3),
     "journal": "Discover Sustainability",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Smart sustainable cyber security: modelling an interpretable and transparent threat detection with explainable artificial intelligence",
@@ -1073,7 +1191,8 @@ export const publicationsData = [
     "date": new Date(2025, 4, 24),
     "journal": "Discover Sustainability",
     "scopus": true,
-    "impactFactor": 3
+    "impactFactor": 3,
+    "collaborationType": "unknown"
   },
   {
     "title": "Blockchain enabled IoMT and transfer learning for ocular disease classification",
@@ -1082,7 +1201,8 @@ export const publicationsData = [
     "date": new Date(2025, 4, 5),
     "journal": "Discover Applied Sciences",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A swin transformer and CNN fusion framework for accurate Parkinson disease classification in MRI",
@@ -1091,7 +1211,8 @@ export const publicationsData = [
     "date": new Date(2025, 3, 29),
     "journal": "Scientific Reports",
     "scopus": true,
-    "impactFactor": 3.2
+    "impactFactor": 3.2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Secure and Transparent Banking: Explainable AI-Driven Federated Learning Model for Financial Fraud Detection",
@@ -1100,7 +1221,8 @@ export const publicationsData = [
     "date": new Date(2025, 2, 27),
     "journal": "Journal of Risk and Financial Management",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Digital Forensics as Advanced Ransomware Pre‐Attack Detection Algorithm for Endpoint Data Protection",
@@ -1109,7 +1231,8 @@ export const publicationsData = [
     "date": new Date(2022, 6, 6),
     "journal": "Security and Communication Networks",
     "scopus": true,
-    "impactFactor": 1.454
+    "impactFactor": 1.454,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Hybrid Book Recommendation System Using Content-Based and Collaborative Filtering for Enhanced User Experience",
@@ -1118,7 +1241,8 @@ export const publicationsData = [
     "date": new Date(2025, 10, 13),
     "journal": "Innternational Conference on Innovative Computing & Communication (ICICC)",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "ROLE OF SOFTWARE DEVELOPER'S HAPPINESS IN PROJECTS SUCCESS: A PROPOSED DEVELOPERS HAPPINESS MODEL (DHM)",
@@ -1127,7 +1251,8 @@ export const publicationsData = [
     "date": new Date(2019, 8, 1),
     "journal": "i-manager’s Journal on Software Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "COORDINATION AND COLLABORATION PRACTICES IN GLOBAL SOFTWARE DEVELOPMENT",
@@ -1136,7 +1261,8 @@ export const publicationsData = [
     "date": new Date(2019, 9, 1),
     "journal": "i-Manager's Journal on Software Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "VALIDATION OF CRITICAL CHALLENGES DURING REQUIREMENTS IMPLEMENTATION IN GLOBAL SOFTWARE DEVELOPMENT WITH EMPIRICAL STUDY",
@@ -1145,7 +1271,8 @@ export const publicationsData = [
     "date": new Date(2019, 8, 1),
     "journal": "i-manager’s Journal on Software Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "KNOWLEDGE SHARING MANAGEMENT (KSM) MODEL IN THE CONTEXT OF GLOBAL SOFTWARE DEVELOPMENT",
@@ -1154,7 +1281,8 @@ export const publicationsData = [
     "date": new Date(2020, 2, 1),
     "journal": "KNOWLEDGE SHARING MANAGEMENT (KSM) MODEL IN THE CONTEXT OF GLOBAL SOFTWARE DEVELOPMENT",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "IMPORTANCE OF FUNCTIONAL REQUIREMENTS PRIORITIZATION: ODOO ERP AS CASE STUDY",
@@ -1163,7 +1291,8 @@ export const publicationsData = [
     "date": new Date(2020, 5, 1),
     "journal": "i-Manager's Journal on Software Engineering;",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "PRACTICES FOR IMPLEMENTING COLLABORATIVE TOOLS AND MODERN TECHNOLOGIES DURING REQUIREMENT ELICITATION IN GLOBAL SOFTWARE DEVELOPMENT",
@@ -1172,7 +1301,8 @@ export const publicationsData = [
     "date": new Date(2020, 5, 1),
     "journal": "i-manager’s Journal on Software Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "INFRASTRUCTURE AND ORGANIZATIONAL IMPROVEMENT PRACTICES IN GLOBAL SOFTWARE DEVELOPMENT: A SYSTEMATIC LITERATURE REVIEW",
@@ -1181,7 +1311,8 @@ export const publicationsData = [
     "date": new Date(2020, 8, 1),
     "journal": "-manager’s Journal on Software Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Functional Requirements Prioritization using Graph and Sorting Algorithm",
@@ -1190,7 +1321,8 @@ export const publicationsData = [
     "date": new Date(2020, 7, 1),
     "journal": "International Journal of Scientific Research in  Research Paper . Computer Science and Engineering",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Prediction of hydrogen generation from perhydro-dibenzyltoluene empowered with machine learning",
@@ -1199,7 +1331,8 @@ export const publicationsData = [
     "date": new Date(2023, 9, 11),
     "journal": "International Journal of Hydrogen Energy",
     "scopus": true,
-    "impactFactor": 7.2
+    "impactFactor": 7.2,
+    "collaborationType": "international"
   },
   {
     "title": "Data Fusion Architecture Empowered with Deep Learning for Breast Cancer Classification",
@@ -1208,7 +1341,8 @@ export const publicationsData = [
     "date": new Date(2023, 10, 21),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": null
   },
   {
     "title": "HCDP-DELM: Heterogeneous Chronic Disease Prediction with Temporal Perspective Enabled Deep Extreme Learning Machine",
@@ -1217,7 +1351,8 @@ export const publicationsData = [
     "date": new Date(2024, 0, 25),
     "journal": "Knowledge-Based Systems",
     "scopus": true,
-    "impactFactor": 8.8
+    "impactFactor": 8.8,
+    "collaborationType": null
   },
   {
     "title": "FedCSCD-GAN: A secure and collaborative framework for clinical cancer diagnosis via optimized federated learning and GAN",
@@ -1226,7 +1361,8 @@ export const publicationsData = [
     "date": new Date(2024, 0, 3),
     "journal": "Biomedical Signal Processing and Control",
     "scopus": true,
-    "impactFactor": 5.1
+    "impactFactor": 5.1,
+    "collaborationType": null
   },
   {
     "title": "Smart Energy Management System Using Machine Learning",
@@ -1235,7 +1371,8 @@ export const publicationsData = [
     "date": new Date(2024, 0, 30),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": null
   },
   {
     "title": "Supervised Machine Learning-Based Prediction of Hydrogen Storage Classes Utilizing Dibenzyltoluene as an Organic Carrier",
@@ -1244,7 +1381,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 13),
     "journal": "Molecules",
     "scopus": true,
-    "impactFactor": 4.6
+    "impactFactor": 4.6,
+    "collaborationType": null
   },
   {
     "title": "Optimizing semantic error detection through weighted federated machine learning: A comprehensive approach",
@@ -1253,7 +1391,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 13),
     "journal": "International Journal of Applied and Advanced Sciences",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Federated Machine Learning Based Fetal Health Prediction Empowered with Bio-Signal Cardiotocography",
@@ -1262,7 +1401,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 26),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": null
   },
   {
     "title": "Identification of kidney stones in KUB X-ray images using VGG16 empowered with explainable artificial intelligence",
@@ -1271,7 +1411,8 @@ export const publicationsData = [
     "date": new Date(2024, 5, 5),
     "journal": "Scientific Reports",
     "scopus": true,
-    "impactFactor": 4.6
+    "impactFactor": 4.6,
+    "collaborationType": null
   },
   {
     "title": "Fuzzy-Based Fusion Model for β-Thalassemia Carriers Prediction Using Machine Learning Technique",
@@ -1280,7 +1421,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 25),
     "journal": "Advances in Fuzzy Systems",
     "scopus": true,
-    "impactFactor": 1.4
+    "impactFactor": 1.4,
+    "collaborationType": null
   },
   {
     "title": "Cervical Cancer Prediction Empowered with Federated Machine Learning",
@@ -1289,7 +1431,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 25),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": null
   },
   {
     "title": "Enhancing smart grid electricity prediction with the fusion of intelligent modeling and XAI integration",
@@ -1298,7 +1441,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 16),
     "journal": "International Journal of Applied and Advanced Sciences",
     "scopus": true,
-    "impactFactor": 0.4
+    "impactFactor": 0.4,
+    "collaborationType": null
   },
   {
     "title": "Emerging research trends in artificial intelligence for cancer diagnostic systems: A comprehensive review",
@@ -1307,7 +1451,8 @@ export const publicationsData = [
     "date": new Date(2024, 8, 15),
     "journal": "Heliyon",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": null
   },
   {
     "title": "Transition-aware human activity recognition using an ensemble deep learning framework",
@@ -1316,7 +1461,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 9),
     "journal": "Computers in Human Behavior",
     "scopus": true,
-    "impactFactor": 9.9
+    "impactFactor": 9.9,
+    "collaborationType": null
   },
   {
     "title": "Genetic Diversity and Forensic Utility of X-STR Loci in Punjabi and Kashmiri Populations: Insights into Population Structure and Ancestry",
@@ -1325,7 +1471,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 28),
     "journal": "Genes",
     "scopus": true,
-    "impactFactor": 2.8
+    "impactFactor": 2.8,
+    "collaborationType": null
   },
   {
     "title": "Connectivity index of interval-valued fuzzy graphs with application",
@@ -1334,7 +1481,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 28),
     "journal": "Scientific Reports",
     "scopus": true,
-    "impactFactor": 3.8
+    "impactFactor": 3.8,
+    "collaborationType": null
   },
   {
     "title": "Fuzzy-Based Weighted Federated Machine Learning Approach for Sustainable Energy Management with IoE Integration",
@@ -1343,7 +1491,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 21),
     "journal": "2024 Systems and Information Engineering Design Symposium (SIEDS)",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Emerging Technologies for Enhancing Robust Cybersecurity Measures for Business Intelligence in Healthcare 5.0",
@@ -1352,7 +1501,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Strengthening Industrial Cybersecurity to Protect Business Intelligence",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "GRADATIONAL PAVEMENT CRACKS SEGMENTATION USING FUZZY INFERENCE SYSTEM",
@@ -1361,7 +1511,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2024",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "A Comparative Study of Machine Learning Algorithms and Factors Involved in the Prediction of Heart Disease",
@@ -1370,7 +1521,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2025",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Unveiling the Enigma through Deep Learning : Exploring Multifaceted Human Personality Traits",
@@ -1379,7 +1531,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2026",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Security Threats and Attacks in IoT-Based Home Automation",
@@ -1388,7 +1541,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 23),
     "journal": "The 9th International Conference on Next Generation Computing 2029",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Diabetes Prediction Empowered with Multi-level Data Fusion and Machine Learning",
@@ -1397,7 +1551,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "A Mechanism for Bitcoin Price Forecasting using Deep Learning",
@@ -1406,7 +1561,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 23),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "DETERMINING STUDENT'S ONLINE ACADEMIC PERFORMANCE USING\n MACHINE LEARNING TECHNIQUES",
@@ -1415,7 +1571,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Informatyka, Automatyka, Pomiary w Gospodarce i Ochronie Środowiska",
     "scopus": true,
-    "impactFactor": 0.7
+    "impactFactor": 0.7,
+    "collaborationType": null
   },
   {
     "title": "A Modern Approach to Include Representative Behaviour Models in Energy Simulations",
@@ -1424,7 +1581,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Towards Energy Smart Homes. Springer, : Algorithms, Technologies, and Applications Cham.",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Simulating the dynamics of occupant behaviour for power management in residential buildings",
@@ -1433,7 +1591,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Energy and Buildings",
     "scopus": true,
-    "impactFactor": 6.6
+    "impactFactor": 6.6,
+    "collaborationType": null
   },
   {
     "title": "Virtual Simulation with Real Occupants Using Serious Games.",
@@ -1442,7 +1601,8 @@ export const publicationsData = [
     "date": null,
     "journal": "14th Conference of International Building Performance Simulation Association (BS 2015)",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Simulating Occupants’ Behaviour for Energy Waste Reduction in Dwellings: A Multi Agent Methodology,",
@@ -1451,7 +1611,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Advances in Complex Systems",
     "scopus": true,
-    "impactFactor": 0.7
+    "impactFactor": 0.7,
+    "collaborationType": null
   },
   {
     "title": "Building Energy Co-Simulations: Assessing energy strategies in Active Buildings considering human behaviour.",
@@ -1460,7 +1621,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Symposium on Sustainable Human-Building Ecosystems (ISSHBE), Carnegie Mellon University",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Comparison between purely statistical and multi-agent based approaches for occupant behaviour modeling in buildings.",
@@ -1469,7 +1631,8 @@ export const publicationsData = [
     "date": null,
     "journal": "IBPSA. Conference Francophone of the International Building Performance Simulation Association,",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "A New Co-Simulation Architecture for Mixing Dynamic Building Simulation and Agent Oriented Approach for Users Behaviour Modelling,",
@@ -1478,7 +1641,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Building Simulation",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "User Behaviour Modelling and Simulation for Energy Management in Domestic Settings.",
@@ -1487,7 +1651,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Simurex (Conception Optimisée du batiment par la simulation et le retour d'expérience),",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "An agent based approach to find high energy consuming activities.",
@@ -1496,7 +1661,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Conference on Artificial Intelligence (ICAI),",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Agent based framework to simulate inhabitants' behaviour in domestic settings for energy management",
@@ -1505,7 +1671,8 @@ export const publicationsData = [
     "date": null,
     "journal": "3rd International Conference on Agents and Artficial Intelligence (ICAART",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Simulating inhabitant behaviour to manage energy at home.",
@@ -1514,7 +1681,8 @@ export const publicationsData = [
     "date": null,
     "journal": "IBPSA (International Building Performance Simulation Association",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Emergence of Novel WEDEx-Kerberotic Cryptographic Framework to Strengthen the Cloud Data Security against Malicious Attacks",
@@ -1523,7 +1691,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 13),
     "journal": "MDPI- Symmetry",
     "scopus": true,
-    "impactFactor": 2.2
+    "impactFactor": 2.2,
+    "collaborationType": null
   },
   {
     "title": "An Innovative Approach Using TKN-Cryptology for Identifying the Replay Assault",
@@ -1532,7 +1701,8 @@ export const publicationsData = [
     "date": new Date(2024, 0, 24),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": null
   },
   {
     "title": "An efficient hybrid approach for optimization using simulated annealing and grasshopper algorithm for IoT applications",
@@ -1541,7 +1711,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 23),
     "journal": "Springer Discover Internet of Things",
     "scopus": true,
-    "impactFactor": 0.76
+    "impactFactor": 0.76,
+    "collaborationType": null
   },
   {
     "title": "Hill Matrix and Radix-64 Bit Algorithm to Preserve Data Confidentiality",
@@ -1550,7 +1721,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 23),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "Deep Bimodal Fusion Approach for Apparent Personality Analysis",
@@ -1559,7 +1731,8 @@ export const publicationsData = [
     "date": new Date(2024, 1, 23),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "Development of Security Rules and Mechanisms to Protect Data from Assaults",
@@ -1568,7 +1741,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 22),
     "journal": "MDPI- Applied Science",
     "scopus": true,
-    "impactFactor": 2.84
+    "impactFactor": 2.84,
+    "collaborationType": null
   },
   {
     "title": "An Optimization Approach for Convolutional Neural Network Using Non-Dominated",
@@ -1577,7 +1751,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 22),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "An Efficient Technique to Prevent Data Misuse with Matrix Cipher Encryption Algorithms",
@@ -1586,7 +1761,8 @@ export const publicationsData = [
     "date": new Date(2023, 9, 22),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "Two Layer Symmetric Cryptography Algorithm for Protecting Data from Attacks",
@@ -1595,7 +1771,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 22),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "Preventing Cloud Network from Spamming Attacks using Cloudflare and KNN",
@@ -1604,7 +1781,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 22),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "Two-Layer Security Algorithms to Prevent Attacks on Data in Cyberspace",
@@ -1613,7 +1791,8 @@ export const publicationsData = [
     "date": new Date(2024, 8, 22),
     "journal": "MDPI- Applied Science",
     "scopus": true,
-    "impactFactor": 2.84
+    "impactFactor": 2.84,
+    "collaborationType": null
   },
   {
     "title": "A Comparison of Pooling Methods for Convolutional Neural Networks",
@@ -1622,7 +1801,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 22),
     "journal": "MDPI- Applied Science",
     "scopus": true,
-    "impactFactor": 2.84
+    "impactFactor": 2.84,
+    "collaborationType": null
   },
   {
     "title": "A Secure Architecture to Protect the Network from Replay Attacks during Client-to-Client Data Transmission",
@@ -1631,7 +1811,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 22),
     "journal": "MDPI- Applied Science",
     "scopus": true,
-    "impactFactor": 2.84
+    "impactFactor": 2.84,
+    "collaborationType": null
   },
   {
     "title": "Preventing the Cloud Networks through Semi-Supervised Clustering from both sides attacks",
@@ -1640,7 +1821,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 22),
     "journal": "MDPI- Applied Science",
     "scopus": true,
-    "impactFactor": 2.84
+    "impactFactor": 2.84,
+    "collaborationType": null
   },
   {
     "title": "Transforming Hand Drawn Wireframes into Front-End Code with Deep Learning",
@@ -1649,7 +1831,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 22),
     "journal": "CMC-Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 3.86
+    "impactFactor": 3.86,
+    "collaborationType": null
   },
   {
     "title": "Intercept the Cloud Network From Brute Force and DDoS Attacks via Intrusion Detection and Prevention System",
@@ -1658,7 +1841,8 @@ export const publicationsData = [
     "date": new Date(2024, 10, 21),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.48
+    "impactFactor": 3.48,
+    "collaborationType": null
   },
   {
     "title": "A Semi-Supervised CNN With Fuzzy Rough C-Mean for Image Classification",
@@ -1667,7 +1851,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 19),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.48
+    "impactFactor": 3.48,
+    "collaborationType": null
   },
   {
     "title": "Semi-Supervised Deep Fuzzy C-Mean Clustering for Imbalanced Multi-Class Classification",
@@ -1676,7 +1861,8 @@ export const publicationsData = [
     "date": new Date(2024, 1, 19),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.48
+    "impactFactor": 3.48,
+    "collaborationType": null
   },
   {
     "title": "Fuzzy Rough C-Mean Based Unsupervised CNN Clustering for Large-Scale Image Data",
@@ -1685,7 +1871,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 18),
     "journal": "MDPI Applied Sciences",
     "scopus": true,
-    "impactFactor": 2.84
+    "impactFactor": 2.84,
+    "collaborationType": null
   },
   {
     "title": "Semi-Supervised Deep Fuzzy C-Mean Clustering for Imbalanced Multi-Class Classification",
@@ -1694,7 +1881,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 18),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.48
+    "impactFactor": 3.48,
+    "collaborationType": null
   },
   {
     "title": "Rough Noise-Filtered Easy Ensemble for Software Fault Prediction",
@@ -1703,7 +1891,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 18),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.48
+    "impactFactor": 3.48,
+    "collaborationType": null
   },
   {
     "title": "Semi-Supervised Deep Fuzzy C-Mean Clustering for Software Fault Prediction",
@@ -1712,7 +1901,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 18),
     "journal": "IEEE ACCESS",
     "scopus": true,
-    "impactFactor": 3.48
+    "impactFactor": 3.48,
+    "collaborationType": null
   },
   {
     "title": "Success factors analysis for requirement elicitation in global\n software development paradigm: An empirical study",
@@ -1721,7 +1911,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 22),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "A hybrid technique using minimal spanning tree and analytic\n hierarchical process to prioritize functional requirements for parallel\n software development",
@@ -1730,7 +1921,8 @@ export const publicationsData = [
     "date": new Date(2024, 1, 23),
     "journal": "Requirements Engineering",
     "scopus": true,
-    "impactFactor": 2.1
+    "impactFactor": 2.1,
+    "collaborationType": null
   },
   {
     "title": "A Novel AI-Based Stock Market Prediction Using Machine Learning Algorithm",
@@ -1739,7 +1931,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Scientific Programming,",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": null
   },
   {
     "title": "An Integration of IoT, IoC, and IoE towards Building a Green Society",
@@ -1748,7 +1941,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Scientific Programming,",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": null
   },
   {
     "title": "Empirical exploration of critical challenges of requirements implementation in global software development",
@@ -1757,7 +1951,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": null
   },
   {
     "title": "Exploratory study of existing research on software requirements prioritization: A systematic literature review",
@@ -1766,7 +1961,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": null
   },
   {
     "title": "Requirement elicitation model for global software development vendors",
@@ -1775,7 +1971,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": null
   },
   {
     "title": "Computational Insight into the Physical Properties of Bulk MP (M = Li, Na, K) for Energy Applications",
@@ -1784,7 +1981,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 4
+    "impactFactor": 4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Requirements Prioritization and using Iteration Model for Successful Implementation of Requirements",
@@ -1793,7 +1991,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications (IJACSA),",
     "scopus": true,
-    "impactFactor": 0.7
+    "impactFactor": 0.7,
+    "collaborationType": null
   },
   {
     "title": "Prioritization of Software Functional Requirements: Spanning Tree based Approach",
@@ -1802,7 +2001,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications (IJACSA),",
     "scopus": true,
-    "impactFactor": 0.7
+    "impactFactor": 0.7,
+    "collaborationType": null
   },
   {
     "title": "Prioritization of Software Functional Requirements: Spanning Tree based Approach",
@@ -1811,7 +2011,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications (IJACSA),",
     "scopus": true,
-    "impactFactor": 0.7
+    "impactFactor": 0.7,
+    "collaborationType": null
   },
   {
     "title": "Computational study of narrow bandgap double halide perovskites Rb2TlRhX6 (X =Cl, Br, I) for energy harvesting applications",
@@ -1820,7 +2021,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Physica Scripta",
     "scopus": true,
-    "impactFactor": 2.6
+    "impactFactor": 2.6,
+    "collaborationType": null
   },
   {
     "title": "Comprehensive Analysis of Computational Methods for Predicting Anti‑inflammatory Peptides",
@@ -1829,7 +2031,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Archives of Computational Methods in Engineering",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "AIPs-SnTCN: Predicting Anti-Inflammatory Peptides Using fastText and Transformer Encoder-Based Hybrid Word Embedding with Self-Normalized Temporal Convolutional Networks",
@@ -1838,7 +2041,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Chemical Information and Modeling",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "AFP-SPTS: An Accurate Prediction of Antifreeze Proteins Using Sequential and Pseudo-Tri-Slicing Evolutionary Features with an Extremely Randomized Tree",
@@ -1847,7 +2051,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Chemical Information and Modeling",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Huffman Code LSB based Image Steganography Technique Using Multi-Level Encryption and Achromatic Component of an image",
@@ -1856,7 +2061,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Scientific Reports.",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Prediction of Antifreeze Proteins Using Machine Learning",
@@ -1865,7 +2071,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Scientific Reports.",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Comparative Analysis of the Existing Methods for Prediction of Antifreeze Proteins",
@@ -1874,7 +2081,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Chemometrics and Intelligent Laboratory Systems",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Multi Perspectives Steganography Algorithm for Color Images on Multiple-Formats",
@@ -1883,7 +2091,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Sustainability",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Rough Set Based Information Theoretic Approach for Clustering Uncertain Categorical Data",
@@ -1892,7 +2101,8 @@ export const publicationsData = [
     "date": null,
     "journal": "PLoS One",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Empirical Analysis of Rough Set Categorical Clustering Techniques",
@@ -1901,7 +2111,8 @@ export const publicationsData = [
     "date": null,
     "journal": "PLoS One",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "AIPs-DeepEnC-GA: Predicting anti-inflammatory peptides using embedded evolutionary and sequential feature integration with genetic algorithm based deep ensemble model",
@@ -1910,7 +2121,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Chemometrics and Intelligent Laboratory Systems",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Comprehensive Study of Digital Image Steganographic Techniques",
@@ -1919,7 +2131,8 @@ export const publicationsData = [
     "date": null,
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Novel Steganography Technique for Digital Images Using the Least Significant Bit Substitution Method,",
@@ -1928,7 +2141,8 @@ export const publicationsData = [
     "date": null,
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Survey on Bug Prioritization",
@@ -1937,7 +2151,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Artificial Intelligence Review",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Rough Set Based Information Theoretic Approach for Clustering Uncertain Categorical Data",
@@ -1946,7 +2161,8 @@ export const publicationsData = [
     "date": null,
     "journal": "PLOS One",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Empirical Analysis of Rough Set Categorical Clustering Techniques",
@@ -1955,7 +2171,8 @@ export const publicationsData = [
     "date": null,
     "journal": "PLOS One",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A novel rough value set categorical clustering technique for supplier base management",
@@ -1964,7 +2181,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Computing (Vienna/New York)",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Proposed IoT-Enabled Smart Waste Bin Management System and Efficient Route Selection",
@@ -1973,7 +2191,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Computer Networks and Communications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Artificial bee colony algorithm used for load balancing in cloud computing: review",
@@ -1982,7 +2201,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Corrupted MP4 Carving Using MP4-Karver",
@@ -1991,7 +2211,8 @@ export const publicationsData = [
     "date": null,
     "journal": "IAES International Journal of Artificial Intelligence (IJ-AI)",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Fast attribute selection based on the rough set boundary region",
@@ -2000,7 +2221,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Periodicals of Engineering and Natural Sciences",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Positive region: An enhancement of partitioning attribute based rough set for categorical data",
@@ -2009,7 +2231,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Periodicals of Engineering and Natural Sciences",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Comparative Analysis of Long Short-Term Memory Recurrent Neural Network Classifiers for Text Classification",
@@ -2018,7 +2241,8 @@ export const publicationsData = [
     "date": null,
     "journal": "The Sciencetech",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Reduction of Defect Generation in Software Projects using LSS Approach",
@@ -2027,7 +2251,8 @@ export const publicationsData = [
     "date": null,
     "journal": "The Sciencetech",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Solving Different Order Boundary Value Problems by Applying Homotopy Type Methods",
@@ -2036,7 +2261,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Journal of Advances in Mathematics and Computer Science",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Modified Variation of Parameters Method for System of PDEs",
@@ -2045,7 +2271,8 @@ export const publicationsData = [
     "date": null,
     "journal": "International Journal of Modern Applied Physics",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "EEVMC: An Energy Efficient Virtual Machine Consolidation Approach for Cloud Data Centers",
@@ -2054,7 +2281,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 24),
     "journal": "IEEE Access",
     "scopus": false,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Innovative Transformation of S-Box Through Chaotic Map Using a Pragmatic Approach",
@@ -2063,7 +2291,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 24),
     "journal": "IEEE Access",
     "scopus": false,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Research on the quantum photonic convolutional neural network for artificial intelligence-based healthcare system security",
@@ -2072,7 +2301,8 @@ export const publicationsData = [
     "date": new Date(2024, 11, 23),
     "journal": "Springer",
     "scopus": false,
-    "impactFactor": 3.3
+    "impactFactor": 3.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "Smart explainable artificial intelligence for sustainable secure healthcare application based on quantum optical neural network",
@@ -2081,7 +2311,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 23),
     "journal": "Optical and Quantum Electronics",
     "scopus": false,
-    "impactFactor": 3.3
+    "impactFactor": 3.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "Polynomial Cryptographic Optical Steganography Substitution Model for the Telehealth System with",
@@ -2090,7 +2321,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 23),
     "journal": "Optical and Quantum Electronics",
     "scopus": false,
-    "impactFactor": 3.3
+    "impactFactor": 3.3,
+    "collaborationType": "unknown"
   },
   {
     "title": "An edge inspired image watermarking approach using compass edge detector and LSB in cybersecurity",
@@ -2099,7 +2331,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 23),
     "journal": "Computers and Electrical Engineering",
     "scopus": false,
-    "impactFactor": 4
+    "impactFactor": 4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Impact of node mobility on the DL based uplink and downlink MIMO-NOMA network",
@@ -2108,7 +2341,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 23),
     "journal": "International Jounal of Information Technology",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Anomaly Detection in Time Series: Current Focus and Future Challenges (Book Chapter)",
@@ -2117,7 +2351,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 23),
     "journal": "Anomaly Detection - Recent Advances, AI and ML Perspectives and Applications (Book Chapter)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Smart and Secure Vehicle Parking System to Avoid Theft Using Deep Image Recognition",
@@ -2126,7 +2361,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 24),
     "journal": "Journal of Innovative Computing and Emerging Technologies",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Versatile Resilience Packet Ring Protocol Model for Homogeneous Networks",
@@ -2135,7 +2371,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 23),
     "journal": "Applied Sciences (Switzerland)",
     "scopus": false,
-    "impactFactor": 2.5
+    "impactFactor": 2.5,
+    "collaborationType": "unknown"
   },
   {
     "title": "Image Watermarking Scheme Using LSB and Image Gradient",
@@ -2144,7 +2381,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 22),
     "journal": "Applied Sciences (Switzerland)",
     "scopus": false,
-    "impactFactor": 2.5
+    "impactFactor": 2.5,
+    "collaborationType": "unknown"
   },
   {
     "title": "An integrated approach for sustainable development of wastewater treatment and management system using IoT in smart cities",
@@ -2153,7 +2391,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 23),
     "journal": "Soft Computing",
     "scopus": false,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Biological feature selection and classification techniques for intrusion detection on BAT",
@@ -2162,7 +2401,8 @@ export const publicationsData = [
     "date": new Date(2024, 10, 22),
     "journal": "Wireless personal communications",
     "scopus": false,
-    "impactFactor": 1.9
+    "impactFactor": 1.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Distance Matrix and Markov Chain Based Sensor Localization in WSN",
@@ -2171,7 +2411,8 @@ export const publicationsData = [
     "date": new Date(2024, 4, 22),
     "journal": "Computers, Materials and Continua",
     "scopus": false,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Modified Lamport Merkle Digital Signature blockchain framework for authentication of internet of things healthcare data",
@@ -2180,7 +2421,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 22),
     "journal": "",
     "scopus": false,
-    "impactFactor": 3.3
+    "impactFactor": 3.3,
+    "collaborationType": null
   },
   {
     "title": "A Certain Structure of Bipolar Fuzzy Subrings",
@@ -2189,7 +2431,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 21),
     "journal": "Symmetry",
     "scopus": false,
-    "impactFactor": 2.2
+    "impactFactor": 2.2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Node Replacement Based Energy Optimization Using Enhanced SALP Swarm Algorithm (ES2A) in Wireless Sensor Networks",
@@ -2198,7 +2441,8 @@ export const publicationsData = [
     "date": new Date(2024, 7, 21),
     "journal": "Journal of Engineering Science and Technology",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Transition-aware human activity recognition using an ensemble deep learning framework",
@@ -2207,7 +2451,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 9),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 9.9
+    "impactFactor": 9.9,
+    "collaborationType": null
   },
   {
     "title": "Genetic Diversity and Forensic Utility of X-STR Loci in Punjabi and Kashmiri Populations: Insights into Population Structure and Ancestry",
@@ -2216,7 +2461,8 @@ export const publicationsData = [
     "date": new Date(2024, 9, 28),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 2.8
+    "impactFactor": 2.8,
+    "collaborationType": null
   },
   {
     "title": "Optimizing smart home energy management for sustainability using machine learning technique",
@@ -2225,7 +2471,8 @@ export const publicationsData = [
     "date": new Date(2024, 10, 25),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 2.4
+    "impactFactor": 2.4,
+    "collaborationType": null
   },
   {
     "title": "Smart buildings: Federated learning-driven secure, transparent and smart energy management system using XAI",
@@ -2234,7 +2481,8 @@ export const publicationsData = [
     "date": new Date(2025, 0, 30),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 4.7
+    "impactFactor": 4.7,
+    "collaborationType": null
   },
   {
     "title": "Facial expression recognition using visible and IR by early fusion of deep learning with attention mechanism",
@@ -2243,7 +2491,8 @@ export const publicationsData = [
     "date": new Date(2025, 11, 3),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 3.8
+    "impactFactor": 3.8,
+    "collaborationType": null
   },
   {
     "title": "Secure and Transparent Banking: Explainable AI-Driven Federated Learning Model for Financial Fraud Detection",
@@ -2252,7 +2501,8 @@ export const publicationsData = [
     "date": new Date(2025, 2, 27),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "A swin transformer and CNN fusion framework for accurate Parkinson disease classification in MRI",
@@ -2261,7 +2511,8 @@ export const publicationsData = [
     "date": new Date(2025, 3, 29),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 3.8
+    "impactFactor": 3.8,
+    "collaborationType": null
   },
   {
     "title": "Blockchain enabled IoMT and transfer learning for ocular disease classification",
@@ -2270,7 +2521,8 @@ export const publicationsData = [
     "date": new Date(2025, 4, 5),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Smart Sustainable Cyber Security: Modelling an Interpretable and Transparent Threat Detection with Explainable Artificial Intelligence",
@@ -2279,7 +2531,8 @@ export const publicationsData = [
     "date": new Date(2025, 4, 15),
     "journal": "Journal",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "international"
   },
   {
     "title": "Machine Learning Applications in UAV Swarms Book Title: Unmanned Aerial Vehicles Swarm for Protecting Smart Cities: Future Trends and Challenges",
@@ -2288,7 +2541,8 @@ export const publicationsData = [
     "date": new Date(2025, 0, 3),
     "journal": "Book Chapter",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": "A Privacy-Preserving and Adversarially Robust Hybrid Deep-Quantum Model for CPS Security",
@@ -2297,7 +2551,8 @@ export const publicationsData = [
     "date": new Date(2025, 6, 5),
     "journal": "Conference",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "national"
   },
   {
     "title": ", Requirements Engineering Model (REM): An Assessment Model for Software Vendor Organizations",
@@ -2306,7 +2561,8 @@ export const publicationsData = [
     "date": new Date(2025, 3, 25),
     "journal": "JOURNAL",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Prioritization of Functional Requirements Using Directed Graph and K-Means Clustering,",
@@ -2315,7 +2571,8 @@ export const publicationsData = [
     "date": new Date(2025, 2, 1),
     "journal": "JOURNAL",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Structural association of requirements engineering challenges in GSD: interpretive structural modelling (ISM) approach,",
@@ -2324,7 +2581,8 @@ export const publicationsData = [
     "date": new Date(2025, 0, 25),
     "journal": "JOURNAL",
     "scopus": true,
-    "impactFactor": 2.1
+    "impactFactor": 2.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Critical Challenges of Continuous Integration and Testing (CI/CT) in DevOps: A Systematic Literature Review Protocol with preliminary Results",
@@ -2333,7 +2591,8 @@ export const publicationsData = [
     "date": null,
     "journal": "JOURNAL",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "M. Yaseen, “Practices of Requirement Engineering Process Maturity in Global Software Development”",
@@ -2342,7 +2601,8 @@ export const publicationsData = [
     "date": new Date(2025, 3, 25),
     "journal": "JOURNAL",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Proposed Model (DOA) for DevOps Practice in Agile Development",
@@ -2351,7 +2611,8 @@ export const publicationsData = [
     "date": new Date(2025, 3, 25),
     "journal": "JOURNAL",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Proposed Software Deployment Model (SDM) for IT Practitioners",
@@ -2360,7 +2621,8 @@ export const publicationsData = [
     "date": new Date(2025, 2, 25),
     "journal": "CONFERENCE",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Multi-LLM semantic fusion with uncertainty-aware GCNs for personalized recommendation",
@@ -2369,7 +2631,8 @@ export const publicationsData = [
     "date": new Date(2026, 5, 16),
     "journal": "Information Sciences",
     "scopus": true,
-    "impactFactor": 6
+    "impactFactor": 6,
+    "collaborationType": null
   },
   {
     "title": "Agentic AI and Explainable CADx: Trends, Methods, and Emerging Directions in Clinical Cancer Diagnosis",
@@ -2378,7 +2641,8 @@ export const publicationsData = [
     "date": new Date(2026, 5, 16),
     "journal": "Archives of Computational Methods in Engineering",
     "scopus": true,
-    "impactFactor": 12.1
+    "impactFactor": 12.1,
+    "collaborationType": null
   },
   {
     "title": "Human-robot collaboration through theomorphic interaction models and secure cloud AI: A comprehensive review",
@@ -2387,7 +2651,8 @@ export const publicationsData = [
     "date": new Date(2026, 4, 27),
     "journal": "Telematics and Informatics Reports",
     "scopus": true,
-    "impactFactor": 4.7
+    "impactFactor": 4.7,
+    "collaborationType": null
   },
   {
     "title": "Telematics and Informatics Reports",
@@ -2396,7 +2661,8 @@ export const publicationsData = [
     "date": new Date(2026, 4, 15),
     "journal": "PLOS One",
     "scopus": true,
-    "impactFactor": 2.6
+    "impactFactor": 2.6,
+    "collaborationType": null
   },
   {
     "title": "Suicidal Thoughts Detection on Social Media in Roman Urdu Using an Attention-Based Hybrid Deep Learning Model",
@@ -2405,7 +2671,8 @@ export const publicationsData = [
     "date": new Date(2026, 3, 5),
     "journal": "Engineering Reports",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "An Explainable Centralized Deep Learning Model for Gastrointestinal Polyp Segmentation Using the Kvasir-SEG Dataset",
@@ -2414,7 +2681,8 @@ export const publicationsData = [
     "date": new Date(2026, 3, 20),
     "journal": "Computer Modeling in Engineering & Sciences",
     "scopus": true,
-    "impactFactor": 2.5
+    "impactFactor": 2.5,
+    "collaborationType": null
   },
   {
     "title": "A Comprehensive Survey of SSA-LSTM Models: Signal Decomposition Techniques, Algorithmic Advances, Practical Applications, and Future Directions",
@@ -2423,7 +2691,8 @@ export const publicationsData = [
     "date": new Date(2026, 1, 26),
     "journal": "Archives of Computational Methods in Engineering",
     "scopus": true,
-    "impactFactor": 12.1
+    "impactFactor": 12.1,
+    "collaborationType": null
   },
   {
     "title": "Big Data-Driven Federated Learning Model for Scalable and Privacy-Preserving Cyber Threat Detection in IoT-Enabled Healthcare Systems",
@@ -2432,7 +2701,8 @@ export const publicationsData = [
     "date": new Date(2025, 11, 18),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 1.7
+    "impactFactor": 1.7,
+    "collaborationType": null
   },
   {
     "title": "Interpretable Federated Learning Model for Cyber Intrusion Detection in Smart Cities with Privacy-Preserving Feature Selection",
@@ -2441,7 +2711,8 @@ export const publicationsData = [
     "date": new Date(2025, 8, 18),
     "journal": "Computers, Materials & Continua",
     "scopus": true,
-    "impactFactor": 1.7
+    "impactFactor": 1.7,
+    "collaborationType": null
   },
   {
     "title": "Weighted explainable federated learning for privacy-preserving and scalable energy optimization in autonomous vehicular networks",
@@ -2450,7 +2721,8 @@ export const publicationsData = [
     "date": new Date(2025, 7, 20),
     "journal": "Egyptian Informatics Journal",
     "scopus": true,
-    "impactFactor": 4.3
+    "impactFactor": 4.3,
+    "collaborationType": null
   },
   {
     "title": "Phish Guard: Real-time Phishing Website Identification using Explainable Graph Neural Networks",
@@ -2459,7 +2731,8 @@ export const publicationsData = [
     "date": new Date(2026, 11, 1),
     "journal": "2025 IEEE International Conference on Computational Intelligence and Knowledge Economy (ICCIKE), Dubai, UAE",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Secure Evolutionary Model Empowered Smart Homes in AI Environment : An Efficient Way of Life",
@@ -2468,7 +2741,8 @@ export const publicationsData = [
     "date": new Date(2025, 11, 30),
     "journal": "The 11th International Conference on Next Generation Computing 2025",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Psychological Manipulation in Cyberspace : Social Engineering as Human- Centric Cyber Threat",
@@ -2477,7 +2751,8 @@ export const publicationsData = [
     "date": new Date(2025, 11, 31),
     "journal": "The 11th International Conference on Next Generation Computing 2025",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": null
   },
   {
     "title": "Empirical Analysis of Challenges in Implementing Agile Methodologies in Global Software Development",
@@ -2486,7 +2761,8 @@ export const publicationsData = [
     "date": new Date(2026, 7, 6),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 1.8
+    "impactFactor": 1.8,
+    "collaborationType": "unknown"
   },
   {
     "title": "Scalability and Limitations of Existing Software Requirements Prioritization Techniques: A Systematic Literature Review",
@@ -2495,7 +2771,8 @@ export const publicationsData = [
     "date": new Date(2025, 8, 17),
     "journal": "Journal of Software: Evolution and Process",
     "scopus": true,
-    "impactFactor": 1.8
+    "impactFactor": 1.8,
+    "collaborationType": "unknown"
   },
   {
     "title": "GNN and GRU-based dynamic NSGA-II algorithm to tolerate Byzantine faults",
@@ -2504,7 +2781,8 @@ export const publicationsData = [
     "date": new Date(2026, 8, 4),
     "journal": "Journal of Network and Computer Applications",
     "scopus": true,
-    "impactFactor": 7.7
+    "impactFactor": 7.7,
+    "collaborationType": null
   },
   {
     "title": "for Software Defined Network",
@@ -2513,7 +2791,8 @@ export const publicationsData = [
     "date": new Date(2023, 7, 11),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Requirement design for software configuration and system modelling",
@@ -2522,7 +2801,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 4),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "Difference Detection in Use Case Models of Healthcare System",
@@ -2531,7 +2811,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 10),
     "journal": "Journal of Medical Imaging and Health Informatics",
     "scopus": false,
-    "impactFactor": 0.66
+    "impactFactor": 0.66,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Feature-Based Evaluation of Model Merge Methods for e-Health Solutions",
@@ -2540,7 +2821,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 10),
     "journal": "Journal of Medical Imaging and Health Informatics",
     "scopus": false,
-    "impactFactor": 0.66
+    "impactFactor": 0.66,
+    "collaborationType": "unknown"
   },
   {
     "title": "Fine-Granular Model Diff Solution in Model-based Version Control Systems",
@@ -2549,7 +2831,8 @@ export const publicationsData = [
     "date": new Date(2015, 0, 6),
     "journal": "Malaysian Journal of Computer Science",
     "scopus": false,
-    "impactFactor": 0.6
+    "impactFactor": 0.6,
+    "collaborationType": "unknown"
   },
   {
     "title": "Fine-granular model merge solution for model-based version control system",
@@ -2558,7 +2841,8 @@ export const publicationsData = [
     "date": new Date(2016, 0, 9),
     "journal": "Malaysian Journal of Computer Science",
     "scopus": false,
-    "impactFactor": 0.6
+    "impactFactor": 0.6,
+    "collaborationType": "unknown"
   },
   {
     "title": "Modernization Framework to Enhance the Security of Legacy Information Systems",
@@ -2567,7 +2851,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 4),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "Leaf Blights Detection and Classification in Large Scale Applications",
@@ -2576,7 +2861,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 1),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "CMMI Compliant Workflow Models to Track and Control Changes",
@@ -2585,7 +2871,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 1),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "Breast cancer detection and classification using traditional computer vision techniques: a comprehensive review",
@@ -2594,7 +2881,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 12),
     "journal": "Current Medical Imaging",
     "scopus": false,
-    "impactFactor": 0.53
+    "impactFactor": 0.53,
+    "collaborationType": "unknown"
   },
   {
     "title": "A feature-centric spam email detection model using diverse supervised machine learning algorithms",
@@ -2603,7 +2891,8 @@ export const publicationsData = [
     "date": new Date(2020, 6, 7),
     "journal": "The Electronic Library",
     "scopus": false,
-    "impactFactor": 0.95
+    "impactFactor": 0.95,
+    "collaborationType": "unknown"
   },
   {
     "title": "Enforcing Optimal ACL Policies Using K-Partite Graph in Hybrid SDN",
@@ -2612,7 +2901,8 @@ export const publicationsData = [
     "date": new Date(2019, 4, 29),
     "journal": "Electronics",
     "scopus": false,
-    "impactFactor": 2.4
+    "impactFactor": 2.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Automatic identification of sarcasm in tweets and customer reviews",
@@ -2621,7 +2911,8 @@ export const publicationsData = [
     "date": new Date(2019, 0, 1),
     "journal": "Journal of Intelligent & Fuzzy Systems",
     "scopus": false,
-    "impactFactor": 1.7
+    "impactFactor": 1.7,
+    "collaborationType": "unknown"
   },
   {
     "title": "CMMI Compliant Modernization Framework to Transform Legacy Systems",
@@ -2630,7 +2921,8 @@ export const publicationsData = [
     "date": new Date(2021, 0, 3),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "Workflow Models to Establish Software Baselines in SSMEs",
@@ -2639,7 +2931,8 @@ export const publicationsData = [
     "date": new Date(2021, 0, 1),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "CMMI Compliant Workflow Models to Establish Configuration Management Integrity in Software SMEs",
@@ -2648,7 +2941,8 @@ export const publicationsData = [
     "date": new Date(2021, 0, 1),
     "journal": "Intelligent Automation & Soft Computing",
     "scopus": false,
-    "impactFactor": 1.26
+    "impactFactor": 1.26,
+    "collaborationType": "unknown"
   },
   {
     "title": "An evaluation of software measurement processes in pakistani software industry",
@@ -2657,7 +2951,8 @@ export const publicationsData = [
     "date": new Date(2018, 9, 10),
     "journal": "IEEE Access",
     "scopus": false,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Distributed partition detection with dynamic replication management in a DHT-based MANET",
@@ -2666,7 +2961,8 @@ export const publicationsData = [
     "date": new Date(2018, 11, 3),
     "journal": "IEEE Access",
     "scopus": false,
-    "impactFactor": 3.4
+    "impactFactor": 3.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Risk Aware and Quality Enriched Effort Estimation for Mobile Applications in Distributed Agile Software Development.",
@@ -2675,7 +2971,8 @@ export const publicationsData = [
     "date": new Date(2017, 0, 11),
     "journal": "J. Inf. Sci. Eng.",
     "scopus": false,
-    "impactFactor": 1.2
+    "impactFactor": 1.2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Predicting the cricket match outcome using crowd opinions on social networks: A comparative study of machine learning methods",
@@ -2684,7 +2981,8 @@ export const publicationsData = [
     "date": new Date(2017, 0, 3),
     "journal": "Malaysian Journal of Computer Science",
     "scopus": false,
-    "impactFactor": 0.6
+    "impactFactor": 0.6,
+    "collaborationType": "unknown"
   },
   {
     "title": "A survey of P2P content sharing in MANETs",
@@ -2693,7 +2991,8 @@ export const publicationsData = [
     "date": new Date(2017, 0, 1),
     "journal": "Computers & Electrical Engineering",
     "scopus": false,
-    "impactFactor": 3.8
+    "impactFactor": 3.8,
+    "collaborationType": "unknown"
   },
   {
     "title": "Why do firms adopt enterprise risk management (ERM)? Empirical evidence from France",
@@ -2702,7 +3001,8 @@ export const publicationsData = [
     "date": new Date(2016, 8, 19),
     "journal": "Management Decision",
     "scopus": false,
-    "impactFactor": 4.1
+    "impactFactor": 4.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Security modeling for service-oriented systems using security pattern refinement approach",
@@ -2711,7 +3011,8 @@ export const publicationsData = [
     "date": new Date(2026, 4, 14),
     "journal": "Software & Systems Modeling",
     "scopus": false,
-    "impactFactor": 2.39
+    "impactFactor": 2.39,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Efficient and Scalable Routing for MANETs",
@@ -2720,7 +3021,8 @@ export const publicationsData = [
     "date": new Date(2026, 2, 14),
     "journal": "Wireless personal communications",
     "scopus": false,
-    "impactFactor": 1.9
+    "impactFactor": 1.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Design of an Efficient and Provable Secure Key Exchange Protocol for HTTP Cookies",
@@ -2729,7 +3031,8 @@ export const publicationsData = [
     "date": new Date(2024, 6, 18),
     "journal": "Computers, Materials and Continua",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Towards classification and comprehensive analysis of AI-based COVID-19 diagnostic techniques: A survey",
@@ -2738,7 +3041,8 @@ export const publicationsData = [
     "date": new Date(2024, 3, 6),
     "journal": "Artificial Intelligence in Medicine",
     "scopus": true,
-    "impactFactor": 7.5
+    "impactFactor": 7.5,
+    "collaborationType": "unknown"
   },
   {
     "title": "APT Adversarial Defence Mechanism for Industrial IoT Enabled Cyber-Physical System",
@@ -2747,7 +3051,8 @@ export const publicationsData = [
     "date": new Date(2023, 6, 3),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Recognizing factors effecting the use of mobile banking apps through sentiment and thematic analysis on user reviews",
@@ -2756,7 +3061,8 @@ export const publicationsData = [
     "date": new Date(2023, 6, 13),
     "journal": "Neural Computing and Applications",
     "scopus": true,
-    "impactFactor": 6
+    "impactFactor": 6,
+    "collaborationType": "unknown"
   },
   {
     "title": "Blockchain and IIoT Enabled Solution for Social Distancing and Isolation Management to Prevent Pandemics",
@@ -2765,7 +3071,8 @@ export const publicationsData = [
     "date": new Date(2023, 5, 9),
     "journal": "Computers, Materials and Continua",
     "scopus": true,
-    "impactFactor": 3.1
+    "impactFactor": 3.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Blockchain-Enabled VANET for Smart Solid Waste Management",
@@ -2774,7 +3081,8 @@ export const publicationsData = [
     "date": new Date(2023, 0, 9),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "CNN-Based Automatic Helmet Violation Detection of Motorcyclists for an Intelligent Transportation System",
@@ -2783,7 +3091,8 @@ export const publicationsData = [
     "date": new Date(2022, 9, 17),
     "journal": "Mathematical Problems in Engineering",
     "scopus": true,
-    "impactFactor": 2.1
+    "impactFactor": 2.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Reliable Framework for Secure Communication and Health Assessment of Soldiers in the Battlefield",
@@ -2792,7 +3101,8 @@ export const publicationsData = [
     "date": new Date(2022, 9, 27),
     "journal": "SAGE Open",
     "scopus": true,
-    "impactFactor": 2
+    "impactFactor": 2,
+    "collaborationType": "unknown"
   },
   {
     "title": "Brain Tumor Detection using Decision-Based Fusion Empowered with Fuzzy Logic",
@@ -2801,7 +3111,8 @@ export const publicationsData = [
     "date": new Date(2022, 7, 21),
     "journal": "Mathematical Problems in Engineering",
     "scopus": true,
-    "impactFactor": 2.1
+    "impactFactor": 2.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "Blockchain-Based Authentication and Trust Management Mechanism for Smart Cities",
@@ -2810,7 +3121,8 @@ export const publicationsData = [
     "date": new Date(2022, 2, 29),
     "journal": "Sensors",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Effective Video Summarization Framework Based on the Object of Interest Using Deep Learning",
@@ -2819,7 +3131,8 @@ export const publicationsData = [
     "date": new Date(2022, 4, 12),
     "journal": "Mathematical Problems in Engineering",
     "scopus": true,
-    "impactFactor": 2.1
+    "impactFactor": 2.1,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Intelligent System to Detect Advanced Persistent Threats in Industrial Internet of Things (I-IoT)",
@@ -2828,7 +3141,8 @@ export const publicationsData = [
     "date": new Date(2022, 1, 28),
     "journal": "Electronics (Switzerland)",
     "scopus": true,
-    "impactFactor": 2.9
+    "impactFactor": 2.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Assistive Devices Analysis for Visually Impaired Persons: A Review on Taxonomy",
@@ -2837,7 +3151,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 26),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "CNN-Based Object Recognition and Tracking System to Assist Visually Impaired People",
@@ -2846,7 +3161,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 31),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 3.9
+    "impactFactor": 3.9,
+    "collaborationType": "unknown"
   },
   {
     "title": "Feature Selection Empowered by Self-Inertia Weight Adaptive Particle Swarm Optimization for Text Classification",
@@ -2855,7 +3171,8 @@ export const publicationsData = [
     "date": new Date(2021, 11, 4),
     "journal": "Applied Artificial Intelligence",
     "scopus": true,
-    "impactFactor": 2.8
+    "impactFactor": 2.8,
+    "collaborationType": "unknown"
   },
   {
     "title": "Long Multi-digit Number Recognition from Images Empowered by Deep Convolutional Neural Networks",
@@ -2864,7 +3181,8 @@ export const publicationsData = [
     "date": new Date(2021, 8, 13),
     "journal": "Computer Journal",
     "scopus": true,
-    "impactFactor": 1.4
+    "impactFactor": 1.4,
+    "collaborationType": "unknown"
   },
   {
     "title": "Detection of Abnormalities in Real-Time Computer Network Traffic Empowered by Machine Learning",
@@ -2873,7 +3191,8 @@ export const publicationsData = [
     "date": new Date(2021, 6, 5),
     "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Analysis of authorship attribution technique on Urdu tweets empowered by machine learning",
@@ -2882,7 +3201,8 @@ export const publicationsData = [
     "date": new Date(2021, 6, 5),
     "journal": "International Journal of Advanced Trends in Computer Science and Engineering",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Social Distancing and Isolation Management Using\nMachine-to-Machine Technologies to Prevent Pandemics",
@@ -2891,7 +3211,8 @@ export const publicationsData = [
     "date": new Date(2021, 2, 1),
     "journal": "Computers, Materials and Continua",
     "scopus": true,
-    "impactFactor": 4.89
+    "impactFactor": 4.89,
+    "collaborationType": "unknown"
   },
   {
     "title": "Video Summarization Techniques: A Review",
@@ -2900,7 +3221,8 @@ export const publicationsData = [
     "date": new Date(2021, 1, 10),
     "journal": "International Journal of Scientific and Technology Research",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Multistage Segmentation of Prostate Cancer Tissues Using Sample Entropy Texture Analysis",
@@ -2909,7 +3231,8 @@ export const publicationsData = [
     "date": new Date(2020, 11, 4),
     "journal": "Entropy",
     "scopus": true,
-    "impactFactor": 2.494
+    "impactFactor": 2.494,
+    "collaborationType": "unknown"
   },
   {
     "title": "Semantic Analysis to Identify Students’ Feedback",
@@ -2918,7 +3241,8 @@ export const publicationsData = [
     "date": new Date(2020, 9, 13),
     "journal": "Computer Journal",
     "scopus": true,
-    "impactFactor": 1.077
+    "impactFactor": 1.077,
+    "collaborationType": "unknown"
   },
   {
     "title": "RESTCub: A Language Independent Middleware for Cognitive Robot",
@@ -2927,7 +3251,8 @@ export const publicationsData = [
     "date": new Date(2020, 9, 1),
     "journal": "International Journal of Humanoid Robotics",
     "scopus": true,
-    "impactFactor": 1.394
+    "impactFactor": 1.394,
+    "collaborationType": "unknown"
   },
   {
     "title": "A passive technique for detecting copy-move forgeries by image feature matching",
@@ -2936,7 +3261,8 @@ export const publicationsData = [
     "date": new Date(2020, 7, 24),
     "journal": "Multimedia Tools and Applications",
     "scopus": true,
-    "impactFactor": 2.313
+    "impactFactor": 2.313,
+    "collaborationType": "unknown"
   },
   {
     "title": "How Secure Is Your Cloud: Classification of Security Threats and Countermeasures Within Cloud Computing?",
@@ -2945,7 +3271,8 @@ export const publicationsData = [
     "date": new Date(2021, 4, 5),
     "journal": "International Journal of Computer Science and Network Security",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Low Complexity High Efficiency Coding of Light Fields using Ensemble Classifier",
@@ -2954,7 +3281,8 @@ export const publicationsData = [
     "date": new Date(2019, 7, 20),
     "journal": "Journal of Visual Communication and Image Representation",
     "scopus": true,
-    "impactFactor": 2.259
+    "impactFactor": 2.259,
+    "collaborationType": "unknown"
   },
   {
     "title": "Towards Reducing the Damage of Fire through Firefighting Autonomous Robot",
@@ -2963,7 +3291,8 @@ export const publicationsData = [
     "date": null,
     "journal": "Technical journal, UET Taxila",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Fast video encoding based on random forests",
@@ -2972,7 +3301,8 @@ export const publicationsData = [
     "date": new Date(2019, 1, 5),
     "journal": "Journal of Real-Time Image Processing",
     "scopus": false,
-    "impactFactor": 2.588
+    "impactFactor": 2.588,
+    "collaborationType": "unknown"
   },
   {
     "title": "A generalized multi-layer framework for video coding to select prediction parameters",
@@ -2981,7 +3311,8 @@ export const publicationsData = [
     "date": new Date(2018, 2, 16),
     "journal": "IEEE Access",
     "scopus": true,
-    "impactFactor": 4.098
+    "impactFactor": 4.098,
+    "collaborationType": "unknown"
   },
   {
     "title": "DoS/DDoS Detection for Healthcare in Internet of Things",
@@ -2990,7 +3321,8 @@ export const publicationsData = [
     "date": new Date(2018, 1, 10),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Efficient Scheme for Real-time Information Storage and Retrieval Systems: A Hybrid Approach",
@@ -2999,7 +3331,8 @@ export const publicationsData = [
     "date": new Date(2017, 8, 8),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Towards Securing Medical Documents from Insider Attacks",
@@ -3008,7 +3341,8 @@ export const publicationsData = [
     "date": new Date(2016, 8, 10),
     "journal": "International Journal of Advanced Computer Science and Applications",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An efficient inter prediction mode selection scheme for advanced video coding based on motion homogeneity and residual complexity",
@@ -3017,7 +3351,8 @@ export const publicationsData = [
     "date": new Date(2016, 7, 31),
     "journal": "IEEJ Transactions on Electrical and Electronic Engineering",
     "scopus": true,
-    "impactFactor": 0.517
+    "impactFactor": 0.517,
+    "collaborationType": "unknown"
   },
   {
     "title": "A First Step toward Reducing Insider Threats in Government Organization",
@@ -3026,7 +3361,8 @@ export const publicationsData = [
     "date": new Date(2016, 5, 10),
     "journal": "International Journal of Computer Science and Network Security",
     "scopus": true,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A hybrid scheme based on pipelining and multitasking in mobile application processors for advanced video coding",
@@ -3035,7 +3371,8 @@ export const publicationsData = [
     "date": new Date(2015, 9, 25),
     "journal": "Scientific Programming",
     "scopus": true,
-    "impactFactor": 0.455
+    "impactFactor": 0.455,
+    "collaborationType": "unknown"
   },
   {
     "title": "Using Genetic Algorithm to Minimize False Alarms in Insider Threats Detection of Information Misuse in Windows Environment",
@@ -3044,7 +3381,8 @@ export const publicationsData = [
     "date": new Date(2014, 10, 11),
     "journal": "Mathematical Problems in engineering journal",
     "scopus": true,
-    "impactFactor": 1.04
+    "impactFactor": 1.04,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Hybrid Approach for Heart Disease Prediction using Genetic Algorithm and SVM",
@@ -3053,7 +3391,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 21),
     "journal": "5th International Conference on Advancements in Computational Sciences (ICACS)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Leukemia Cells Classification using Deep Learning Approaches",
@@ -3062,7 +3401,8 @@ export const publicationsData = [
     "date": new Date(2024, 2, 19),
     "journal": "25th International Multitopic Conference (INMIC)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Towards Classification and Analysis of Ransomware Detection Techniques",
@@ -3071,7 +3411,8 @@ export const publicationsData = [
     "date": new Date(2023, 3, 20),
     "journal": "4th International Conference on Computing, Mathematics and Engineering Technologies (iCoMET)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Deep Learning based Human Detection and Tracking for Security Surveillance System",
@@ -3080,7 +3421,8 @@ export const publicationsData = [
     "date": new Date(2023, 2, 22),
     "journal": "4th International Conference on Computing and Data Science (CONF-CDS 2022), 2023",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Automatic Wound Detection System Empowered by Deep Learning",
@@ -3089,7 +3431,8 @@ export const publicationsData = [
     "date": new Date(2023, 2, 22),
     "journal": "4th International Conference on Computing and Data Science (CONF-CDS 2022), 2023",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Vulnerabilities and Security Threats for IoT in Transportation and Fleet Management",
@@ -3098,7 +3441,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 19),
     "journal": "4th International Conference on Computing & Information Sciences (ICCIS), 2021",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Comparative Analysis of Traditional and Software Defined Networks",
@@ -3107,7 +3451,8 @@ export const publicationsData = [
     "date": new Date(2021, 8, 6),
     "journal": "Mohammad Ali Jinnah University International Conference on Computing (MAJICC), 2021",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Malware Detection Using Machine Learning Algorithms for Windows Platform",
@@ -3116,7 +3461,8 @@ export const publicationsData = [
     "date": new Date(2022, 3, 21),
     "journal": "15th International Conference on Information Technology and Applications (ICITA), 2021",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Ethical Hacking Methodologies: A Comparative Analysis",
@@ -3125,7 +3471,8 @@ export const publicationsData = [
     "date": new Date(2021, 8, 6),
     "journal": "Mohammad Ali Jinnah University International Conference on Computing (MAJICC), 2021",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Survey on Sentiment Analysis of User Reviews",
@@ -3134,7 +3481,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 31),
     "journal": "4th international conference on innovative Computing, 2021",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Comprehensive Survey of Sentiment Analysis Based on User Opinion",
@@ -3143,7 +3491,8 @@ export const publicationsData = [
     "date": new Date(2022, 0, 19),
     "journal": "4th International Conference on Computing & Information Sciences (ICCIS),  2021",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Reliability Management Framework and Recommender System for Hyper-converged Infrastructure Data Centers",
@@ -3152,7 +3501,8 @@ export const publicationsData = [
     "date": new Date(2020, 3, 23),
     "journal": "3rd International Conference on Computing, Mathematics and Engineering Technologies (iCoMET), 2020",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "DNA Compression using an innovative Index based Coding Algorithm",
@@ -3161,7 +3511,8 @@ export const publicationsData = [
     "date": new Date(2020, 2, 5),
     "journal": "22nd International Multi Topic Conference (IEEE INMIC 2019) 2019",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "PARK MY RIE: Your True Parking Companion",
@@ -3170,7 +3521,8 @@ export const publicationsData = [
     "date": new Date(2020, 4, 9),
     "journal": "International Conference on Intelligent Technologies and applications (INTAP 2019)",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Cloud Computing: A Paradigm of more Insider Threats",
@@ -3179,7 +3531,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 9),
     "journal": "4th International Conference on Information System Engineering (ICISE2019), May 4-6, 2019",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Comparison of Detection Techniques for Attacks on MANETs",
@@ -3188,7 +3541,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 9),
     "journal": "4th International Conference on Information System Engineering (ICISE2019), May 4-6, 2019",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Automatic Accident Detection System: A Hybrid Solution",
@@ -3197,7 +3551,8 @@ export const publicationsData = [
     "date": new Date(2020, 0, 9),
     "journal": "4th International Conference on Information System Engineering (ICISE2019), May 4-6, 2019",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "An Efficient scheme for intra prediction blocks size and mode selection in advanced video coding",
@@ -3206,7 +3561,8 @@ export const publicationsData = [
     "date": new Date(2016, 1, 29),
     "journal": "13th International Conference on Frontiers of Information Technology (FIT 2015), Dec 14-16, 2015",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Exploiting MB level parallelism in H.264/AVC encoder for multicore platform",
@@ -3215,7 +3571,8 @@ export const publicationsData = [
     "date": new Date(2015, 3, 2),
     "journal": "11th International Conference on Computer Systems and Applications (AICCSA), 2014",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "A Novel Application to Secure Misuse of Information in Critical Organizations for Windows Environment",
@@ -3224,7 +3581,8 @@ export const publicationsData = [
     "date": new Date(2014, 10, 20),
     "journal": "Fifth International Conference on Computing, Communications and Networking Technologies (ICCCNT), 2014",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Towards a realistic Risk Assessment Methodology for insider threats of information misuse",
@@ -3233,7 +3591,8 @@ export const publicationsData = [
     "date": new Date(2015, 5, 8),
     "journal": "12th International Conference on Frontiers of Information Technology, 2014",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   },
   {
     "title": "Optimized implementation of Motion Compensation for H.264/AVC Decoder",
@@ -3242,6 +3601,7 @@ export const publicationsData = [
     "date": new Date(2011, 1, 10),
     "journal": "5th International Conference on Computer Sciences and Convergence Information Technology, 2010.",
     "scopus": false,
-    "impactFactor": 0
+    "impactFactor": 0,
+    "collaborationType": "unknown"
   }
 ]
